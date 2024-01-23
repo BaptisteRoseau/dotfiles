@@ -1,5 +1,5 @@
 #!/bin/bash
-for file in ~/.shrc/.*.sh; do
+for file in ~/.shrc/*.sh; do
     source "${file}"
 done
 
