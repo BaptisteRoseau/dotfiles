@@ -10,7 +10,7 @@ Run the [remote-setup](scripts/remote-setup) script with the following. `git` mu
 
 ```sh
 curl -sfL https://raw.githubusercontent.com/BaptisteRoseau/dotfiles/main/scripts/remote-setup | bash -
-source ~/.bash_profile
+source ~/.bashrc
 ```
 
 If you prefer installing manually, clone the repository under .local/dotfiles, then run the [setup](scripts/setup) script:
