@@ -12,7 +12,7 @@ CONFIG_TO_LINK=(
 )
 
 # Prefixing every visible file/dir by "." and linking into $HOME
-for file in $(ls $GIT_ROOT/ | grep -v "*.md\|scripts\|config"); do
+for file in $(realpath $GIT_ROOT/* | grep -v "/\.git\|/.*\.md\|/config"); do
   name="$(basename "${file}")"
   dotname=".${name}"
 
