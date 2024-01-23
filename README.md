@@ -6,6 +6,8 @@ These are my own dotfiles mainly for VSCode, neovim, tmux, Git and some custom t
 
 Run the [remote-setup](scripts/remote-setup) script with the following. `git` must be installed.
 
+**/!\ WARNING /!\: This script wil remove your .config/Code/User and .config/nvim directories. Make sure to have a backup if necessary.**
+
 ```sh
 curl -sfL https://raw.githubusercontent.com/BaptisteRoseau/dotfiles/main/scripts/remote-setup | bash -
 source ~/.bash_profile
@@ -18,7 +20,7 @@ git clone https://github.com/BaptisteRoseau/dotfiles.git ~/.local/share/dotfiles
 ~/.local/share/dotfiles/script/setup
 ```
 
-The install script **won't overwrite your existing dotfiles**, but will symlink
+The install script **won't overwrite your existing dotfiles except .config/\***, but will symlink
 the ones that don't exist. If you want to replace your existing dotfiles, simply
 move them to a backup location and run install again.
 
@@ -29,6 +31,9 @@ If Neovim is not installed on your system, you can install it as a user with:
 ```sh
 curl -sfL https://raw.githubusercontent.com/BaptisteRoseau/dotfiles/main/scripts/install-neovim | bash -
 ```
+
+Make sure `git`, `cmake` and `unzip` are installed.
+
 ## Shout-out
 
 - Inspired from Mislav's configuration files: <https://github.com/mislav/dotfiles>.
