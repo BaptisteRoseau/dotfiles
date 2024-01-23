@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-mkdir -p ${HOME}/.local/share
-git clone https://github.com/BaptisteRoseau/dotfiles.git "${HOME}/.local/share/dotfiles"
+if [ ! -d "${HOME}/.local/share/dotfiles" ]; then
+    mkdir -p ${HOME}/.local/share
+    git clone https://github.com/BaptisteRoseau/dotfiles.git "${HOME}/.local/share/dotfiles"
+fi
 "${HOME}/.local/share/dotfiles/scripts/setup"
