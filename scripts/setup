@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -e
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+GIT_ROOT=$(
+  cd "${SCRIPT_DIR}"
+  git rev-parse --show-toplevel
+  cd - >/dev/null 2>&1
+)
+CONFIG_TO_LINK=(
+  Code/User
+  nvim
+)
+
+# Prefixing every visible file/dir by "." and linking into $HOME
+GLOBIGNORE='*.md scripts config'
+for file in "${GIT_ROOT}"/*; do
+  name="$(basename "${file}")"
+  dotname=".${name}"
+
+  [ -e "${HOME}/${dotname}" ] && continue
+  git --git-dir "${file}/.git" rev-parse --git-dir &>/dev/null && continue
+
+  ln -sfnv ${file#$HOME/} "${HOME}/${dotname}"
+done
+
+# Linking .config utils
+for dotconfig in "${CONFIG_TO_LINK[@]}"; do
+  ln -sfnv ${dotconfig#$HOME/} "${HOME}/.config/${dotconfig}"
+done
