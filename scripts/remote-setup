@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
+mkdir -p ${HOME}/.local/share
 git clone https://github.com/BaptisteRoseau/dotfiles.git "${HOME}/.local/share/dotfiles"
-"${HOME}/.local/share/dotfiles/script/setup"
+"${HOME}/.local/share/dotfiles/scripts/setup"
