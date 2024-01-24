@@ -55,5 +55,10 @@ return {
                 leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
             },
         })
+        local keymap = vim.keymap
+        keymap.set('n', '<leader>nf', '<cmd>Neotree left filesystem<cr>', { desc = '[N]eotree [F]ilesytem' })
+        keymap.set('n', '<leader>nb', '<cmd>Neotree float buffers<cr>', { desc = '[N]eotree opened [B]uffers' })
+        keymap.set('n', '<leader>ng', '<cmd>Neotree float git_status<cr>', { desc = '[N]eotree [G]it Status' })
+        keymap.set('n', '<leader>nc', '<cmd>Neotree close<cr>', { desc = '[N]eotree [C]lose' })
     end
 }
