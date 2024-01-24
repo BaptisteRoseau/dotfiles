@@ -39,4 +39,5 @@ Make sure `git`, `cmake` and `unzip` are installed.
 - Inspired from Mislav's configuration files: <https://github.com/mislav/dotfiles>.
 - Tmux configuration from gpakosz: <https://github.com/gpakosz/.tmux>.
 - TJ's kickstart.nvim: <https://github.com/nvim-lua/kickstart.nvim>
+- Josean Martinez's NeoVim configuration: <https://github.com/josean-dev/dev-environment-files/tree/main>
 - CEA HPC's Modules: <https://github.com/cea-hpc/modules>

@@ -4,8 +4,6 @@ local function map(mode, l, r, desc, opts)
     vim.keymap.set(mode, l, r, opts)
 end
 
--- Keymaps for better default experience
--- See `:help map()`
 map({ 'n', 'v' }, '<Space>', '<Nop>', '', { silent = true })
 
 -- Remap for dealing with word wrap
@@ -19,15 +17,10 @@ map('n', '<leader>e', vim.diagnostic.open_float, 'Open floating diagnostic messa
 map('n', '<leader>q', vim.diagnostic.setloclist, 'Open diagnostics list')
 
 -- Navigate thgough files
-map('n', '<leader>od', ':Ex<cr>', '[O]pen [D]irectory')
+map('n', '<leader>ot', ':NERDTree<cr>', '[O]pen file [T]ree')
 
--- ================= VSCODE-Like Rempaps
 -- Indent In Visual Mode
 map('v', '<Tab>', '>gv', 'Indent Right')
 map('n', '<Tab>', '>>', 'Indent Right')
 map('v', '<S-Tab>', '<gv', 'Indent Left')
 map('n', '<S-Tab>', '<<', 'Indent Left')
-
--- Multi-Cursor
--- map('ni', '<C-S-Up>', vm.addacursor, 'Add Cursor Up')
--- map('ni', '<C-S-Down>', vm.addacursor, 'Add Cursor Down')

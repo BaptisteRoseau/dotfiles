@@ -4,3 +4,8 @@
 # Neovim plugins
 *.lock
 *lock.json
+
+# VSCode generated
+config/Code/User/History/
+config/Code/User/globalStorage/
+config/Code/User/workspaceStorage/
