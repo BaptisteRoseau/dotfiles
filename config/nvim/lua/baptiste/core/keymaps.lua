@@ -17,7 +17,7 @@ map('n', '<leader>e', vim.diagnostic.open_float, 'Open floating diagnostic messa
 map('n', '<leader>q', vim.diagnostic.setloclist, 'Open diagnostics list')
 
 -- Navigate thgough files
-map('n', '<leader>ot', ':NERDTree<cr>', '[O]pen file [T]ree')
+-- map('n', '<leader>ot', ':NERDTree<cr>', '[O]pen file [T]ree')
 
 -- Indent In Visual Mode
 map('v', '<Tab>', '>gv', 'Indent Right')

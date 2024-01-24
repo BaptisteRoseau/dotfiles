@@ -26,6 +26,7 @@ return {
             -- NvimTreeIndentMarker              = { fg = "#FFFFFF", bg = 'NONE' }
         }
     },
+    priority = 100, -- Load last
     config = function()
         require('ibl').setup({
             whitespace = {
