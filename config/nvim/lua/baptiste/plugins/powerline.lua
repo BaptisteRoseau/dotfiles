@@ -3,13 +3,12 @@ return {
     opts = {
         options = {
             icons_enabled = true,
-            theme = 'horizon',
-            component_separators = '|',
-            section_separators = '',
+            theme = 'vscode',
         },
     },
     dependencies = {
         'nvim-tree/nvim-web-devicons',
         'ryanoasis/vim-devicons'
     },
+    priority = 100
 }

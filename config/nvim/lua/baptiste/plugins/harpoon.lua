@@ -26,5 +26,9 @@ return {
             "<cmd>lua require('harpoon.ui').nav_prev()<cr>",
             { desc = "[H]arpoon [P]revious mark" }
         )
+
+        require("which-key").register({
+            ['<leader>H'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
+        })
     end,
 }

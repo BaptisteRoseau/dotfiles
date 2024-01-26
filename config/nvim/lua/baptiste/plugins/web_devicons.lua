@@ -8,7 +8,4 @@ return {
         default = true,
         strict = true,
     },
-    config = function()
-        local web_devicon = require('nvim-web-devicons')
-    end
 }

@@ -1,5 +1,5 @@
 -- Format On Save
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 
 local opt = vim.opt
 local glob = vim.glob
@@ -34,7 +34,8 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.colorcolumn = "90"
+opt.textwidth = 90
+opt.colorcolumn = "90,120,+0"
 opt.cursorline = true
 
 opt.background = "dark"
@@ -42,18 +43,18 @@ opt.background = "dark"
 opt.backspace = "indent,eol,start"
 
 -- Set cursor to block in normal mode and bar in insert mode
-opt.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20'
+opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 -- Make line numbers default
 vim.wo.number = true
 
 -- Enable mouse mode
-opt.mouse = 'a'
+opt.mouse = "a"
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 -- Enable break indent
 opt.breakindent = true
@@ -67,7 +68,7 @@ opt.updatetime = 250
 opt.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-opt.completeopt = 'menuone,noselect'
+opt.completeopt = "menuone,noselect"
 
 -- split windows
 opt.splitright = true
