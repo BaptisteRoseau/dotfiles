@@ -13,7 +13,6 @@ return {
 			Comment = { fg = "#707070", bg = "NONE" },
 		},
 	},
-	priority = 99,
 	config = function()
 		require("ibl").setup({
 			whitespace = {
@@ -22,5 +21,6 @@ return {
 			},
 			scope = { enabled = false },
 		})
+		require("vscode").load()
 	end,
 }

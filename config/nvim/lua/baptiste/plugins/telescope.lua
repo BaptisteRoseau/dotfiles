@@ -80,7 +80,6 @@ return {
 				previewer = false,
 			}))
 		end, { desc = "[/] Fuzzily search in current buffer" })
-
 		local function telescope_live_grep_open_files()
 			require("telescope.builtin").live_grep({
 				grep_open_files = true,
@@ -99,4 +98,3 @@ return {
 		keymap.set("n", "<leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
 	end,
 }
-
