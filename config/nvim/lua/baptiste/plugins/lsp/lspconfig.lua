@@ -84,7 +84,7 @@ return {
 			ruff_lsp = { filetypes = { "py" } },
 
 			-- Rust
-			rust_analyzer = { filetypes = { "rs" } },
+			rust_analyzer = { filetypes = { "rs", "rust" } },
 
 			-- C
 			clangd = { filetypes = { "c", "h", "cpp", "hpp" } },
@@ -120,19 +120,6 @@ return {
 
 		-- Setup neovim lua configuration
 		require("neodev").setup()
-
-		require("lspconfig").rust_analyzer.setup({
-			settings = {
-				["rust-analyzer"] = {
-					check = {
-						command = "clippy",
-					},
-					diagnostics = {
-						enable = true,
-					},
-				},
-			},
-		})
 
 		-- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 		local capabilities = vim.lsp.protocol.make_client_capabilities()

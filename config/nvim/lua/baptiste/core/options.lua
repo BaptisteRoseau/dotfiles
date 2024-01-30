@@ -76,7 +76,3 @@ opt.splitbelow = true
 
 -- Enable Blamer By default
 glob.blamer_enabled = true
-
--- Treesitter folding
-vim.wo.foldmethod = "expr"
-vim.wo.foldexpr = "nvim_treesitter#foldexpr()"

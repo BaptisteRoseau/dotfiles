@@ -28,5 +28,4 @@ require("lazy").setup({
 -- The order matters.
 require("vscode").load()
 require("lualine").setup({})
-require("neo-tree").setup()
-require("dashboard").setup({})
+require("neo-tree").setup({})
