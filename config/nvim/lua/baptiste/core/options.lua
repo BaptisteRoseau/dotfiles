@@ -1,5 +1,6 @@
 -- Format On Save
-vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
+-- With autosave enabled, this actually becomes anoying
+-- vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 
 local opt = vim.opt
 local glob = vim.glob
@@ -34,7 +35,6 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.textwidth = 90
 opt.colorcolumn = "90,120,+0"
 opt.cursorline = true
 
@@ -76,3 +76,6 @@ opt.splitbelow = true
 
 -- Enable Blamer By default
 glob.blamer_enabled = true
+
+-- Recommended settings for auto-session
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
