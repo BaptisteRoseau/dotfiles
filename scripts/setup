@@ -29,3 +29,6 @@ for dotconfig in "${CONFIG_TO_LINK[@]}"; do
   mkdir -p $(dirname "${abs_dst_path}")
   ln -sfnv "${GIT_ROOT}/config/${dotconfig}" "${abs_dst_path}"
 done
+
+echo "Initializing tmux plugin manager"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
