@@ -257,8 +257,8 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   https://github.com/ryanoasis/n
 #     - #{gpu_temp}
 #     - #{gpu_temp_bg_color}
 #     - #{gpu_temp_fg_color}
-tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b , #{loadavg} ld | #{username}#{root} | #{hostname} "
+tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} | #{username}#{root} | #{hostname}"
+tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, {battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b ,#{cpu_percentage} #{?cpu_temp °C} cpu , #{ram_percentage} ram , #{gpu_percentage} #{?gpu_temp °C} gpu , #{loadavg} ld"
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -359,8 +359,9 @@ set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-#set -g status-keys vi
-#set -g mode-keys vi
+setenv VISUAL vi
+set -g status-keys vi
+set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
 set -gu prefix2
@@ -417,4 +418,93 @@ set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
+
+
+# tmux-cpu configuration -------------------------------------------------------
+# CPU
+set -g  @cpu_low_icon "="
+set -g  @cpu_medium_icon "≡"
+set -g  @cpu_high_icon "≣"
+
+set -g  @cpu_low_fg_color ""
+set -g  @cpu_medium_fg_color ""
+set -g  @cpu_high_fg_color ""
+
+set -g  @cpu_low_bg_color "#[bg=green]"
+set -g  @cpu_medium_bg_color "#[bg=yellow]"
+set -g  @cpu_high_bg_color "#[bg=red]"
+
+set -g  @cpu_percentage_format "%3.1f%%"
+set -g  @cpu_medium_thresh "30"
+set -g  @cpu_high_thresh "80"
+
+set -g  @cpu_temp_format "%2.0f"
+set -g  @cpu_temp_unit "C" # supports C & F
+set -g  @cpu_temp_medium_thresh "80"
+set -g  @cpu_temp_high_thresh "90"
+
+set -g  @cpu_temp_low_icon ""
+set -g  @cpu_temp_medium_icon "🥵"
+set -g  @cpu_temp_high_icon "🔥"
+
+# GPU
+set -g  @gpu_low_icon $@cpu_low_icon
+set -g  @gpu_medium_icon $@cpu_medium_icon
+set -g  @gpu_high_icon $@cpu_high_icon
+
+set -g  @gpu_low_fg_color $@cpu_low_fg_color
+set -g  @gpu_medium_fg_color $@cpu_medium_fg_color
+set -g  @gpu_high_fg_color $@cpu_high_fg_color
+
+set -g  @gpu_low_bg_color $@cpu_low_bg_color
+set -g  @gpu_medium_bg_color $@cpu_medium_bg_color
+set -g  @gpu_high_bg_color $@cpu_high_bg_color
+
+set -g  @gpu_percentage_format $@cpu_percentage_format
+set -g  @gpu_medium_thresh $@cpu_medium_thresh
+set -g  @gpu_high_thresh $@cpu_high_thresh
+
+set -g  @gpu_temp_format $@cpu_temp_format
+set -g  @gpu_temp_unit $@cpu_temp_unit
+set -g  @gpu_temp_medium_thresh $@cpu_temp_medium_thresh
+set -g  @gpu_temp_high_thresh $@cpu_temp_high_thresh
+
+set -g  @gpu_temp_low_icon $@cpu_temp_low_icon
+set -g  @gpu_temp_medium_icon $@cpu_temp_medium_icon
+set -g  @gpu_temp_high_icon $@cpu_temp_high_icon
+
+# RAM
+set -g  @ram_low_icon $@cpu_low_icon
+set -g  @ram_medium_icon $@cpu_medium_icon
+set -g  @ram_high_icon $@cpu_high_icon
+
+set -g  @ram_low_fg_color $@cpu_low_fg_color
+set -g  @ram_medium_fg_color $@cpu_medium_fg_color
+set -g  @ram_high_fg_color $@cpu_high_fg_color
+
+set -g  @ram_low_bg_color $@cpu_low_bg_color
+set -g  @ram_medium_bg_color $@cpu_medium_bg_color
+set -g  @ram_high_bg_color $@cpu_high_bg_color
+
+set -g  @ram_percentage_format $@cpu_percentage_format
+set -g  @ram_medium_thresh "70"
+set -g  @ram_high_thresh "90"
+
+
+# GRAM
+set -g  @gram_low_icon $@ram_low_icon
+set -g  @gram_medium_icon $@ram_medium_icon
+set -g  @gram_high_icon $@ram_high_icon
+
+set -g  @gram_low_fg_color $@ram_low_fg_color
+set -g  @gram_medium_fg_color $@ram_medium_fg_color
+set -g  @gram_high_fg_color $@ram_high_fg_color
+
+set -g  @gram_low_bg_color $@ram_low_bg_color
+set -g  @gram_medium_bg_color $@ram_medium_bg_color
+set -g  @gram_high_bg_color $@ram_high_bg_color
+
+set -g  @gram_percentage_format $@ram_percentage_format
+set -g  @gram_medium_thresh $@ram_medium_thresh
+set -g  @gram_high_thresh $@ram_high_thresh
 
