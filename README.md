@@ -34,7 +34,7 @@ curl -sfL https://raw.githubusercontent.com/BaptisteRoseau/dotfiles/main/scripts
 
 Make sure `git`, `cmake` and `unzip` are installed.
 
-## Shout-out
+## Acknowledgements
 
 - Inspired from Mislav's configuration files: <https://github.com/mislav/dotfiles>.
 - Tmux configuration from gpakosz: <https://github.com/gpakosz/.tmux>.
