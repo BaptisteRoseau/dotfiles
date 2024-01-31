@@ -43,7 +43,7 @@ opt.background = "dark"
 opt.backspace = "indent,eol,start"
 
 -- Set cursor to block in normal mode and bar in insert mode
-opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+opt.guicursor = "n-c-sm:block,i-ci-ve-v:ver25,r-cr-o:hor20"
 
 -- Make line numbers default
 vim.wo.number = true
