@@ -5,7 +5,6 @@ return {
 		local conform = require("conform")
 		conform.setup({
 			formatters_by_ft = {
-				-- rust = { "rust-analyzer" },
 				bash = { "beautysh" },
 				css = { { "prettierd", "prettier" } },
 				erb = { "htmlbeautifier" },
@@ -28,11 +27,6 @@ return {
 				typescript = { { "prettierd", "prettier" } },
 				typescriptreact = { { "prettierd", "prettier" } },
 				yaml = { "yamlfix" },
-			},
-			format_on_save = {
-				lsp_fallback = true,
-				async = false,
-				timeout_ms = 1000,
 			},
 		})
 

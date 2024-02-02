@@ -14,7 +14,6 @@ return {
 			typescriptreact = { "eslint_d" },
 			svelte = { "eslint_d" },
 			python = { "pylint", "ruff", "mypy" },
-			-- rust = { "clippy" },
 			bash = { "shellcheck" },
 			yaml = { "yamllint" },
 			json = { "jsonlint" },

@@ -3,7 +3,7 @@ return {
 	opts = {
 		transparent = true,
 		italic_comments = true,
-		disable_nvimtree_bg = true,
+		disable_nvimtree_bg = false,
 		color_overrides = {
 			-- See https://github.com/Mofiqul/vscode.nvim/blob/main/lua/vscode/colors.lua
 			-- vscFront = '#3D3D3D'

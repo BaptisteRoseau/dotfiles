@@ -83,9 +83,6 @@ return {
 			-- Python
 			ruff_lsp = { filetypes = { "py" } },
 
-			-- Rust
-			rust_analyzer = { filetypes = { "rs", "rust" } },
-
 			-- C
 			clangd = { filetypes = { "c", "h", "cpp", "hpp" } },
 
