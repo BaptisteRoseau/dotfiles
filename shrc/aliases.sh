@@ -6,3 +6,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias xc='xclip -sel clip'
 alias mkdir='mkdir -p'
 alias sts='git status'
+alias fixmouse='sudo /root/scripts/unplug_and_replug_mouse.sh'
