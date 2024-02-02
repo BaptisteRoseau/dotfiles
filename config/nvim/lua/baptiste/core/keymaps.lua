@@ -16,11 +16,31 @@ map("n", "]d", vim.diagnostic.goto_next, "Go to next diagnostic message")
 map("n", "<leader>e", vim.diagnostic.open_float, "Open floating diagnostic message")
 map("n", "<leader>q", vim.diagnostic.setloclist, "Open diagnostics list")
 
--- Navigate thgough files
--- map('n', '<leader>ot', ':NERDTree<cr>', '[O]pen file [T]ree')
+-- New buffers
+map("n", "<leader>bn", "<cmd>e new<cr>", "[B]uffer [N]ew")
+map("n", "<leader>bv", "<cmd>vs new<cr>", "[B]uffer [V]ertical new")
+map("n", "<leader>bh", "<cmd>sp new<cr>", "[B]uffer [H]orizontal new")
+
+-- Tabs Management
+map("n", "<C-t>", "<cmd>tabnew<cr>", "Create a new tab")
+
+-- Tabs Management
+map("n", "<C-t>", "<cmd>tabnew<cr>", "Create a new tab")
 
 -- Indent In Visual Mode
 map("v", "<Tab>", ">gv", "Indent Right")
 map("n", "<Tab>", ">>", "Indent Right")
 map("v", "<S-Tab>", "<gv", "Indent Left")
 map("n", "<S-Tab>", "<<", "Indent Left")
+
+-- VSCode-like vertical line moving using Alt
+local moveline = require("moveline")
+map({"n", "i"}, "<M-k>", moveline.up, "Move line Up")
+map({"n", "i"}, "<M-j>", moveline.down, "Move line Down")
+map({"n", "i"}, "<M-Up>", moveline.up, "Move line Up")
+map({"n", "i"}, "<M-Down>", moveline.down, "Move line Down")
+map("v", "<M-k>", moveline.block_up, "Move block Up")
+map("v", "<M-j>", moveline.block_down, "Move block Down")
+map("v", "<M-Up>", moveline.block_up, "Move block Up")
+map("v", "<M-Down>", moveline.block_down, "Move block Down")
+
