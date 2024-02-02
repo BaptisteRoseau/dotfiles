@@ -37,6 +37,23 @@ return {
 					enabled = true,
 				},
 			},
+			diagnostics = {
+				symbols = {
+					hint = "󰌵",
+					info = "",
+					warn = "",
+					error = "",
+				},
+				highlights = {
+					hint = "DiagnosticSignHint",
+					info = "DiagnosticSignInfo",
+					warn = "DiagnosticSignWarn",
+					error = "DiagnosticSignError",
+				},
+			},
+			indent = {
+				indent_size = 1,
+			},
 			filtered_items = {
 				visible = true, -- when true, they will just be displayed differently than normal items
 				force_visible_in_empty_folder = true, -- when true, hidden files will be shown if the root folder is otherwise empty
@@ -49,6 +66,9 @@ return {
 				enabled = false, -- This will find and focus the file in the active buffer every time
 				-- the current file is changed while the tree is open.
 				leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+			},
+			filesystem = {
+				hijack_netrw_behavior = "disabled", -- open_default, open_current, disabled
 			},
 		})
 		local keymap = vim.keymap

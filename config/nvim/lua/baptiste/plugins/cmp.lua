@@ -12,6 +12,7 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
+		local lspkind = require("lspkind")
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
@@ -61,17 +62,13 @@ return {
 				{ name = "path" },
 			},
 			formatting = {
-				fields = { "menu", "abbr", "kind" },
-				format = function(entry, item)
-					local menu_icon = {
-						nvim_lsp = "λ",
-						vsnip = "⋗",
-						buffer = "Ω",
-						path = "🖫",
-					}
-					item.menu = menu_icon[entry.source.name]
-					return item
-				end,
+				format = lspkind.cmp_format({
+					mode = "symbol",
+					preset = "default",
+					maxwidth = 50,
+					ellipsis_char = "...",
+					show_labelDetails = true,
+				}),
 			},
 		})
 	end,
