@@ -24,9 +24,6 @@ map("n", "<leader>bh", "<cmd>sp new<cr>", "[B]uffer [H]orizontal new")
 -- Tabs Management
 map("n", "<C-t>", "<cmd>tabnew<cr>", "Create a new tab")
 
--- Tabs Management
-map("n", "<C-t>", "<cmd>tabnew<cr>", "Create a new tab")
-
 -- Indent In Visual Mode
 map("v", "<Tab>", ">gv", "Indent Right")
 map("n", "<Tab>", ">>", "Indent Right")
