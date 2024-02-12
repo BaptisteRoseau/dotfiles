@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-require('baptiste.lazy')
-require('baptiste.core')
+require("baptiste.core")
+require("baptiste.lazy")

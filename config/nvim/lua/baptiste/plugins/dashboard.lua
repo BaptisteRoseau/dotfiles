@@ -19,21 +19,14 @@ return {
 						key = "f",
 					},
 					{
-						desc = " Apps",
-						group = "DiagnosticHint",
-						action = "Telescope app",
-						key = "a",
-					},
-					{
 						desc = " dotfiles",
 						group = "Number",
-						action = "Telescope dotfiles",
+						action = "chdir $HOME/.config/nvim/",
 						key = "d",
 					},
 				},
 			},
 		})
 	end,
-	priority = 100, --load last
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { "nvim-tree/nvim-web-devicons", "Mofiqul/vscode.nvim" },
 }

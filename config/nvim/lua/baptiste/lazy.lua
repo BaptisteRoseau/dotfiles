@@ -23,9 +23,3 @@ require("lazy").setup({
 		notify = false,
 	},
 })
-
--- Plugins requiring manual load
--- The order matters.
-require("vscode").load()
-require("lualine").setup({})
-require("neo-tree").setup({})

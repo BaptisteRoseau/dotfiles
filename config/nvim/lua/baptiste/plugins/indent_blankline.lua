@@ -17,7 +17,13 @@ return {
 				"TelescopePrompt",
 				"TelescopeResults",
 				"",
+				"dashboard",
 			},
 		},
+		whitespace = {
+			highlight = { "Whitespace" },
+			remove_blankline_trail = false,
+		},
+		scope = { enabled = false },
 	},
 }

@@ -35,12 +35,17 @@ return {
 			end
 		end
 
+		local dapui_toggle = function()
+			require("dapui").toggle()
+			close_nvim_ide_panels()
+		end
+
 		local dapui_open = function()
 			require("dapui").open()
 			close_nvim_ide_panels()
 		end
 
-		-- Adviced from nvim-dap-ui to automatically open/close
+		-- adviced from nvim-dap-ui to automatically open/close
 		-- during debugging session
 		local dap, dapui = require("dap"), require("dapui")
 		dap.listeners.before.attach.dapui_config = function()
@@ -113,7 +118,7 @@ return {
 			-- workspaces config
 			workspaces = {
 				-- which panels to open by default, one of: 'left', 'right', 'both', 'none'
-				auto_open = "left",
+				auto_open = "none",
 			},
 			-- default panel sizes for the different positions
 			panel_sizes = {
@@ -127,7 +132,8 @@ return {
 		local keymap = vim.keymap
 		keymap.set("n", "<leader>il", "<cmd>Workspace LeftPanelToggle<cr>", { desc = "[I]DE toggle [L]eft panel" })
 		keymap.set("n", "<leader>ir", "<cmd>Workspace RightPanelToggle<cr>", { desc = "[I]DE toggle [R]ight panel" })
-		keymap.set("n", "<leader>id", dapui_open, { desc = "[I]DE open [D]ebug Interface" })
+		keymap.set("n", "<leader>ir", "<cmd>Workspace BottomPanelToggle<cr>", { desc = "[I]DE toggle [B]ottom panel" })
+		keymap.set("n", "<leader>id", dapui_toggle, { desc = "[I]DE toggle [D]ebug Interface" })
 
 		require("which-key").register({
 			["<leader>i"] = { name = "[I]DE", _ = "which_key_ignore" },

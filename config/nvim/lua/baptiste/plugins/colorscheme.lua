@@ -1,5 +1,8 @@
 return {
 	"Mofiqul/vscode.nvim",
+	dependencies = {
+		"lukas-reineke/indent-blankline.nvim",
+	},
 	opts = {
 		transparent = true,
 		italic_comments = true,
@@ -14,13 +17,6 @@ return {
 		},
 	},
 	config = function()
-		require("ibl").setup({
-			whitespace = {
-				highlight = { "Whitespace" },
-				remove_blankline_trail = false,
-			},
-			scope = { enabled = false },
-		})
 		require("vscode").load()
 	end,
 }
