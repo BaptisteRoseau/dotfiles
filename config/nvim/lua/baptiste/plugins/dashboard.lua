@@ -21,7 +21,10 @@ return {
 					{
 						desc = " dotfiles",
 						group = "Number",
-						action = "chdir $HOME/.config/nvim/",
+						action = function ()
+							vim.cmd('chdir $HOME/.config/nvim/')
+							vim.cmd('SessionRestore')
+						end,
 						key = "d",
 					},
 				},

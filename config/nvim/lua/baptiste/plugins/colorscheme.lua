@@ -3,20 +3,22 @@ return {
 	dependencies = {
 		"lukas-reineke/indent-blankline.nvim",
 	},
-	opts = {
-		transparent = true,
-		italic_comments = true,
-		disable_nvimtree_bg = false,
-		color_overrides = {
-			-- See https://github.com/Mofiqul/vscode.nvim/blob/main/lua/vscode/colors.lua
-			-- vscFront = '#3D3D3D'
-		},
-		group_overrides = {
-			-- See https://github.com/Mofiqul/vscode.nvim/blob/main/lua/vscode/theme.lua
-			Comment = { fg = "#707070", bg = "NONE" },
-		},
-	},
+	opts = {},
 	config = function()
-		require("vscode").load()
+		local vscode = require("vscode")
+		vscode.setup({
+			transparent = false,
+			italic_comments = true,
+			disable_nvimtree_bg = true,
+			color_overrides = {
+				-- See https://github.com/Mofiqul/vscode.nvim/blob/main/lua/vscode/colors.lua
+				-- vscFront = '#3D3D3D'
+			},
+			group_overrides = {
+				-- See https://github.com/Mofiqul/vscode.nvim/blob/main/lua/vscode/theme.lua
+				Comment = { fg = "#606060", bg = "NONE" },
+			},
+		})
+		vscode.load()
 	end,
 }
