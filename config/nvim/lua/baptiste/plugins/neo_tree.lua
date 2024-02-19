@@ -8,10 +8,10 @@ return {
 	},
 	opts = {},
 	config = function()
-		vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-		vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-		vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
 		vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
+		vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+		vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+		vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
 
 		require("neo-tree").setup({
 			popup_border_style = "rounded",
@@ -63,7 +63,7 @@ return {
 			},
 			find_by_full_path_words = true,
 			follow_current_file = {
-				leave_dirs_open = false, -- This will find and focus the file in the active buffer every time
+				leave_dirs_open = true, -- This will find and focus the file in the active buffer every time
 				-- the current file is changed while the tree is open.
 				enabled = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
 			},

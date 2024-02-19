@@ -20,7 +20,6 @@ return {
 				proto = { "buf" },
 				python = { "isort", "black" },
 				ruby = { "standardrb" },
-				rust = { "rustfmt" },
 				scss = { { "prettierd", "prettier" } },
 				svelte = { { "prettierd", "prettier" } },
 				toml = { "taplo" },

@@ -57,6 +57,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.breakindent = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
+--
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
@@ -76,3 +77,4 @@ vim.glob.blamer_enabled = true
 
 -- Recommended settings for auto-session
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+

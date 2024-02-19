@@ -103,6 +103,7 @@ return {
 			panels = {
 				left = "explorer",
 				right = "git",
+				bottom = "diagnostics"
 			},
 			-- panels defined by groups of components, user is free to redefine the defaults
 			-- and/or add additional.
@@ -112,7 +113,7 @@ return {
 					outline.Name,
 					callhierarchy.Name,
 				},
-				terminal = { terminal.Name },
+				diagnostics = { callhierarchy.Name },
 				git = { changes.Name, commits.Name, timeline.Name, branches.Name },
 			},
 			-- workspaces config
@@ -132,7 +133,7 @@ return {
 		local keymap = vim.keymap
 		keymap.set("n", "<leader>il", "<cmd>Workspace LeftPanelToggle<cr>", { desc = "[I]DE toggle [L]eft panel" })
 		keymap.set("n", "<leader>ir", "<cmd>Workspace RightPanelToggle<cr>", { desc = "[I]DE toggle [R]ight panel" })
-		keymap.set("n", "<leader>ir", "<cmd>Workspace BottomPanelToggle<cr>", { desc = "[I]DE toggle [B]ottom panel" })
+		keymap.set("n", "<leader>ib", "<cmd>Workspace BottomPanelToggle<cr>", { desc = "[I]DE toggle [B]ottom panel" })
 		keymap.set("n", "<leader>id", dapui_toggle, { desc = "[I]DE toggle [D]ebug Interface" })
 
 		require("which-key").register({

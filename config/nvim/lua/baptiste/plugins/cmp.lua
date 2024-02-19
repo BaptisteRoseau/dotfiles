@@ -57,8 +57,10 @@ return {
 				end, { "i", "s" }),
 			}),
 			sources = {
-				{ name = "nvim_lsp" },
+				{ name = "buffer" },
+				{ name = "crates" },
 				{ name = "luasnip" },
+				{ name = "nvim_lsp" },
 				{ name = "path" },
 			},
 			formatting = {
