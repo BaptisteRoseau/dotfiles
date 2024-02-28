@@ -1,0 +1,195 @@
+live_config_reload = true
+
+[bell]
+animation = "EaseOutExpo"
+color = "0xffffff"
+duration = 0
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+# Colors (Blood Moon)
+
+# Default colors
+[colors.primary]
+background = '#10100E'
+foreground = '#C6C6C4'
+
+# Normal colors
+[colors.normal]
+black   = '#10100E'
+red     = '#C40233'
+green   = '#009F6B'
+yellow  = '#FFD700'
+blue    = '#0087BD'
+magenta = '#9A4EAE'
+cyan    = '#20B2AA'
+white   = '#C6C6C4'
+
+# Bright colors
+[colors.bright]
+black   = '#696969'
+red     = '#FF2400'
+green   = '#03C03C'
+yellow  = '#FDFF00'
+blue    = '#007FFF'
+magenta = '#FF1493'
+cyan    = '#00CCCC'
+white   = '#FFFAFA'
+
+[colors.cursor]
+cursor = "#FFFFFF"
+text = "#4D4D4D"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[debug]
+log_level = "OFF"
+persistent_logging = false
+print_events = false
+render_timer = false
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Medium"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Light Italic"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Light"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "Paste"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Copy"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ClearLogNotice"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\f"
+key = "L"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "PageUp"
+mode = "~Alt"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "PageDown"
+mode = "~Alt"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key = "Home"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "End"
+mode = "~Alt"
+mods = "Shift"
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[shell]
+program = "/usr/bin/bash"
+args = ["-c", "tmux", "new-session", "-A", "-s", "main"]
+
+[window]
+decorations = "Full"
+dynamic_padding = false
+opacity = 1.0
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 100
+lines = 85
+
+[window.padding]
+x = 0
+y = 0
