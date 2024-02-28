@@ -2,9 +2,9 @@ return {
     "mg979/vim-visual-multi",
     opts = {},
     config = function()
-        -- FIXME
-        -- See available mappings here:
         -- https://github.com/mg979/vim-visual-multi/wiki/Mappings#full-mappings-list
+        -- See available mappings here:
+        -- FIXME: Make the visual multi command remap actually work
         vim.g.VM_maps["Find Under"] = "<C-d>"
         vim.g.VM_maps["Find Subword Under"] = "<C-d>"
         vim.g.VM_maps["Select Cursor Down"] = "<C-S-Down>"
