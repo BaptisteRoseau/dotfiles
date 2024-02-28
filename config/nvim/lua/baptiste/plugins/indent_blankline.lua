@@ -1,7 +1,3 @@
-local highlight = {
-    "CursorColumn",
-}
-
 return {
     -- Add indentation guides even on blank lines
     "lukas-reineke/indent-blankline.nvim",
@@ -23,10 +19,6 @@ return {
                 "",
                 "dashboard",
             },
-        },
-        whitespace = {
-            highlight = highlight,
-            remove_blankline_trail = false,
         },
         scope = { enabled = false },
         indent = { char = "▏" },
