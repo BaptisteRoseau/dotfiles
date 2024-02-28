@@ -20,12 +20,8 @@ return {
 	opts = {},
 	config = function()
 		local on_attach = function(_, bufnr)
-			-- NOTE: Remember that lua is a real programming language, and as such it is possible
-			-- to define small helper and utility functions so you don't have to repeat yourself
-			-- many times.
-			--
-			-- In this case, we create a function that lets us more easily define mappings specific
-			-- for LSP related items. It sets the mode, buffer and description for us each time.
+			vim.lsp.inlay_hint.enable(bufnr, true)
+
 			local nmap = function(keys, func, desc)
 				vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
 			end
@@ -80,31 +76,15 @@ return {
 		require("mason-lspconfig").setup()
 
 		local servers = {
-			-- Python
 			ruff_lsp = { filetypes = { "py" } },
-
-			-- C
 			clangd = { filetypes = { "c", "h", "cpp", "hpp" } },
-
-			-- Bash
 			bashls = { filetypes = { "sh" } },
-
-			-- YAML
 			yamlls = { filetypes = { "yaml", "yml" } },
-
-			-- JSON
 			jsonls = { filetypes = { "json" } },
-
-			-- LaTeX
 			ltex = { filetypes = { "tex", "md" } },
-
-			-- HTML
 			html = { filetypes = { "html" } },
-
-			-- Docker
 			dockerls = { filetypes = { "Dockerfile" } },
-
-			-- Lua
+			sqlls = { filetypes = { "sql" } },
 			lua_ls = {
 				filetypes = { "lua" },
 				Lua = {
