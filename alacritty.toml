@@ -178,7 +178,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [shell]
 program = "/usr/bin/bash"
-args = ["-c", "tmux", "new-session", "-A", "-s", "main"]
+args = ["-c", "tmux new-session -A -s main"]
 
 [window]
 decorations = "Full"
