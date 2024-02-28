@@ -9,3 +9,7 @@
 config/Code/User/History/
 config/Code/User/globalStorage/
 config/Code/User/workspaceStorage/
+
+# Other
+.git
+.mypy_cache
