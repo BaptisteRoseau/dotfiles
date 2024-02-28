@@ -7,6 +7,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = "*",
 })
 
+-- Current Line
+vim.cmd.highlight({ "CursorLine", "guibg=#2C2C2C" })
+
 -- Blamer
 vim.cmd.highlight({ "Blamer", "guifg=#696969" })
 
