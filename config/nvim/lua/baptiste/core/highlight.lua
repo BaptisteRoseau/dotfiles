@@ -7,8 +7,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     pattern = "*",
 })
 
--- TODO: Have red/yellow/blue undercurl for diagnostics instead of current fg
-
 -- Current Line
 vim.cmd.highlight({ "CursorLine", "guibg=#292929" })
 

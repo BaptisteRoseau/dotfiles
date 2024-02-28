@@ -1,5 +1,8 @@
 live_config_reload = true
 
+[env]
+term = "alacritty"
+
 [bell]
 animation = "EaseOutExpo"
 color = "0xffffff"
