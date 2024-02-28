@@ -23,8 +23,5 @@ return {
 
         -- Force back indent_blanckline to display grey lines instead of white
         require("ibl").update({})
-        -- Avoid indent_blanckline to change cursor color on indented areas
-        vim.api.nvim_set_hl(0, "Cursor", { fg = "#FFFFFF" })
-        vim.cmd.highlight("Cursor", "guifg=black")
     end,
 }
