@@ -19,5 +19,5 @@ vim.api.nvim_set_hl(0, "DiagnosticWarnLn", { bg = "#3a3a1e" })
 vim.api.nvim_set_hl(0, "DiagnosticInfoLn", { bg = "#1e1e3a" })
 vim.api.nvim_set_hl(0, "DiagnosticHintLn", { bg = "#1e1e3a" })
 vim.diagnostic.config({
-    signs = { linehl = { "DiagnosticHintLn", "DiagnosticInfoLn", "DiagnosticWarnLn", "DiagnosticErrorLn" } },
+    signs = { linehl = { "DiagnosticErrorLn", "DiagnosticWarnLn", "DiagnosticInfoLn", "DiagnosticHintLn" } },
 })
