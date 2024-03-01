@@ -58,10 +58,11 @@ return {
             find_by_full_path_words = true,
             filesystem = {
                 hijack_netrw_behavior = "open_default", -- open_default, open_current, disabled
+                bind_to_cwd = true,
                 filtered_items = {
                     visible = true, -- when true, they will just be displayed differently than normal items
-                    force_visible_in_empty_folder = true, -- when true, shows hidden files if the root folder is otherwise empty
-                    show_hidden_count = true, -- when true, shows the number of hidden items in each folder as the last entry
+                    force_visible_in_empty_folder = true, -- when true, shows hidden files if the root folder is empty
+                    show_hidden_count = true, -- when true, shows the number of hidden items in each folder
                     hide_dotfiles = false,
                     hide_gitignored = false,
                 },
