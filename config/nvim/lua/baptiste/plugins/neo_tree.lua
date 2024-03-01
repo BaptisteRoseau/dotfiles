@@ -1,5 +1,6 @@
 return {
     "nvim-neo-tree/neo-tree.nvim",
+    priority = 40, -- Load before color scheme
     requires = {
         "ryanoasis/vim-devicons",
         "nvim-lua/plenary.nvim",
