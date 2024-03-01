@@ -15,11 +15,17 @@ return {
 
 		-- Additional lua configuration, makes nvim stuff amazing!
 		"folke/neodev.nvim",
+
+		-- Run diagnostics on all workspace once when an LSP server is attached
+		'artemave/workspace-diagnostics.nvim'
 	},
 	opts = {},
 	config = function()
-		local on_attach = function(_, bufnr)
+		local on_attach = function(client, bufnr)
 			vim.lsp.inlay_hint.enable(bufnr, true)
+
+			-- Run diagnostics on all workspace. This is actually ran only once.
+			require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
 
 			local nmap = function(keys, func, desc)
 				vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
@@ -29,6 +35,7 @@ return {
 			nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
 			nmap("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+			nmap("<F2>", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 			nmap("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 			nmap("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 			nmap("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
