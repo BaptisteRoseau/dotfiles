@@ -17,10 +17,8 @@ return {
         map("n", "<M-k>", "<Plug>GoNSMUp", {})
         map("n", "<M-l>", "<Plug>GoNSMRight", {})
 
-        map("n", "<M-Left>", "<Plug>GoNSMLeft", {})
         map("n", "<M-Down>", "<Plug>GoNSMDown", {})
         map("n", "<M-Up>", "<Plug>GoNSMUp", {})
-        map("n", "<M-Right>", "<Plug>GoNSMRight", {})
 
         map("x", "<M-j>", "<Plug>GoVSMDown", {})
         map("x", "<M-h>", "<Plug>GoVSMLeft", {})
