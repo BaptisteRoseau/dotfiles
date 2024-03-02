@@ -1,9 +1,19 @@
 {
-    "C_Cpp.updateChannel": "Insiders",
     "cmake.configureOnOpen": false,
+    "cSpell.enabled": true,
     "cSpell.enableFiletypes": [
         "plaintext"
     ],
+    "cSpell.userWords": [
+        "PYTHONPATH",
+        "venv",
+        "virtualenv"
+    ],
+    "dev.containers.dockerComposePath": "podman-compose",
+    "dev.containers.dockerPath": "podman",
+    "docker.composeCommand": "podman-compose",
+    "docker.dockerPath": "podman",
+    "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
     "editor.rulers": [
         80,
         120
@@ -25,38 +35,22 @@
         "${workspaceFolder}"
     ],
     "python.envFile": "${workspaceFolder}/.venv",
-    "python.linting.enabled": true,
-    "python.linting.pylintArgs": [
-        "--recursive=y src tst",
-        "--disable=missing-class-docstring",
-        "--disable=missing-function-docstring",
-        "--disable=c-extension-no-member",
-        "--disable=missing-module-docstring",
-        "--disable=broad-except",
-        "--disable=fixme",
-        "--disable=too-many-boolean-expressions",
-        "--good-names-rgxs=^[_a-z][_a-z0-9]?[_a-z0-9]?$",
-        "--max-line-length=120"
-    ],
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintUseMinimalCheckers": false,
     "python.venvFolders": [
         "${workspaceFolder}/.venv",
         "${workspaceFolder}/.virtualenv",
         "${workspaceFolder}/.env"
     ],
+    "redhat.telemetry.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.env.linux": {
         "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}"
     },
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
     "window.menuBarVisibility": "toggle",
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#35199b93"
-    },
-    "workbench.editorAssociations": [
-        {
-            "filenamePattern": "*.ipynb",
-            "viewType": "jupyter-notebook"
-        }
-    ]
+    }
 }
