@@ -3,7 +3,7 @@ return {
 	tag = "stable",
 	config = function()
 		require("crates").setup({
-			on_attach = function(bufnr)
+			on_attach = function(_)
 				local crates = require("crates")
 				vim.keymap.set("n", "<leader>cr", crates.reload, { desc = "[C]rates [R]eload" })
 

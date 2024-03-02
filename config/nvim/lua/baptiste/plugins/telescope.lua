@@ -65,8 +65,6 @@ return {
             end
         end
 
-        vim.api.nvim_create_user_command("LiveGrepGitRoot", live_grep_git_root, {})
-
         -- See `:help telescope.builtin`
         local keymap = vim.keymap
         keymap.set("n", "<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
@@ -91,7 +89,7 @@ return {
         keymap.set("n", "<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
         keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string, { desc = "[S]earch current [W]ord" })
         keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
-        keymap.set("n", "<leader>sG", ":LiveGrepGitRoot<cr>", { desc = "[S]earch by [G]rep on Git Root" })
+        keymap.set("n", "<leader>sG", live_grep_git_root, { desc = "[S]earch by [G]rep on Git Root" })
         keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
         keymap.set("n", "<leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
     end,

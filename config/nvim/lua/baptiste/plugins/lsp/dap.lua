@@ -3,10 +3,24 @@ return {
     dependencies = {
         "mfussenegger/nvim-dap",
         "folke/neodev.nvim",
+        "rcarriga/cmp-dap",
+        "hrsh7th/nvim-cmp",
     },
     opts = {},
     config = function()
         require("neodev").setup({ library = { plugins = { "nvim-dap-ui" }, types = true } })
+
+        -- cmp popup
+        require("cmp").setup({
+            enabled = function()
+                return require("cmp_dap").is_dap_buffer()
+            end,
+        })
+        require("cmp").setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
+            sources = {
+                { name = "dap" },
+            },
+        })
 
         -- Debugging icons
         local fn = vim.fn

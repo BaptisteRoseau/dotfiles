@@ -6,7 +6,6 @@ return {
 	},
 	config = function()
 		local lint = require("lint")
-		-- TODO: Run diagnostics on all non-ignored files at startup
 
 		lint.linters_by_ft = {
 			ansible = { "ansible_lint" },
@@ -35,7 +34,6 @@ return {
 			yaml = { "yamllint" },
 		}
 
-		-- TODO: Make cspell always enabled
 		local always_lint = { "cspell" }
 		local do_lint = function()
 			lint.try_lint()
