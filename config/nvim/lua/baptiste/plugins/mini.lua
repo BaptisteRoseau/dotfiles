@@ -12,8 +12,6 @@ end
 return {
     build("mini.align"),
     build("mini.comment"),
-    build("mini.completion"),
     build("mini.cursorword"),
     build("mini.jump"),
-    build("mini.map"),
 }
