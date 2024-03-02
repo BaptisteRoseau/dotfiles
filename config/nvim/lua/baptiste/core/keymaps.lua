@@ -21,6 +21,12 @@ map("n", "<leader>bn", "<cmd>e new<cr>", "[B]uffer [N]ew")
 map("n", "<leader>bv", "<cmd>vs new<cr>", "[B]uffer [V]ertical new")
 map("n", "<leader>bh", "<cmd>sp new<cr>", "[B]uffer [H]orizontal new")
 
+-- Navigating with insert mode
+map("i", "<C-h>", "<Left>", "Move cursor left")
+map("i", "<C-j>", "<Down>", "Move cursor down")
+map("i", "<C-k>", "<Up>", "Move cursor up")
+map("i", "<C-l>", "<Right>", "Move cursor right")
+
 -- Tabs Management
 map("n", "<C-t>", "<cmd>tabnew<cr>", "Create a new tab")
 

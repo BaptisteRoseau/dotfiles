@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.cmd.highlight({ "CursorLine", "guibg=#292929" })
 
 -- Current Word
-vim.cmd.highlight({ "MiniCursorWord", "guibg=#303030" })
+vim.cmd.highlight({ "MiniCursorWord", "guibg=#303030 cterm=NONE" })
 
 -- Blamer
 vim.cmd.highlight({ "Blamer", "guifg=#696969" })
