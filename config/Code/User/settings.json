@@ -1,39 +1,30 @@
 {
-    "editor.rulers": [80, 120],
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#35199b93"
-    },
-    "security.workspace.trust.untrustedFiles": "open",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "window.menuBarVisibility": "toggle",
-    "files.autoSave": "afterDelay",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter-notebook",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "C_Cpp.updateChannel": "Insiders",
+    "cmake.configureOnOpen": false,
     "cSpell.enableFiletypes": [
         "plaintext"
     ],
-    "C_Cpp.updateChannel": "Insiders",
-    "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}"
-    },
-    "cmake.configureOnOpen": false,
-    "python.autoComplete.extraPaths": [
-        "${workspaceFolder}/tst",
-        "${workspaceFolder}/src",
-        "${workspaceFolder}"
+    "editor.rulers": [
+        80,
+        120
     ],
+    "editor.tokenColorCustomizations": {
+        "comments": "#606060"
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "afterDelay",
     "python.analysis.extraPaths": [
         "${workspaceFolder}/tst",
         "${workspaceFolder}/src",
         "${workspaceFolder}"
     ],
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintUseMinimalCheckers": false,
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/tst",
+        "${workspaceFolder}/src",
+        "${workspaceFolder}"
+    ],
+    "python.envFile": "${workspaceFolder}/.venv",
     "python.linting.enabled": true,
     "python.linting.pylintArgs": [
         "--recursive=y src tst",
@@ -47,10 +38,25 @@
         "--good-names-rgxs=^[_a-z][_a-z0-9]?[_a-z0-9]?$",
         "--max-line-length=120"
     ],
-    "python.envFile": "${workspaceFolder}/.venv",
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintUseMinimalCheckers": false,
     "python.venvFolders": [
         "${workspaceFolder}/.venv",
         "${workspaceFolder}/.virtualenv",
         "${workspaceFolder}/.env"
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}"
+    },
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#35199b93"
+    },
+    "workbench.editorAssociations": [
+        {
+            "filenamePattern": "*.ipynb",
+            "viewType": "jupyter-notebook"
+        }
     ]
 }
