@@ -10,7 +10,7 @@ shopt -s histappend
 shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 case "$TERM" in
-xterm-color | *-256color) color_prompt=yes ;;
+xterm-color | *-256color | alacritty ) color_prompt=yes ;;
 esac
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
