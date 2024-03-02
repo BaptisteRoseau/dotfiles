@@ -48,10 +48,10 @@ tmux_conf_new_pane_reconnect_ssh=false
 #   - false
 #   - auto (default)
 #
-# automatic detection relies on the colorTERM environment variable being defined
+# automatic detection relies on the color TERM environment variable being defined
 # to 'truecolor' or '24bit' or '$ tput colors' answering '16777216'
 # see https://github.com/termstandard/colors
-tmux_conf_24b_color=auto
+tmux_conf_24b_color=false
 
 
 # -- theming -------------------------------------------------------------------
@@ -398,6 +398,13 @@ set -g status-position bottom
 
 # Enable native xterm scrolling
 set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+
+# Colorized Undercurl support
+set-option -gas terminal-overrides "*:Tc" # true color support
+set-option -gas terminal-overrides "*:RGB" # true color support
+set -as terminal-overrides ',xterm*:Tc:sitm=\E[3m'
+set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colors - needs tmux-3.0
 
 # -- tpm -----------------------------------------------------------------------
 
