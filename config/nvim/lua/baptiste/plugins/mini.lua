@@ -16,5 +16,4 @@ return {
     build("mini.cursorword"),
     build("mini.jump"),
     build("mini.map"),
-    build("mini.pairs"),
 }
