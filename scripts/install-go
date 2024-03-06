@@ -6,12 +6,14 @@ TEMP_BUILD_DIR=/tmp/neovim
 VERSION=1.22.1
 ARCH=amd64
 FILE="go${VERSION}.linux-${ARCH}.tar.gz"
-URL="https://dl.google.com/go/${FILE}"
+URL="https://go.dev/dl/${FILE}"
 
-curl -O "${URL}"
 rm -rf "${HOME}/.local/share/go"
+unlink "${HOME}/.local/bin/go" || echo "Skipping unlink"
+curl -LO "${URL}"
 mkdir -p "${HOME}/.local/share/"
 tar -C "${HOME}/.local/share" -xzf "${FILE}"
 ln -s "${HOME}/.local/share/go/bin/go" "${HOME}/.local/bin/go"
+rm "${FILE}"
 echo "Installed go version ${VERSION}"
 
