@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -xe
+set -e
 
 INSTALL_PREFIX="${HOME}/.local"
 TEMP_BUILD_DIR=/tmp/neovim
