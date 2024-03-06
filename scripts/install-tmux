@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -e
+
+VERSION="3.4"
+FILE="tmux-${VERSION}.tar.gz"
+URL="https://github.com/tmux/tmux/releases/download/${VERSION}/${FILE}"
+
+sudo apt install -y \
+    build-essential \
+    libevent-dev \
+    ncurses-dev \
+    pkg-config
+
+tar -zxf tmux-*.tar.gz
+cd tmux-*/
+./configure --prefix="${HOME}/.local"
+make && make install
+cd - >/dev/null
+rm -rf tmux*
+
+echo "Installed tmux"
+
