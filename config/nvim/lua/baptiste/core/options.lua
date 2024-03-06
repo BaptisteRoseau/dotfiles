@@ -1,5 +1,5 @@
 -- Format On Save
--- With autosave enabled, this actually becomes anoying
+-- With autosave enabled, this actually becomes annoying
 -- vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 
 -- ThePrimeagen
@@ -72,9 +72,8 @@ vim.opt.completeopt = "menuone,noselect"
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Enable blamer by defaut
+-- Enable blamer by default
 vim.glob.blamer_enabled = true
 
 -- Recommended settings for auto-session
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
