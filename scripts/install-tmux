@@ -11,6 +11,7 @@ sudo apt install -y \
     ncurses-dev \
     pkg-config
 
+curl -LO "${URL}"
 tar -zxf tmux-*.tar.gz
 cd tmux-*/
 ./configure --prefix="${HOME}/.local"
