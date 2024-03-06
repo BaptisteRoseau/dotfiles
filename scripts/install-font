@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+VERSION=3.1.1
+FONT=Hack
+FILE="${FONT}.tar.xz"
+URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v${VERSION}/${FILE}"
+DEST="${HOME}/.local/share/fonts/${FONT}/"
+
+curl -LO "${URL}"
+mkdir -p "${DEST}"
+tar -xf "${FILE}" -C "${DEST}"
+echo "Installed ${FONT} font into ${DEST}"
