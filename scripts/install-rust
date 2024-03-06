@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 set -e
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -q -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > /tmp/install_rust
+chmod +x /tmp/install_rust
+/tmp/install_rust -q -y
+rm /tmp/install_rust
 echo "Installed Rust"
 
