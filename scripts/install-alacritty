@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-INSTALL_PREFIX="${HOME}/.local"
 TEMP_BUILD_DIR=/tmp/alacritty
 VERSION="alacritty_terminal_v0.22.0"
 GIT_URL="https://github.com/alacritty/alacritty.git"
