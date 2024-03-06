@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# The order matters but no need to write a dependency manager yet
+"${SCRIPT_DIR}/install-rust"
+"${SCRIPT_DIR}/install-go"
+"${SCRIPT_DIR}/install-font"
+"${SCRIPT_DIR}/install-vscode"
+"${SCRIPT_DIR}/install-neovim"
+"${SCRIPT_DIR}/install-alacritty"
+"${SCRIPT_DIR}/install-tmux"
+
