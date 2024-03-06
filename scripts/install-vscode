@@ -32,6 +32,7 @@ EXTENSIONS=(
     mtxr.sqltools
     redhat.vscode-yaml
     rust-lang.rust-analyzer
+    serayuzgur.crates
     streetsidesoftware.code-spell-checker
     tamasfe.even-better-toml
     twxs.cmake
