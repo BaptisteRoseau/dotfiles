@@ -67,7 +67,6 @@ return {
 
         -- See `:help telescope.builtin`
         local keymap = vim.keymap
-        keymap.set("n", "<leader>?", require("telescope.builtin").oldfiles, { desc = "[?] Find recently opened files" })
         keymap.set("n", "<leader><space>", require("telescope.builtin").buffers, { desc = "[ ] Find existing buffers" })
         keymap.set("n", "<leader>/", function()
             -- You can pass additional configuration to telescope to change theme, layout, etc.
@@ -91,6 +90,6 @@ return {
         keymap.set("n", "<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
         keymap.set("n", "<leader>sG", live_grep_git_root, { desc = "[S]earch by [G]rep on Git Root" })
         keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, { desc = "[S]earch [D]iagnostics" })
-        keymap.set("n", "<leader>sr", require("telescope.builtin").resume, { desc = "[S]earch [R]esume" })
+        keymap.set("n", "<leader>sr", require("telescope.builtin").oldfiles, { desc = "[S]earch [R]ecent" })
     end,
 }
