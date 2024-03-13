@@ -3,22 +3,31 @@
   "language": "en",
   "version": "0.2",
   "words": [
+    "FIXIT",
     "Neovim",
+    "OPTIM",
     "Pocco",
     "augroup",
     "autocmd",
     "cssls",
     "davidmh",
+    "earch",
+    "fnamemodify",
+    "folke",
+    "getcwd",
     "keymap",
     "lspconfig",
     "mypy",
     "nvim",
     "nvimtools",
+    "oldfiles",
     "oogle",
     "prismals",
     "pyright",
+    "systemlist",
     "tailwindcss",
     "utosave",
-    "williamboman"
+    "williamboman",
+    "winblend"
   ]
 }
