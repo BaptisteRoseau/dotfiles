@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- TODO: Autofill "replace" and find a workspace query-replace
--- TODO: Fix cspell enabled globally & add user/workspace dictionaries
+-- TODO: Add cspell user/workspace dictionaries
 -- TODO: Fix <C-S-;> and <C-S-;> shortcuts
 -- TODO: Add auto function-documentation plugin
 -- TODO: Highlight current visual selection background as in VSCode
