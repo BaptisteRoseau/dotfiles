@@ -6,10 +6,25 @@ return {
     },
     config = function()
         local cspell = require("cspell")
+        local config = {
+            config_file_preferred_name = ".cspell.json",
+            on_add_to_json = function(payload)
+                -- Format json as human readable
+                os.execute(
+                    string.format(
+                        "command -v jq &>/dev/null && (jq -S '.words |= sort' %s > %s.tmp && mv -f %s.tmp %s)",
+                        payload.cspell_config_path,
+                        payload.cspell_config_path,
+                        payload.cspell_config_path,
+                        payload.cspell_config_path
+                    )
+                )
+            end,
+        }
         require("null-ls").setup({
             sources = {
-                cspell.diagnostics,
-                cspell.code_actions,
+                cspell.diagnostics.with({ config = config, fallback_severity = vim.diagnostic.severity.INFO }),
+                cspell.code_actions.with({ config = config }),
             },
         })
     end,

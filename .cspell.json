@@ -1,0 +1,24 @@
+{
+  "flagWords": [],
+  "language": "en",
+  "version": "0.2",
+  "words": [
+    "Neovim",
+    "Pocco",
+    "augroup",
+    "autocmd",
+    "cssls",
+    "davidmh",
+    "keymap",
+    "lspconfig",
+    "mypy",
+    "nvim",
+    "nvimtools",
+    "oogle",
+    "prismals",
+    "pyright",
+    "tailwindcss",
+    "utosave",
+    "williamboman"
+  ]
+}
