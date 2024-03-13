@@ -99,6 +99,12 @@ return {
                     },
                 },
             },
+            -- Enable shortcuts starting with <space> when focusing on neotree window
+            window = {
+                mappings = {
+                    ["<space>"] = false,
+                },
+            },
         })
 
         local keymap = vim.keymap
