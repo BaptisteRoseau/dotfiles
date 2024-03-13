@@ -34,7 +34,8 @@ return {
             yaml = { "yamllint" },
         }
 
-        local always_lint = { "cspell" }
+        -- Add linters you want to be executed to every file here.
+        local always_lint = {}
         for _, linter_name in pairs(always_lint) do
             for language, _ in pairs(lint.linters_by_ft) do
                 table.insert(lint.linters_by_ft[language], linter_name)
@@ -43,7 +44,8 @@ return {
 
         local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
-        vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+        -- No need to add another event when autosave is enabled
+        vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
             group = lint_augroup,
             callback = function()
                 lint.try_lint()
