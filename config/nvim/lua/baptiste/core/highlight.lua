@@ -13,9 +13,6 @@ vim.cmd.highlight({ "CursorLine", "guibg=#292929" })
 -- Current Word
 vim.cmd.highlight({ "MiniCursorWord", "guibg=#373737 cterm=NONE gui=NONE" })
 
--- Blamer
-vim.cmd.highlight({ "Blamer", "guifg=#696969" })
-
 -- Diagnostics line background
 vim.api.nvim_set_hl(0, "DiagnosticErrorLn", { bg = "#3a1e1e" })
 vim.api.nvim_set_hl(0, "DiagnosticWarnLn", { bg = "#3a3a1e" })
