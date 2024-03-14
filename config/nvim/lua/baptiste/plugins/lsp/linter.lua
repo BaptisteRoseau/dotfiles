@@ -7,35 +7,29 @@ return {
     config = function()
         local lint = require("lint")
 
+        -- Add linters you want to be executed to every file here.
+        local always_lint = {}
+
         lint.linters_by_ft = {
-            ansible = { "ansible_lint" },
+            ansible = { "ansible-lint" },
             bash = { "shellcheck" },
-            c = { "clangtidy" },
             clojure = { "clj-kondo" },
             cmake = { "cmakelint" },
-            cpp = { "cppcheck" },
             dockerfile = { "hadolint" },
-            html = { "tidy" },
-            inko = { "inko" },
-            janet = { "janet" },
+            html = { "eslint_d" },
             javascript = { "eslint_d" },
             javascriptreact = { "eslint_d" },
             json = { "jsonlint" },
             lua = { "luacheck" },
             markdown = { "mardownlint" },
             python = { "pylint", "ruff", "mypy" },
-            rst = { "vale" },
-            ruby = { "ruby" },
             svelte = { "eslint_d" },
             terraform = { "tflint" },
-            text = { "vale" },
             typescript = { "eslint_d" },
             typescriptreact = { "eslint_d" },
             yaml = { "yamllint" },
         }
 
-        -- Add linters you want to be executed to every file here.
-        local always_lint = {}
         for _, linter_name in pairs(always_lint) do
             for language, _ in pairs(lint.linters_by_ft) do
                 table.insert(lint.linters_by_ft[language], linter_name)

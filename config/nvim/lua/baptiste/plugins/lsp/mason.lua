@@ -23,16 +23,16 @@ return {
         -- LSP
         mason_lspconfig.setup({
             ensure_installed = {
-                "tsserver",
-                "html",
                 "cssls",
-                "tailwindcss",
-                "svelte",
-                "lua_ls",
-                "graphql",
                 "emmet_ls",
+                "graphql",
+                "html",
+                "lua_ls",
                 "prismals",
                 "pyright",
+                "svelte",
+                "tailwindcss",
+                "tsserver",
             },
             -- auto-install configured servers (with lspconfig)
             automatic_installation = true, -- not the same as ensure_installed
@@ -41,32 +41,41 @@ return {
         -- DAP, Formatters, Linters
         -- Requires:
         --      nodejs 21+
-        --      gem 3.3+
         --      python 3.10+
         mason_tool_installer.setup({
             ensure_installed = {
+                -- linters
                 "ansible-lint",
-                "bash-debug-adapter",
-                "black",
                 "clj-kondo",
                 "cmakelint",
                 "cspell",
                 "eslint_d",
-                "firefox-debug-adapter",
-                "go-debug-adapter",
                 "hadolint",
-                "isort",
                 "jsonlint",
                 "luacheck",
                 "markdownlint",
                 "mypy",
-                "prettier",
                 "pylint",
                 "ruff",
                 "shellcheck",
-                "stylua",
                 "tflint",
                 "yamllint",
+                -- formatters
+                "black",
+                "beautysh",
+                "isort",
+                "prettier",
+                "prettierd",
+                "htmlbeautifier",
+                "google-java-format",
+                "ktlint",
+                "buf",
+                "yamlfix",
+                "stylua",
+                -- DAP
+                "bash-debug-adapter",
+                "firefox-debug-adapter",
+                "go-debug-adapter",
             },
         })
     end,
