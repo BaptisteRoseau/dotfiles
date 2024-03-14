@@ -13,8 +13,7 @@ map("n", "j", "v:count == 0 ? 'gj' : 'j'", "", { expr = true, silent = true })
 -- Diagnostic keymaps
 map("n", "[d", vim.diagnostic.goto_prev, "Go to previous diagnostic message")
 map("n", "]d", vim.diagnostic.goto_next, "Go to next diagnostic message")
-map("n", "<leader>e", vim.diagnostic.open_float, "Open floating diagnostic message")
-map("n", "<leader>q", vim.diagnostic.setloclist, "Open diagnostics list")
+map("n", "<leader>cd", vim.diagnostic.open_float, "[C]ode [D]iagnostic window")
 
 -- New buffers
 map("n", "<leader>bn", "<cmd>e new<cr>", "[B]uffer [N]ew")
@@ -39,3 +38,25 @@ map("v", "<Tab>", ">gv", "Indent Right")
 map("n", "<Tab>", ">>", "Indent Right")
 map("v", "<S-Tab>", "<gv", "Indent Left")
 map("n", "<S-Tab>", "<<", "Indent Left")
+
+-- Quick quit
+map("n", "<C-M-q>", "<cmd>qa<cr>", "Quick Quit")
+map("n", "<C-M-S-q>", "<cmd>qa!<cr>", "Quick Quit Force Force")
+
+-- File path and name copy utils
+local function get_path(mods)
+    ---@diagnostic disable-next-line: param-type-mismatch
+    return vim.fn.fnamemodify(vim.fn.expand("%"), mods)
+end
+
+map("n", "<leader>dp", function()
+    vim.fn.setreg("+", (get_path(":.")))
+end, "[D]ocument [P]ath (rel)")
+
+map("n", "<leader>dP", function()
+    vim.fn.setreg("+", (get_path(":p")))
+end, "[D]ocument [P]ath (abs)")
+
+map("n", "<leader>df", function()
+    vim.fn.setreg("+", (get_path(":t")))
+end, "[D]ocument [F]ilename")
