@@ -8,7 +8,7 @@ vim.g.maplocalleader = " "
 -- TODO: Highlight current visual selection background as in VSCode
 -- TODO: Pay for Copilot and add extension:
 -- TODO: Populate workspace diagnostics linters
--- FIX: fix cspell diagnostics severity
+-- FIX: fix cspell diagnostics severity or write new plugin
 
 -- When opening a directory with `nvim /path/to/directory`,
 -- make CWD to be that directory. This fixes

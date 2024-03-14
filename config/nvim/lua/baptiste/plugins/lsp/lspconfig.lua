@@ -18,6 +18,7 @@ return {
 
         -- Run diagnostics on all workspace once when an LSP server is attached
         "artemave/workspace-diagnostics.nvim",
+
     },
     opts = {},
     config = function()
@@ -81,15 +82,15 @@ return {
         require("mason-lspconfig").setup()
 
         local servers = {
-            ruff_lsp = { filetypes = { "py" } },
-            clangd = { filetypes = { "c", "h", "cpp", "hpp" } },
             bashls = { filetypes = { "sh" } },
-            yamlls = { filetypes = { "yaml", "yml" } },
+            clangd = { filetypes = { "c", "h", "cpp", "hpp" } },
+            dockerls = { filetypes = { "Dockerfile" } },
+            html = { filetypes = { "html" } },
             jsonls = { filetypes = { "json" } },
             ltex = { filetypes = { "tex", "md" } },
-            html = { filetypes = { "html" } },
-            dockerls = { filetypes = { "Dockerfile" } },
+            ruff_lsp = { filetypes = { "py" } },
             sqlls = { filetypes = { "sql" } },
+            yamlls = { filetypes = { "yaml", "yml" } },
             lua_ls = {
                 filetypes = { "lua" },
                 Lua = {

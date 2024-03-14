@@ -1,12 +1,12 @@
 -- Format On Save
 -- With autosave enabled, this actually becomes annoying
+-- TODO: Be able to toggle this functionality
 -- vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 
 -- ThePrimeagen
 vim.opt.nu = true
 vim.opt.relativenumber = false
 
--- Tabs configuration
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -57,7 +57,6 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.breakindent = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
---
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
@@ -77,3 +76,16 @@ vim.glob.blamer_enabled = true
 
 -- Recommended settings for auto-session
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- Attempt to enable opening URL and files using gx
+vim.glob.netrw_browsex_viewer = "open"
+vim.glob.netrw_mousemaps = 1
+
+-- Auto reload on dirty
+vim.opt.autoread = true
+vim.opt.autowrite = true
+
+vim.diagnostic.config({
+    float = true,
+    severity_sort = true,
+})

@@ -11,7 +11,7 @@ return {
         local always_lint = {}
 
         lint.linters_by_ft = {
-            ansible = { "ansible-lint" },
+            ansible = { "ansible-lint", "yamllint" },
             bash = { "shellcheck" },
             clojure = { "clj-kondo" },
             cmake = { "cmakelint" },
@@ -21,7 +21,7 @@ return {
             javascriptreact = { "eslint_d" },
             json = { "jsonlint" },
             lua = { "luacheck" },
-            markdown = { "mardownlint" },
+            markdown = { "markdownlint" },
             python = { "pylint", "ruff", "mypy" },
             svelte = { "eslint_d" },
             terraform = { "tflint" },

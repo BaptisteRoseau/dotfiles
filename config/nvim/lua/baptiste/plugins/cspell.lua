@@ -23,7 +23,7 @@ return {
         }
         require("null-ls").setup({
             sources = {
-                cspell.diagnostics.with({ config = config, fallback_severity = vim.diagnostic.severity.INFO }),
+                cspell.diagnostics.with({ config = config }),
                 cspell.code_actions.with({ config = config }),
             },
         })

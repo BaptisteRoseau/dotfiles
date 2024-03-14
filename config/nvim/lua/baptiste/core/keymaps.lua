@@ -30,8 +30,8 @@ map("i", "<C-l>", "<Right>", "Move cursor right")
 map("n", "<C-t>", "<cmd>tabnew<cr>", "Create a new tab")
 
 -- VSCode commenting shortcuts
-map("n", "<C-S-:>", "gcc", "Comment line")
-map("x", "<C-S-:>", "gc", "Comment area")
+map("n", "<C-S-.>", "gcc", "Comment line")
+map("x", "<C-S-.>", "gc", "Comment area")
 
 -- Indent In Normal and Visual Mode
 map("v", "<Tab>", ">gv", "Indent Right")

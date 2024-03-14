@@ -20,9 +20,13 @@ return {
             },
         })
 
-        -- LSP
-        mason_lspconfig.setup({
+        -- DAP, Formatters, Linters
+        -- Requires:
+        --      nodejs 21+
+        --      python 3.10+
+        mason_tool_installer.setup({
             ensure_installed = {
+                -- LSP
                 "cssls",
                 "emmet_ls",
                 "graphql",
@@ -34,17 +38,6 @@ return {
                 "svelte",
                 "tailwindcss",
                 "tsserver",
-            },
-            -- auto-install configured servers (with lspconfig)
-            automatic_installation = true, -- not the same as ensure_installed
-        })
-
-        -- DAP, Formatters, Linters
-        -- Requires:
-        --      nodejs 21+
-        --      python 3.10+
-        mason_tool_installer.setup({
-            ensure_installed = {
                 -- linters
                 "ansible-lint",
                 "clj-kondo",
@@ -77,7 +70,10 @@ return {
                 -- DAP
                 "bash-debug-adapter",
                 "cpptools",
+                "codelldb",
+                "debugpy",
                 "firefox-debug-adapter",
+                "js-debug-adapter",
                 "go-debug-adapter",
             },
         })
