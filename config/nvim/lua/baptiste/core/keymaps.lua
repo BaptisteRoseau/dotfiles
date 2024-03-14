@@ -16,9 +16,9 @@ map("n", "]d", vim.diagnostic.goto_next, "Go to next diagnostic message")
 map("n", "<leader>cd", vim.diagnostic.open_float, "[C]ode [D]iagnostic window")
 
 -- New buffers
-map("n", "<leader>bn", "<cmd>e new<cr>", "[B]uffer [N]ew")
-map("n", "<leader>bv", "<cmd>vs new<cr>", "[B]uffer [V]ertical new")
-map("n", "<leader>bh", "<cmd>sp new<cr>", "[B]uffer [H]orizontal new")
+map("n", "<leader>bn", "<cmd>enew<cr>", "[B]uffer [N]ew")
+map("n", "<leader>bv", "<cmd>vnew<cr>", "[B]uffer [V]ertical new")
+map("n", "<leader>bh", "<cmd>new<cr>", "[B]uffer [H]orizontal new")
 
 -- Navigating with insert mode
 map("i", "<C-h>", "<Left>", "Move cursor left")
@@ -41,7 +41,7 @@ map("n", "<S-Tab>", "<<", "Indent Left")
 
 -- Quick quit
 map("n", "<C-M-q>", "<cmd>qa<cr>", "Quick Quit")
-map("n", "<C-M-S-q>", "<cmd>qa!<cr>", "Quick Quit Force Force")
+map("n", "<C-M-Q>", "<cmd>qa!<cr>", "Quick Quit Force Force")
 
 -- File path and name copy utils
 local function get_path(mods)
