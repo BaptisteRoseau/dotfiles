@@ -66,8 +66,8 @@ return {
                 { name = "nvim_lsp" },
                 { name = "path" },
                 { name = "nvim_lua" },
-                { name = 'nvim_lsp_signature_help' },
-                { name = 'nvim_lsp_document_symbol' }
+                { name = "nvim_lsp_signature_help" },
+                { name = "nvim_lsp_document_symbol" },
             },
             formatting = {
                 format = lspkind.cmp_format({
@@ -77,6 +77,17 @@ return {
                     ellipsis_char = "...",
                     show_labelDetails = true,
                 }),
+            },
+            sorting = {
+                comparators = {
+                    cmp.exact,
+                    cmp.recently_used,
+                    cmp.kind,
+                    cmp.locality,
+                    cmp.sort_text,
+                    cmp.length,
+                    cmp.order,
+                },
             },
         })
     end,
