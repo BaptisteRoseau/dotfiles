@@ -466,8 +466,8 @@ set -g @cpu_high_thresh "90"
 
 set -g @cpu_temp_format "%2.0f"
 set -g @cpu_temp_unit "C" # supports C & F
-set -g @cpu_temp_medium_thresh "65"
-set -g @cpu_temp_high_thresh "85"
+set -g @cpu_temp_medium_thresh "60"
+set -g @cpu_temp_high_thresh "75"
 
 set -g @cpu_temp_low_icon ""
 set -g @cpu_temp_medium_icon "🥵"
@@ -501,8 +501,8 @@ set -g @gpu_high_thresh "90"
 
 set -g @gpu_temp_format "%2.0f"
 set -g @gpu_temp_unit "C" # supports C & F
-set -g @gpu_temp_medium_thresh "65"
-set -g @gpu_temp_high_thresh "85"
+set -g @gpu_temp_medium_thresh "60"
+set -g @gpu_temp_high_thresh "80"
 
 set -g @gpu_temp_low_icon ""
 set -g @gpu_temp_medium_icon "🥵"
