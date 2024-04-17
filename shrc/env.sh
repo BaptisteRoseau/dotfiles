@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 # Custom Tools
-export PATH="$PATH:$HOME/.bin"
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/lib:$PATH"
 
 # Modules
 export MODULES_ROOT=/opt/Modules
@@ -14,3 +16,9 @@ export MODULEPATH=$MODULES_ROOT/modulefiles
 export PODMAN_DESKTOP_ROOT=/opt/podman-desktop/1.7.1
 export PATH="$PATH:$PODMAN_DESKTOP_ROOT"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$PODMAN_DESKTOP_ROOT"
+
+# Neovim
+NVIM_ROOT="/opt/nvim"
+export PATH="$PATH:$NVIM_ROOT/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$NVIM_ROOT/lib"
+export MANPATH="$MANPATH:$NVIM_ROOT/man"
