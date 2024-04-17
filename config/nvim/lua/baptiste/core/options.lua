@@ -72,14 +72,14 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- Enable blamer by default
-vim.glob.blamer_enabled = true
+vim.g.blamer_enabled = true
 
 -- Recommended settings for auto-session
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Attempt to enable opening URL and files using gx
-vim.glob.netrw_browsex_viewer = "open"
-vim.glob.netrw_mousemaps = 1
+vim.g.netrw_browsex_viewer = "open"
+vim.g.netrw_mousemaps = 1
 
 -- Auto reload on dirty
 vim.opt.autoread = true

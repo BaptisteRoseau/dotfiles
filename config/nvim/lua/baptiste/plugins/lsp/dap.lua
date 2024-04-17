@@ -3,6 +3,7 @@ return {
     dependencies = {
         "mfussenegger/nvim-dap",
         "folke/neodev.nvim",
+        "nvim-neotest/nvim-nio",
         "rcarriga/cmp-dap",
         "hrsh7th/nvim-cmp",
         "mfussenegger/nvim-dap-python",
