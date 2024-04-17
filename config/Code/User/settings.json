@@ -5,6 +5,7 @@
         "plaintext"
     ],
     "cSpell.userWords": [
+        "oneshot",
         "PYTHONPATH",
         "venv",
         "virtualenv"
@@ -52,5 +53,9 @@
     "window.menuBarVisibility": "toggle",
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#35199b93"
+    },
+    "cmake.showOptionsMovedNotification": false,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     }
 }

@@ -5,6 +5,7 @@ return {
         "folke/neodev.nvim",
         "rcarriga/cmp-dap",
         "hrsh7th/nvim-cmp",
+        "mfussenegger/nvim-dap-python",
     },
     opts = {},
     config = function()
@@ -18,6 +19,7 @@ return {
                 { name = "dap" },
             },
         })
+
         -- Debugging icons
         local fn = vim.fn
         fn.sign_define("DapBreakpoint", { text = "🔴", texthl = "", linehl = "", numhl = "" })
@@ -35,5 +37,14 @@ return {
         keymap.set("n", "<F12>", dap.step_out)
         keymap.set("n", "<leader>ib", dap.toggle_breakpoint, { desc = "[I]DE toggle [B]reakpoint" })
         keymap.set("n", "<leader>id", dapui.toggle, { desc = "[I]DE toggle [D]ebug Interface" })
+
+        dap.adapters.codelldb = {
+            type = "server",
+            port = "${port}",
+            executable = {
+                command = "codelldb",
+                args = { "--port", "${port}" },
+            },
+        }
     end,
 }

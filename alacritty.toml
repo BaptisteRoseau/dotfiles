@@ -8,6 +8,15 @@ animation = "EaseOutExpo"
 color = "0xffffff"
 duration = 0
 
+[[hints.enabled]]
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+mouse.mods = "Control"
+binding = { key = "U", mods = "Control|Shift" }
+
 [colors]
 draw_bold_text_with_bright_colors = false
 
@@ -111,11 +120,6 @@ mods = "Control"
 action = "DecreaseFontSize"
 key = "Minus"
 mods = "Control"
-
-[[keyboard.bindings]]
-action = "ToggleFullscreen"
-key = "F11"
-mods = "None"
 
 [[keyboard.bindings]]
 action = "Paste"
