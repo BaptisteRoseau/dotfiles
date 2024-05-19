@@ -5,8 +5,12 @@
         "plaintext"
     ],
     "cSpell.userWords": [
+        "Addrs",
+        "onclick",
         "oneshot",
+        "paypal",
         "PYTHONPATH",
+        "tailwindcss",
         "venv",
         "virtualenv"
     ],
@@ -48,7 +52,8 @@
     },
     "vs-kubernetes": {
         "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
-        "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+        "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vs-kubernetes.minikube-show-information-expiration": "2024-05-22T14:08:18.787Z"
     },
     "window.menuBarVisibility": "toggle",
     "workbench.colorCustomizations": {
@@ -57,5 +62,50 @@
     "cmake.showOptionsMovedNotification": false,
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    }
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.includeLanguages": {
+        "rust": "html"
+    },
+    "[tailwindCSS]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "errorLens.lintFilePaths": {
+        "tailwindCSS": [
+            "**/*.tailwind.config.{cjs,js,json,yaml,yml}",
+            "**/*package.json",
+            "**/*.css"
+        ],
+        "eslint": [
+            "**/*.eslintrc.{js,cjs,yaml,yml,json}",
+            "**/*package.json"
+        ],
+        "Stylelint": [
+            "**/*.stylelintrc",
+            "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
+            "**/*stylelint.config.{cjs,js}",
+            "**/*package.json"
+        ]
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
 }

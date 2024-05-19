@@ -9,6 +9,7 @@
 config/Code/User/History/
 config/Code/User/globalStorage/
 config/Code/User/workspaceStorage/
+config/Code/User/sync/
 
 # Other
 .git
