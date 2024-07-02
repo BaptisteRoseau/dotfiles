@@ -108,4 +108,8 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
+    "powermode.enabled": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }

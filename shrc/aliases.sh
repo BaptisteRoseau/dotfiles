@@ -8,3 +8,4 @@ alias mkdir='mkdir -p'
 alias sts='git status'
 alias fixmouse='sudo /root/scripts/unplug_and_replug_mouse.sh'
 alias pyvenv='python3 -m venv .venv && source .venv/bin/activate'
+eval "$(zoxide init --cmd "cd" bash)"
