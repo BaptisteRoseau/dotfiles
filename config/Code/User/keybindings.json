@@ -64,5 +64,10 @@
         "key": "ctrl+shift+i",
         "command": "-codeium.openCodeiumCommand",
         "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible && !editorReadonly"
     }
 ]

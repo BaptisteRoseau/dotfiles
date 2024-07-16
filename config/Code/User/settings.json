@@ -53,7 +53,7 @@
     "vs-kubernetes": {
         "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
         "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.minikube-show-information-expiration": "2024-05-22T14:08:18.787Z"
+        "vs-kubernetes.minikube-show-information-expiration": "2024-12-30T12:40:28.366Z"
     },
     "window.menuBarVisibility": "toggle",
     "workbench.colorCustomizations": {
@@ -88,7 +88,8 @@
         ]
     },
     "files.associations": {
-        "*.css": "tailwindcss"
+        "*.css": "tailwindcss",
+        "*.twig": "html"
     },
     "editor.quickSuggestions": {
         "strings": "on"
@@ -112,4 +113,7 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "workbench.startupEditor": "none",
+    "git.openRepositoryInParentFolders": "never",
+    "liveServer.settings.donotShowInfoMsg": true,
 }
