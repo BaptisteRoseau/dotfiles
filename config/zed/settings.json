@@ -30,14 +30,6 @@
         "light": "One Light",
         "dark": "Custom VSCode Dark Modern"
     },
-    "experimental.theme_overrides": {
-        "syntax": {
-            "comment": {
-                "color": "#606060",
-                "font_style": "italic"
-            }
-        }
-    },
     "show_wrap_guides": true,
     "wrap_guides": [80, 120],
     "buffer_font_family": "Hack Nerd Font",
@@ -71,10 +63,10 @@
     "use_autoclose": true,
     "tab_size": 4,
     "languages": {
-        "JSON": {
+        "json": {
             "tab_size": 2
         },
-        "YAML": {
+        "yaml": {
             "tab_size": 2
         }
     },
