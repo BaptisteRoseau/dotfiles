@@ -1,0 +1,110 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+    "features": {
+        "inline_completion_provider": "none"
+    },
+    "assistant": {
+        "default_model": {
+            "provider": "ollama",
+            "model": "deepseek-coder-v2:latest"
+        },
+        "version": "2"
+    },
+    "autosave": {
+        "after_delay": {
+            "milliseconds": 1000
+        }
+    },
+    "vim_mode": true,
+    "ui_font_size": 16,
+    "buffer_font_size": 16,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Custom VSCode Dark Modern"
+    },
+    "experimental.theme_overrides": {
+        "syntax": {
+            "comment": {
+                "color": "#606060",
+                "font_style": "italic"
+            }
+        }
+    },
+    "show_wrap_guides": true,
+    "wrap_guides": [80, 120],
+    "buffer_font_family": "Hack Nerd Font",
+    "git": {
+        "inline_blame": {
+            "enabled": true
+        }
+    },
+    "inlay_hints": {
+        "enabled": true
+    },
+    "inline_completions": {
+        "disabled_globs": [".env", ".pyc", ".venv"]
+    },
+    "tabs": {
+        "close_position": "right",
+        "file_icons": true,
+        "git_status": true
+    },
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "check": {
+                    "command": "clippy"
+                }
+            }
+        }
+    },
+    "hour_format": "hour24",
+    "format_on_save": "on",
+    "use_autoclose": true,
+    "tab_size": 4,
+    "languages": {
+        "JSON": {
+            "tab_size": 2
+        },
+        "YAML": {
+            "tab_size": 2
+        }
+    },
+    "language_models": {
+        "enabled": true,
+        "version": "2",
+        "default_model": {
+            "provider": "ollama",
+            "model": "deepseek-coder-v2:latest"
+        },
+        "ollama": {
+            "api_url": "http://localhost:11434",
+            "low_speed_timeout_in_seconds": 120,
+            "available_models": [
+                {
+                    "provider": "ollama",
+                    "name": "deepseek-coder-v2:latest",
+                    "max_tokens": 16384
+                },
+                {
+                    "provider": "ollama",
+                    "name": "llama3.1:8b",
+                    "max_tokens": 16384
+                },
+                {
+                    "provider": "ollama",
+                    "name": "codestral:22b",
+                    "max_tokens": 16384
+                }
+            ]
+        }
+    }
+}
