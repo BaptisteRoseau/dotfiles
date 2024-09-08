@@ -13,6 +13,8 @@
             "ctrl-alt-b": "workspace::ToggleRightDock",
             "ctrl-b": "workspace::ToggleLeftDock",
             "ctrl-a": "editor::SelectAll",
+            "ctrl-o": "workspace::Open",
+            "ctrl-i": null,
             "ctrl-shift-f": "pane::DeploySearch",
             "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }]
         }
@@ -65,7 +67,9 @@
         "context": "Pane",
         "bindings": {
             "alt-left": "pane::GoBack",
-            "alt-right": "pane::GoForward"
+            "alt-right": "pane::GoForward",
+            "alt-h": "pane::GoBack",
+            "alt-l": "pane::GoForward"
         }
     }
 ]
