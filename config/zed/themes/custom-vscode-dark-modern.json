@@ -244,12 +244,12 @@
                         "font_weight": null
                     },
                     "function.method": {
-                        "color": "#EA9A97",
+                        "color": "#c7c778",
                         "font_style": null,
                         "font_weight": null
                     },
                     "keyword": {
-                        "color": "#569CD6",
+                        "color": "#c792ea",
                         "background_color": null,
                         "font_style": null,
                         "font_weight": null
