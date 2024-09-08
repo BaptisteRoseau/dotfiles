@@ -19,6 +19,20 @@
             "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }]
         }
     },
+    // Avoid vim override
+    {
+      "context": "BufferSearchBar",
+      "bindings": {
+        "escape": "buffer_search::Dismiss",
+        "tab": "buffer_search::FocusEditor",
+        "enter": "search::SelectNextMatch",
+        "shift-enter": "search::SelectPrevMatch",
+        "alt-enter": "search::SelectAllMatches",
+        "ctrl-f": "search::FocusSearch",
+        "ctrl-h": "search::ToggleReplace",
+        "ctrl-l": "search::ToggleSelection"
+      }
+    },
     {
         "context": "vim_mode == insert",
         "bindings": {
