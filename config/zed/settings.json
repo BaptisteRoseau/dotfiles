@@ -25,6 +25,7 @@
     "show_wrap_guides": true,
     "wrap_guides": [80, 120],
     "buffer_font_family": "Hack Nerd Font",
+    "buffer_font_weight": 100,
     "git": {
         "inline_blame": {
             "enabled": true
