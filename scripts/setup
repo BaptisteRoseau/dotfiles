@@ -9,6 +9,7 @@ GIT_ROOT=$(
 CONFIG_TO_LINK=(
   Code/User
   nvim
+  zed
 )
 
 # Prefixing every visible file/dir by "." and linking into $HOME
