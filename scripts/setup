@@ -13,14 +13,14 @@ CONFIG_TO_LINK=(
 )
 
 # Prefixing every visible file/dir by "." and linking into $HOME
-for file in $(realpath $GIT_ROOT/* | grep -v "/\.git\|/.*\.md\|/config"); do
+for file in $(realpath "$GIT_ROOT"/* | grep -v "/\.git\|/.*\.md\|/config"); do
   name="$(basename "${file}")"
   dotname=".${name}"
 
   [ -e "${HOME}/${dotname}" ] && continue
   git --git-dir "${file}/.git" rev-parse --git-dir &>/dev/null && continue
 
-  ln -sfnv ${file#$HOME/} "${HOME}/${dotname}"
+  ln -sfnv "${file#"$HOME"/}" "${HOME}/${dotname}"
 done
 
 # Linking .config utils
