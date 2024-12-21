@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+. "$HOME/.cargo/env"
 
 # Custom Tools
 export PATH="$HOME/.bin:$PATH"

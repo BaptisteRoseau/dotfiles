@@ -61,13 +61,13 @@
         "when": "canNavigateForward"
     },
     {
-        "key": "ctrl+shift+i",
-        "command": "-codeium.openCodeiumCommand",
+        "key": "ctrl+shift+w",
+        "command": "codeium.openCodeiumCommand",
         "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
     },
     {
-        "key": "ctrl+right",
-        "command": "-editor.action.inlineSuggest.acceptNextWord",
-        "when": "inlineSuggestionVisible && !editorReadonly"
+        "key": "ctrl+shift+i",
+        "command": "-codeium.openCodeiumCommand",
+        "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
     }
 ]

@@ -1,4 +1,11 @@
 {
+    "emmet.includeLanguages": {
+        "rust": "html",
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "sql-formatter.uppercase": true,
     "cmake.configureOnOpen": false,
     "cSpell.enabled": true,
     "cSpell.enableFiletypes": [
@@ -7,6 +14,9 @@
     "cSpell.userWords": [
         "Addrs",
         "onclick",
+        "clippy",
+        "dockercompose",
+        "jquery",
         "oneshot",
         "paypal",
         "PYTHONPATH",
@@ -14,13 +24,14 @@
         "venv",
         "virtualenv"
     ],
+    "path-intellisense.absolutePathToWorkspace": false,
     "dev.containers.dockerComposePath": "podman-compose",
     "dev.containers.dockerPath": "podman",
     "docker.composeCommand": "podman-compose",
     "docker.dockerPath": "podman",
     "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
     "editor.rulers": [
-        80,
+        90,
         120
     ],
     "editor.tokenColorCustomizations": {
@@ -46,7 +57,7 @@
         "${workspaceFolder}/.env"
     ],
     "redhat.telemetry.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust ui.untrustedFiles": "open",
     "terminal.integrated.env.linux": {
         "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}"
     },
@@ -94,26 +105,45 @@
     "editor.quickSuggestions": {
         "strings": "on"
     },
-    "workbench.editorAssociations": {
-        "*.pdf": "latex-workshop-pdf-hook"
+    // "rust-analyzer.checkOnSave.command": "clippy",
+    "[css]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "dev.containers.dockerCredentialHelper": false,
+    "docker.commands.attach": "${containerCommand} exec -it ${containerId} ${shellCommand}",
+    "docker.contexts.showInStatusBar": true,
+    "vim.handleKeys": {
+        "<C-d>": false
+    },
+    "vim.useCtrlKeys": false,
+    "docker.environment": {
+        "DOCKER_HOST": "unix:///run/user/1000/podman/podman.sock"
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "powermode.enabled": true,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.startupEditor": "none",
-    "git.openRepositoryInParentFolders": "never",
     "liveServer.settings.donotShowInfoMsg": true,
+    "[sql]": {
+        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    },
+    "git.openRepositoryInParentFolders": "always"
 }

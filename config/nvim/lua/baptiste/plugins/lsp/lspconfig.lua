@@ -18,7 +18,11 @@ return {
 
         -- Run diagnostics on all workspace once when an LSP server is attached
         "artemave/workspace-diagnostics.nvim",
-
+    },
+    init_options = {
+        userLanguages = {
+            rust = "html",
+        },
     },
     opts = {},
     config = function()
