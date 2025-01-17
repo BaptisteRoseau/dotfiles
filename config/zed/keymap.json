@@ -1,4 +1,8 @@
 // Documentation: https://zed.dev/docs/key-bindings
+// 
+// Last shortcut defined takes priority in case of conflict.
+// This is especially helpful for vim mode conflicts.
+//TODO: See https://github.com/jellydn/zed-101-setup/blob/main/keymap.json
 [
     // Vim mode resets
     {
@@ -13,7 +17,6 @@
             "ctrl-alt-b": "workspace::ToggleRightDock",
             "ctrl-b": "workspace::ToggleLeftDock",
             "ctrl-a": "editor::SelectAll",
-            "ctrl-o": "workspace::Open",
             "ctrl-i": null,
             "ctrl-shift-f": "pane::DeploySearch",
             "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }]
@@ -21,17 +24,28 @@
     },
     // Avoid vim override
     {
-      "context": "BufferSearchBar",
-      "bindings": {
-        "escape": "buffer_search::Dismiss",
-        "tab": "buffer_search::FocusEditor",
-        "enter": "search::SelectNextMatch",
-        "shift-enter": "search::SelectPrevMatch",
-        "alt-enter": "search::SelectAllMatches",
-        "ctrl-f": "search::FocusSearch",
-        "ctrl-h": "search::ToggleReplace",
-        "ctrl-l": "search::ToggleSelection"
-      }
+        "context": "BufferSearchBar",
+        "bindings": {
+            "escape": "buffer_search::Dismiss",
+            "tab": "buffer_search::FocusEditor",
+            "enter": "search::SelectNextMatch",
+            "shift-enter": "search::SelectPrevMatch",
+            "alt-enter": "search::SelectAllMatches",
+            "ctrl-f": "search::FocusSearch",
+            "ctrl-h": "search::ToggleReplace",
+            "ctrl-l": "search::ToggleSelection"
+        }
+    },
+    {
+        "context": "Editor && mode == full",
+        "bindings": {
+            "alt-z": "editor::ToggleSoftWrap",
+            "ctrl-f": "buffer_search::Deploy",
+            "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }],
+            "ctrl-<": "editor::ToggleCodeActions",
+            "ctrl-down": ["editor::MoveDownByLines", 10],
+            "ctrl-up": ["editor::MoveUpByLines", 10]
+        }
     },
     {
         "context": "vim_mode == insert",
@@ -40,14 +54,6 @@
             "ctrl-j": "editor::MoveDown",
             "ctrl-k": "editor::MoveUp",
             "ctrl-l": "editor::MoveRight"
-        }
-    },
-    {
-        "context": "Editor && mode == full",
-        "bindings": {
-            "alt-z": "editor::ToggleSoftWrap",
-            "ctrl-f": "buffer_search::Deploy",
-            "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }]
         }
     },
     {
@@ -86,4 +92,5 @@
             "alt-l": "pane::GoForward"
         }
     }
+    // TODO: tab, visual mode tab, visual to insert mode with I and A
 ]
