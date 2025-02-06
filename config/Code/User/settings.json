@@ -8,27 +8,27 @@
     "sql-formatter.uppercase": true,
     "cmake.configureOnOpen": false,
     "cSpell.enabled": true,
-    "cSpell.enableFiletypes": [
+    "cSpell.enableFiletypes#": [
         "plaintext"
     ],
     "cSpell.userWords": [
         "Addrs",
+        "axum",
+        "bindgen",
         "onclick",
         "clippy",
         "dockercompose",
         "jquery",
         "oneshot",
+        "openapi",
         "paypal",
         "PYTHONPATH",
         "tailwindcss",
+        "utoipa",
+        "Utoipa",
         "venv",
         "virtualenv"
     ],
-    "path-intellisense.absolutePathToWorkspace": false,
-    "dev.containers.dockerComposePath": "podman-compose",
-    "dev.containers.dockerPath": "podman",
-    "docker.composeCommand": "podman-compose",
-    "docker.dockerPath": "podman",
     "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
     "editor.rulers": [
         90,
@@ -105,27 +105,6 @@
     "editor.quickSuggestions": {
         "strings": "on"
     },
-    // "rust-analyzer.checkOnSave.command": "clippy",
-    "[css]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-    },
-    "[dockercompose]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "dev.containers.dockerCredentialHelper": false,
-    "docker.commands.attach": "${containerCommand} exec -it ${containerId} ${shellCommand}",
-    "docker.contexts.showInStatusBar": true,
-    "vim.handleKeys": {
-        "<C-d>": false
-    },
-    "vim.useCtrlKeys": false,
-    "docker.environment": {
-        "DOCKER_HOST": "unix:///run/user/1000/podman/podman.sock"
-    },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -138,12 +117,16 @@
     },
     "workbench.startupEditor": "none",
     "liveServer.settings.donotShowInfoMsg": true,
-    "[sql]": {
-        "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+    "cSpell.language": "en,fr",
+    "rust-analyzer.check.command": "clippy",
+    "git.suggestSmartCommit": false,
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
-    "github.copilot.editor.enableAutoCompletions": true,
-    "[javascript]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "continue.enableDebugLogs": true,
+    "continue.enableQuickActions": true,
+    "continue.telemetryEnabled": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "git.openRepositoryInParentFolders": "always"
 }

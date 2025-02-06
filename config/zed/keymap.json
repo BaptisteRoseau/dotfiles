@@ -1,5 +1,5 @@
 // Documentation: https://zed.dev/docs/key-bindings
-// 
+//
 // Last shortcut defined takes priority in case of conflict.
 // This is especially helpful for vim mode conflicts.
 //TODO: See https://github.com/jellydn/zed-101-setup/blob/main/keymap.json
@@ -43,8 +43,8 @@
             "ctrl-f": "buffer_search::Deploy",
             "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }],
             "ctrl-<": "editor::ToggleCodeActions",
-            "ctrl-down": ["editor::MoveDownByLines", 10],
-            "ctrl-up": ["editor::MoveUpByLines", 10]
+            "ctrl-down": "editor::MoveDownByLines",
+            "ctrl-up": "editor::MoveUpByLines"
         }
     },
     {
@@ -79,8 +79,8 @@
             "ctrl-7": ["workspace::ActivatePane", 6],
             "ctrl-8": ["workspace::ActivatePane", 7],
             "ctrl-9": ["workspace::ActivatePane", 8],
-            "ctrl-up": ["editor::MoveUpByLines", 10],
-            "ctrl-down": ["editor::MoveDownByLines", 10]
+            "ctrl-up": "editor::MoveUpByLines",
+            "ctrl-down": "editor::MoveDownByLines"
         }
     },
     {

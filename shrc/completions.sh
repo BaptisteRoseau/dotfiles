@@ -16,3 +16,6 @@ if [ -x "$(command -v helm)" ]; then
   eval "$(helm completion bash)"
 fi
 
+if [ -x "$(command -v podman)" ]; then
+  eval "$(podman completion bash)"
+fi

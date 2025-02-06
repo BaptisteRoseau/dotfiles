@@ -23,3 +23,7 @@ NVIM_ROOT="/opt/nvim"
 export PATH="$PATH:$NVIM_ROOT/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$NVIM_ROOT/lib"
 export MANPATH="$MANPATH:$NVIM_ROOT/man"
+
+# Lumen
+export LUMEN_AI_PROVIDER="ollama"
+export LUMEN_AI_MODEL="deepseek-coder-v2:latest"

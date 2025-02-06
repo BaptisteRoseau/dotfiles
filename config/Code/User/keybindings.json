@@ -66,8 +66,24 @@
         "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
     },
     {
+        "key": "ctrl+right",
+        "command": "-editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-continue.focusContinueInputWithoutClear"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-continue.focusContinueInput"
+    },
+    {
         "key": "ctrl+shift+i",
-        "command": "-codeium.openCodeiumCommand",
-        "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
+        "command": "-continue.focusEditWithoutClear"
+    },
+    {
+        "key": "ctrl+shift+/",
+        "command": "continue.focusEditWithoutClear"
     }
 ]
