@@ -11,4 +11,4 @@ alias pyvenv='python3 -m venv .venv && source .venv/bin/activate'
 alias podmanrunit="podman run -it --rm"
 alias dockerrunit="docker run -it --rm"
 alias ssh="TERM=xterm-256color ssh"
-alias cd="zoxide"
+alias cd="z"
