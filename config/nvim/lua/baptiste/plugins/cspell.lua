@@ -1,3 +1,4 @@
+-- TODO: Add "disable for workspace" option
 return {
     "davidmh/cspell.nvim",
     opts = {},

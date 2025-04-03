@@ -63,7 +63,7 @@ return {
         end
 
         -- document existing key chains
-        require("which-key").register({
+        require("which-key").add({
             ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
             ["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
             ["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
@@ -73,9 +73,9 @@ return {
             ["<leader>t"] = { name = "[T]oggle", _ = "which_key_ignore" },
             ["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
         })
-        -- register which-key VISUAL mode
+        --.add which-key VISUAL mode
         -- required for visual <leader>hs (hunk stage) to work
-        require("which-key").register({
+        require("which-key").add({
             ["<leader>"] = { name = "VISUAL <leader>" },
             ["<leader>h"] = { "Git [H]unk" },
         }, { mode = "v" })
@@ -92,7 +92,7 @@ return {
             html = { filetypes = { "html" } },
             jsonls = { filetypes = { "json" } },
             ltex = { filetypes = { "tex", "md" } },
-            ruff_lsp = { filetypes = { "py" } },
+            ruff = { filetypes = { "py" } },
             sqlls = { filetypes = { "sql" } },
             yamlls = { filetypes = { "yaml", "yml" } },
             lua_ls = {

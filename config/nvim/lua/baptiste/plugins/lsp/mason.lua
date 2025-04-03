@@ -37,7 +37,7 @@ return {
                 "rust-analyzer",
                 "svelte",
                 "tailwindcss",
-                "tsserver",
+                "typescript-language-server",
                 -- linters
                 "ansible-lint",
                 "clj-kondo",

@@ -15,10 +15,11 @@
         "Addrs",
         "axum",
         "bindgen",
-        "onclick",
         "clippy",
         "dockercompose",
+        "Drush",
         "jquery",
+        "onclick",
         "oneshot",
         "openapi",
         "paypal",
@@ -64,7 +65,7 @@
     "vs-kubernetes": {
         "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
         "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.minikube-show-information-expiration": "2024-12-30T12:40:28.366Z"
+        "vs-kubernetes.minikube-show-information-expiration": "2025-04-11T18:44:06.220Z"
     },
     "window.menuBarVisibility": "toggle",
     "workbench.colorCustomizations": {
@@ -128,5 +129,21 @@
     "continue.telemetryEnabled": false,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
 }

@@ -26,8 +26,14 @@ return {
             "<cmd>lua require('harpoon.ui').nav_prev()<cr>",
             { desc = "[H]arpoon [P]revious mark" }
         )
+        keymap.set(
+            "n",
+            "<leader>Hl",
+            "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
+            { desc = "[H]arpoon [L]ist marks" }
+        )
 
-        require("which-key").register({
+        require("which-key").add({
             ['<leader>H'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
         })
     end,

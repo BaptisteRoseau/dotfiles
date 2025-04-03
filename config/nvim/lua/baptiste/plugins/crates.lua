@@ -22,7 +22,7 @@ return {
 				vim.keymap.set("n", "<leader>CR", crates.open_repository, { desc = "[C]rate [R]epository" })
 				vim.keymap.set("n", "<leader>CD", crates.open_documentation, { desc = "[C]rate [D]documentation" })
 				vim.keymap.set("n", "<leader>CC", crates.open_crates_io, { desc = "[C]rate open [C]rates.io" })
-				require("which-key").register({
+				require("which-key").add({
 					["<leader>C"] = { name = "[C]rates", _ = "which_key_ignore" },
 				})
 			end,

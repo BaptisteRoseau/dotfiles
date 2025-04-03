@@ -1,3 +1,4 @@
+-- Manages Hard and Wrap, bound to alt-z
 return {
     "andrewferrier/wrapping.nvim",
     config = function()

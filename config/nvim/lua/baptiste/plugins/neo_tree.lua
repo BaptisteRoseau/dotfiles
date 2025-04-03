@@ -68,9 +68,9 @@ return {
                     hide_gitignored = false,
                 },
                 follow_current_file = {
-                    leave_dirs_open = true, -- This will find and focus the file in the active buffer every time
+                    leave_dirs_open = false, -- This will find and focus the file in the active buffer every time
                     -- the current file is changed while the tree is open.
-                    enabled = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+                    enabled = true, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
                 },
                 never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
                     ".DS_Store",
@@ -112,7 +112,7 @@ return {
         keymap.set("n", "<leader>nb", "<cmd>Neotree float buffers<cr>", { desc = "[N]eotree opened [B]uffers" })
         keymap.set("n", "<leader>ng", "<cmd>Neotree float git_status<cr>", { desc = "[N]eotree [G]it Status" })
         keymap.set("n", "<leader>nc", "<cmd>Neotree close<cr>", { desc = "[N]eotree [C]lose" })
-        require("which-key").register({
+        require("which-key").add({
             ["<leader>n"] = { name = "[N]eotree", _ = "which_key_ignore" },
         })
     end,

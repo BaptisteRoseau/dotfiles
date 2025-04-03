@@ -9,7 +9,7 @@ return {
                 view = "<leader>bH",
             },
         })
-        require("which-key").register({
+        require("which-key").add({
             ["<leader>bH"] = { name = "[B]uffer [H]istory", _ = "which_key_ignore" },
             ["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
         })

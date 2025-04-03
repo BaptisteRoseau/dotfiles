@@ -1,8 +1,5 @@
 return {
     "Mofiqul/vscode.nvim",
-    dependencies = {
-        "lukas-reineke/indent-blankline.nvim",
-    },
     opts = {},
     config = function()
         local vscode = require("vscode")
@@ -20,8 +17,5 @@ return {
             },
         })
         vscode.load()
-
-        -- Force back indent_blanckline to display grey lines instead of white
-        require("ibl").update({})
     end,
 }
