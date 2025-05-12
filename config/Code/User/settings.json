@@ -1,149 +1,243 @@
 {
-    "emmet.includeLanguages": {
-        "rust": "html",
-    },
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-    "sql-formatter.uppercase": true,
-    "cmake.configureOnOpen": false,
-    "cSpell.enabled": true,
-    "cSpell.enableFiletypes#": [
-        "plaintext"
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[tailwindCSS]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "chat.agent.enabled": true,
+  "cmake.configureOnOpen": false,
+  "cmake.showOptionsMovedNotification": false,
+  "cSpell.enabled": true,
+  "cSpell.enableFiletypes#": ["plaintext"],
+  "cSpell.language": "en,fr",
+  "cSpell.userWords": [
+    "Addrs",
+    "axum",
+    "bindgen",
+    "clippy",
+    "dockercompose",
+    "Drush",
+    "jquery",
+    "onclick",
+    "oneshot",
+    "openapi",
+    "paypal",
+    "PYTHONPATH",
+    "tailwindcss",
+    "utoipa",
+    "Utoipa",
+    "venv",
+    "virtualenv"
+  ],
+  "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.rulers": [90, 120],
+  "editor.tokenColorCustomizations": {
+    "comments": "#606060"
+  },
+  "emmet.includeLanguages": {
+    "rust": "html"
+  },
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+  "errorLens.lintFilePaths": {
+    "eslint": ["**/*.eslintrc.{js,cjs,yaml,yml,json}", "**/*package.json"],
+    "Stylelint": [
+      "**/*.stylelintrc",
+      "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
+      "**/*stylelint.config.{cjs,js}",
+      "**/*package.json"
     ],
-    "cSpell.userWords": [
-        "Addrs",
-        "axum",
-        "bindgen",
-        "clippy",
-        "dockercompose",
-        "Drush",
-        "jquery",
-        "onclick",
-        "oneshot",
-        "openapi",
-        "paypal",
-        "PYTHONPATH",
-        "tailwindcss",
-        "utoipa",
-        "Utoipa",
-        "venv",
-        "virtualenv"
-    ],
-    "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
-    "editor.rulers": [
-        90,
-        120
-    ],
-    "editor.tokenColorCustomizations": {
-        "comments": "#606060"
+    "tailwindCSS": [
+      "**/*.tailwind.config.{cjs,js,json,yaml,yml}",
+      "**/*package.json",
+      "**/*.css"
+    ]
+  },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.twig": "html"
+  },
+  "files.autoSave": "afterDelay",
+  "git.blame.editorDecoration.enabled": true,
+  "git.suggestSmartCommit": false,
+  "github.copilot.enable": {
+    "*": false,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "material-icon-theme.folders.theme": "classic",
+  "powermode.enabled": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/tst",
+    "${workspaceFolder}/src",
+    "${workspaceFolder}"
+  ],
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/tst",
+    "${workspaceFolder}/src",
+    "${workspaceFolder}"
+  ],
+  "python.envFile": "${workspaceFolder}/.venv",
+  "python.venvFolders": [
+    "${workspaceFolder}/.venv",
+    "${workspaceFolder}/.virtualenv",
+    "${workspaceFolder}/.env"
+  ],
+  "redhat.telemetry.enabled": false,
+  "rust-analyzer.check.command": "clippy",
+  "security.workspace.trust ui.untrustedFiles": "open",
+  "sql-formatter.uppercase": true,
+  "sqltools.useNodeRuntime": true,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "rust": "html"
+  },
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}"
+  },
+  "vim.camelCaseMotion.enable": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-d>": false,
+    "<C-f>": false,
+    "<C-g>": false,
+    "<C-h>": false,
+    "<C-z>": false,
+    "<C-n>": false
+  },
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["ctrl+w"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.autoSave": "afterDelay",
-    "python.analysis.extraPaths": [
-        "${workspaceFolder}/tst",
-        "${workspaceFolder}/src",
-        "${workspaceFolder}"
-    ],
-    "python.autoComplete.extraPaths": [
-        "${workspaceFolder}/tst",
-        "${workspaceFolder}/src",
-        "${workspaceFolder}"
-    ],
-    "python.envFile": "${workspaceFolder}/.venv",
-    "python.venvFolders": [
-        "${workspaceFolder}/.venv",
-        "${workspaceFolder}/.virtualenv",
-        "${workspaceFolder}/.env"
-    ],
-    "redhat.telemetry.enabled": false,
-    "security.workspace.trust ui.untrustedFiles": "open",
-    "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}"
+    // Dependi
+    {
+      "before": ["<leader>CU"],
+      "commands": ["dependi.commands.updateall"],
+      "when": "editortextfocus && resourcefilename in dependi.supportedfiles"
     },
-    "vs-kubernetes": {
-        "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
-        "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.minikube-show-information-expiration": "2025-04-11T18:44:06.220Z"
+    {
+      "before": ["<leader>cu"],
+      "commands": ["dependi.commands.replaceversion"],
+      "when": "editortextfocus && resourcefilename in dependi.supportedfiles"
     },
-    "window.menuBarVisibility": "toggle",
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#35199b93"
+    {
+      "before": ["<leader>ca"],
+      "commands": ["editor.action.quickfix"],
+      "when": "editortextfocus"
     },
-    "cmake.showOptionsMovedNotification": false,
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    // case switching
+    {
+      "before": ["<leader>cc"],
+      "commands": ["editor.action.transformtocamelcase"]
     },
-    "tailwindCSS.emmetCompletions": true,
-    "tailwindCSS.includeLanguages": {
-        "rust": "html"
+    {
+      "before": ["<leader>cs"],
+      "commands": ["editor.action.transformtosnakecase"]
     },
-    "[tailwindCSS]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    {
+      "before": ["<leader>ck"],
+      "commands": ["editor.action.transformtokebabcase"]
     },
-    "errorLens.lintFilePaths": {
-        "tailwindCSS": [
-            "**/*.tailwind.config.{cjs,js,json,yaml,yml}",
-            "**/*package.json",
-            "**/*.css"
-        ],
-        "eslint": [
-            "**/*.eslintrc.{js,cjs,yaml,yml,json}",
-            "**/*package.json"
-        ],
-        "Stylelint": [
-            "**/*.stylelintrc",
-            "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
-            "**/*stylelint.config.{cjs,js}",
-            "**/*package.json"
-        ]
+    {
+      "before": ["<leader>ct"],
+      "commands": ["editor.action.transformtotitlecase"]
     },
-    "files.associations": {
-        "*.css": "tailwindcss",
-        "*.twig": "html"
+    {
+      "before": ["<leader>cp"],
+      "commands": ["editor.action.transformtopascalcase"]
     },
-    "editor.quickSuggestions": {
-        "strings": "on"
+    {
+      "before": ["<leader>cu"],
+      "commands": ["editor.action.transformtouppercase"]
     },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["<leader>cl"],
+      "commands": ["editor.action.transformtolowercase"]
+    }
+  ],
+  "vim.overrideCopy": true,
+  "vim.surround": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindings": [
+    {
+      "after": ["\"", "+", "y"],
+      "before": ["<c-c>"]
     },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    {
+      "after": ["\"", "+", "p"],
+      "before": ["<c-v>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["ctrl+w"],
+      "commands": ["workbench.action.closeActiveEditor"]
     },
-    "powermode.enabled": true,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.startupEditor": "none",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "cSpell.language": "en,fr",
-    "rust-analyzer.check.command": "clippy",
-    "git.suggestSmartCommit": false,
-    "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    },
-    "continue.enableDebugLogs": true,
-    "continue.enableQuickActions": true,
-    "continue.telemetryEnabled": false,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "errorLens.enabledDiagnosticLevels": [
-        "error",
-        "warning",
-    ],
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
+    {
+      "before": ["<space>"],
+      "commands": ["whichkey.show"]
+    }
+  ],
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-show-information-expiration": "2025-04-11t18:44:06.220z",
+    "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
+    "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+  },
+  "window.menuBarVisibility": "toggle",
+  "workbench.colorCustomizations": {
+    "editorruler.foreground": "#35199b93"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "yaml.schemas": {
+    "/home/baptiste/.vscode/extensions/continue.continue-1.0.9-linux-x64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  }
 }

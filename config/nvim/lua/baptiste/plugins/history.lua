@@ -10,8 +10,8 @@ return {
             },
         })
         require("which-key").add({
-            ["<leader>bH"] = { name = "[B]uffer [H]istory", _ = "which_key_ignore" },
-            ["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
+            { "<leader>bH",  desc = "[B]uffer [H]istory", mode = "n", _ = "which_key_ignore" },
+            {"<leader>b", group = "[B]uffer", mode = "n" },
         })
     end,
 }

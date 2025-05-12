@@ -112,6 +112,7 @@ return {
         keymap.set("n", "<leader>nb", "<cmd>Neotree float buffers<cr>", { desc = "[N]eotree opened [B]uffers" })
         keymap.set("n", "<leader>ng", "<cmd>Neotree float git_status<cr>", { desc = "[N]eotree [G]it Status" })
         keymap.set("n", "<leader>nc", "<cmd>Neotree close<cr>", { desc = "[N]eotree [C]lose" })
+        keymap.set("n", "<C-b>", "<cmd>Neotree toggle<cr>", { desc = "[N]eotree [T]oggle" })
         require("which-key").add({
             ["<leader>n"] = { name = "[N]eotree", _ = "which_key_ignore" },
         })
