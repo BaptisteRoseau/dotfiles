@@ -29,8 +29,6 @@
             "escape": "buffer_search::Dismiss",
             "tab": "buffer_search::FocusEditor",
             "enter": "search::SelectNextMatch",
-            "shift-enter": "search::SelectPrevMatch",
-            "alt-enter": "search::SelectAllMatches",
             "ctrl-f": "search::FocusSearch",
             "ctrl-h": "search::ToggleReplace",
             "ctrl-l": "search::ToggleSelection"
@@ -61,7 +59,7 @@
         "bindings": {
             "ctrl-h": "editor::MoveLeft",
             "ctrl-j": "menu::SelectNext",
-            "ctrl-k": "menu::SelectPrev",
+            "ctrl-k": "menu::SelectPrevious",
             "ctrl-l": "editor::MoveRight",
             "shift-g": "menu::SelectLast",
             "g g": "menu::SelectFirst"
@@ -81,6 +79,68 @@
             "ctrl-9": ["workspace::ActivatePane", 8],
             "ctrl-up": "editor::MoveUpByLines",
             "ctrl-down": "editor::MoveDownByLines"
+        }
+    },
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "a": "project_panel::NewFile",
+            "A": "project_panel::NewDirectory",
+            "r": "project_panel::Rename",
+            "d": "project_panel::Delete",
+            "x": "project_panel::Cut",
+            "c": "project_panel::Copy",
+            "p": "project_panel::Paste",
+            // Close project panel as project file panel on the right
+            "q": "workspace::ToggleLeftDock",
+            "space e": "workspace::ToggleLeftDock"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+        "bindings": {
+            "g d": "editor::GoToDefinition",
+            "g D": "editor::GoToDefinitionSplit",
+            "g i": "editor::GoToImplementation",
+            "g I": "editor::GoToImplementationSplit",
+            "g t": "editor::GoToTypeDefinition",
+            "g T": "editor::GoToTypeDefinitionSplit",
+            "g r": "editor::FindAllReferences",
+            "] d": "editor::GoToDiagnostic",
+            "[ d": "editor::GoToPreviousDiagnostic",
+            "] h": "editor::GoToHunk",
+            "[ h": "editor::GoToPreviousHunk",
+            // Git
+            "space g h d": "editor::ToggleSelectedDiffHunks",
+            "space g s": "git_panel::ToggleFocus",
+
+            // Toggle inlay hints
+            "space t i": "editor::ToggleInlayHints",
+
+            // Toggle soft wrap
+            "space u w": "editor::ToggleSoftWrap",
+
+            // NOTE: Toggle Zen mode, not fully working yet
+            "space c z": "workspace::ToggleCenteredLayout",
+            // Open markdown preview
+            "space m p": "markdown::OpenPreview",
+            "space m P": "markdown::OpenPreviewToTheSide",
+            "ctrl-s": "workspace::Save"
+        }
+    },
+    // Better escape
+    {
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            "j j": "vim::NormalBefore", // remap jj in insert mode to escape
+            "j k": "vim::NormalBefore" // remap jk in insert mode to escape
+        }
+    },
+    {
+        "context": "vim_mode == normal || vim_mode == visual",
+        "bindings": {
+            "s": ["vim::PushSneak", {}],
+            "S": ["vim::PushSneakBackward", {}]
         }
     },
     {
