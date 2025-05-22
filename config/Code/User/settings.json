@@ -100,9 +100,9 @@
   "git.blame.editorDecoration.enabled": true,
   "git.suggestSmartCommit": false,
   "github.copilot.enable": {
-    "*": false,
-    "markdown": false,
+    "*": true,
     "plaintext": false,
+    "markdown": false,
     "scminput": false
   },
   "liveServer.settings.donotShowInfoMsg": true,

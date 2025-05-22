@@ -13,7 +13,6 @@
                 "editor::SelectPrevious",
                 { "replace_newest": false }
             ],
-            "ctrl-w": "pane::CloseActiveItem",
             "ctrl-alt-b": "workspace::ToggleRightDock",
             "ctrl-b": "workspace::ToggleLeftDock",
             "ctrl-a": "editor::SelectAll",
@@ -41,8 +40,8 @@
             "ctrl-f": "buffer_search::Deploy",
             "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }],
             "ctrl-<": "editor::ToggleCodeActions",
-            "ctrl-down": "editor::MoveDownByLines",
-            "ctrl-up": "editor::MoveUpByLines"
+            "ctrl-down": ["editor::MoveDownByLines", { "lines": 10 }],
+            "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }]
         }
     },
     {
@@ -140,7 +139,8 @@
         "context": "vim_mode == normal || vim_mode == visual",
         "bindings": {
             "s": ["vim::PushSneak", {}],
-            "S": ["vim::PushSneakBackward", {}]
+            "S": ["vim::PushSneakBackward", {}],
+            "ctrl-w": "pane::CloseActiveItem"
         }
     },
     {

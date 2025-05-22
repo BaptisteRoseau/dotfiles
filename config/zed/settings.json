@@ -14,7 +14,7 @@
         },
         "default_model": {
             "provider": "ollama",
-            "model": "qwen3:8b"
+            "model": "qwen3:30b"
         },
         "version": "2"
     },
@@ -188,6 +188,11 @@
                 {
                     "provider": "ollama",
                     "name": "qwen3:8b",
+                    "max_tokens": 16384
+                },
+                {
+                    "provider": "ollama",
+                    "name": "qwen3:30b",
                     "max_tokens": 16384
                 }
             ]
