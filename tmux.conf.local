@@ -584,7 +584,7 @@ set -g @continuum-restore 'on'
 # }
 #
 # online() {
-#   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf 'online' || printf 'offline'
+#   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '🌐' || printf '📵'
 # }
 #
 # wan_ip_v4() {
