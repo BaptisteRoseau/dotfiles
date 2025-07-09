@@ -64,22 +64,21 @@ return {
 
         -- document existing key chains
         require("which-key").add({
-            ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-            ["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
-            ["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
-            ["<leader>h"] = { name = "Git [H]unk", _ = "which_key_ignore" },
-            ["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
-            ["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
-            ["<leader>t"] = { name = "[T]oggle", _ = "which_key_ignore" },
-            ["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
+            {"<leader>b", group = "[B]uffer", mode = "n" },
+            {"<leader>c", group = "[C]ode", mode = "n"},
+            {"<leader>d", group = "[D]ocument", mode = "n"},
+            {"<leader>g", group = "[G]it", mode = "n"},
+            {"<leader>h", group = "Git [H]unk", mode = "n"},
+            {"<leader>r", group = "[R]ename", mode = "n"},
+            {"<leader>s", group = "[S]earch", mode = "n"},
+            {"<leader>t", group = "[T]oggle", mode = "n"},
+            {"<leader>w", group = "[W]orkspace", mode = "n"},
+            {"<leader>i", group = "[I]DE", mode = "n"},
+            --.add which-key VISUAL mode
+            -- required for visual <leader>hs (hunk stage) to work
+            {"<leader>", group = "VISUAL <leader>", mode = "v"},
+            {"<leader>h", group = "Git [H]unk", mode = "v" },
         })
-        --.add which-key VISUAL mode
-        -- required for visual <leader>hs (hunk stage) to work
-        require("which-key").add({
-            ["<leader>"] = { name = "VISUAL <leader>" },
-            ["<leader>h"] = { "Git [H]unk" },
-        }, { mode = "v" })
-
         -- mason-lspconfig requires that these setup functions are called in this order
         -- before setting up the servers.
         require("mason").setup()

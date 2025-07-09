@@ -34,7 +34,7 @@ return {
         )
 
         require("which-key").add({
-            ['<leader>H'] = { name = '[H]arpoon', _ = 'which_key_ignore' },
+            {'<leader>H', group = '[H]arpoon', mode = "n"},
         })
     end,
 }

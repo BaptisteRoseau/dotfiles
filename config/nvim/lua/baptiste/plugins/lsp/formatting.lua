@@ -28,16 +28,18 @@ return {
       },
     }
 
-    vim.keymap.set({ "n", "v" }, "<leader>ff", function()
+    local format = function()
       conform.format {
         lsp_fallback = true,
         async = false,
         timeout_ms = 1000,
       }
-    end, { desc = "[F]ormat [F]ile or range (in visual mode)" })
+    end
+    vim.keymap.set({ "n", "v" }, "<leader>ff", format, { desc = "[F]ormat [F]ile or range (in visual mode)" })
+    vim.keymap.set({ "n", "v" }, "<C-S-i>", format, { desc = "[F]ormat [F]ile or range (in visual mode)" })
 
     require("which-key").add {
-      ["<leader>f"] = { name = "[F]ormat", _ = "which_key_ignore" },
+      {"<leader>f", group = "[F]ormat", mode = "n"},
     }
   end,
 }

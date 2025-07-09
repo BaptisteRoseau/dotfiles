@@ -114,7 +114,7 @@ return {
         keymap.set("n", "<leader>nc", "<cmd>Neotree close<cr>", { desc = "[N]eotree [C]lose" })
         keymap.set("n", "<C-b>", "<cmd>Neotree toggle<cr>", { desc = "[N]eotree [T]oggle" })
         require("which-key").add({
-            ["<leader>n"] = { name = "[N]eotree", _ = "which_key_ignore" },
+            {"<leader>n", group = "[N]eotree", mode = "n"},
         })
     end,
 }
