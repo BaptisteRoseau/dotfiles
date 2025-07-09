@@ -182,19 +182,10 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [shell]
 program = "/usr/bin/bash"
-# args = ["-c", "tmux new-session -A -s main"] # Re-open main session
-args = ["-c", "tmux"]
+args = ["-c", "tmux attach -t main || tmux new -s main"]
 
 [window]
-decorations = "Full"
+decorations = "None"
 dynamic_padding = false
 opacity = 1.0
 startup_mode = "Windowed"
-
-[window.dimensions]
-columns = 100
-lines = 85
-
-[window.padding]
-x = 0
-y = 0
