@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-VERSION="3.4"
+VERSION="3.6"
 FILE="tmux-${VERSION}.tar.gz"
 URL="https://github.com/tmux/tmux/releases/download/${VERSION}/${FILE}"
 
