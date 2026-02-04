@@ -371,6 +371,9 @@ set -g history-limit 10000
 # start with mouse mode enabled
 set -g mouse on
 
+# allow selecting file paths on double-click by removing / from word separators
+set -g word-separators "\t\n,│`|:\"' ()[]{}<>"
+
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 setenv VISUAL vi
