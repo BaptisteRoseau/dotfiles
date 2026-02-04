@@ -19,3 +19,7 @@ fi
 if [ -x "$(command -v podman)" ]; then
   eval "$(podman completion bash)"
 fi
+
+if [ -f "/usr/share/bash-completion/completions/git" ]; then
+  source /usr/share/bash-completion/completions/git
+fi
