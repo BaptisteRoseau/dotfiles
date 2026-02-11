@@ -4,7 +4,11 @@
 # Custom Tools
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.scripts:$PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:$PATH"
+
+#TMP Support tracker
+export PATH="$HOME/Documents/time_tracker:$PATH"
 
 # Modules
 export MODULES_ROOT=/opt/Modules
@@ -27,3 +31,4 @@ export MANPATH="$MANPATH:$NVIM_ROOT/man"
 # Lumen
 export LUMEN_AI_PROVIDER="ollama"
 export LUMEN_AI_MODEL="deepseek-coder-v2:latest"
+

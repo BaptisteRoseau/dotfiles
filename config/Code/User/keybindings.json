@@ -20,7 +20,7 @@
     },
     "when": "editorTextFocus"
   },
-  // AZERTY-Compatibility
+  // // AZERTY-Compatibility
   {
     "key": "ctrl+shift+,",
     "command": "-editor.action.inPlaceReplace.up",

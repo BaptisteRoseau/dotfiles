@@ -272,7 +272,8 @@ uptime="#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{upt
 battery="#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},}"
 
 tmux_conf_theme_status_left=" #{hostname} | #{username}#{root} | $uptime , ❐ #S "
-tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized}$battery |#{loadavg}ld |CPU #{cpu_percentage}|#{cpu_temp}°|RAM #{ram_percentage}|GPU #{gpu_percentage}|#{gpu_temp}°|VRAM #{gram_percentage}| #{online} "
+# tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized}$battery |#{loadavg}ld |CPU #{cpu_percentage}|#{cpu_temp}°|RAM #{ram_percentage}| #{online} "
+tmux_conf_theme_status_right="#{prefix}#{mouse}#{pairing}#{synchronized}$battery |#{loadavg}ld |CPU #{cpu_percentage}|#{cpu_temp}°|RAM #{ram_percentage}#{?#{check_nvidia},|GPU #{gpu_percentage}|#{gpu_temp}°|VRAM #{gram_percentage},} | #{online} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$dark_gray,$white,$white,$white"
@@ -280,6 +281,9 @@ tmux_conf_theme_status_left_bg="$white,$red,$dark_gray,$dark_gray"
 tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
+# tmux_conf_theme_status_right_fg="$light_gray,$white,#{cpu_fg_color},#{cpu_temp_fg_color},#{ram_fg_color},$dark_gray"
+# tmux_conf_theme_status_right_bg="$dark_gray,$dark_gray,#{cpu_bg_color},#{cpu_temp_bg_color},#{ram_bg_color},$white"
+# tmux_conf_theme_status_right_attr="none,bold,none,none,none,none"
 tmux_conf_theme_status_right_fg="$light_gray,$white,#{cpu_fg_color},#{cpu_temp_fg_color},#{ram_fg_color},#{gpu_fg_color},#{gpu_temp_fg_color},#{gram_fg_color},$dark_gray"
 tmux_conf_theme_status_right_bg="$dark_gray,$dark_gray,#{cpu_bg_color},#{cpu_temp_bg_color},#{ram_bg_color},#{gpu_bg_color},#{gpu_temp_bg_color},#{gram_bg_color},$white"
 tmux_conf_theme_status_right_attr="none,bold,none,none,none,none,none,none,none"
@@ -598,6 +602,14 @@ set -g @continuum-restore 'on'
 # wan_ip_v6() {
 #   curl -f -s -m 2 -6 ifconfig.me
 #   sleep 300                                         # sleep for 5 minutes, throttle network requests whatever the value of status-interval
+# }
+#
+# check_nvidia() {
+#   if command -v nvidia-smi >/dev/null 2>&1 && nvidia-smi -L >/dev/null 2>&1; then
+#     printf "|GPU #{gpu_percentage}|#{gpu_temp}°|VRAM #{gram_percentage}"
+#   else
+#     printf ""
+#   fi
 # }
 #
 # "$@"

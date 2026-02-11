@@ -1,8 +1,13 @@
 [user]
-    name = Baptiste Roseau
-    email = broseau@gmail.com
+	name = Baptiste Roseau
+	email = baptiste.roseau@opendatasoft.com
+	signingkey = 3769E1D3E868ABA7
 [pull]
     rebase = true
 [init]
     defaultBranch = main
 
+[commit]
+	gpgsign = true
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs

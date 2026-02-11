@@ -1,4 +1,7 @@
 {
+  "[dockercompose]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-containers"
   },
@@ -9,7 +12,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -36,8 +39,14 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "chat.agent.enabled": true,
+  "chat.extensionTools.enabled": false,
+  "chat.tools.terminal.autoApprove": {
+    "awk": true,
+    "uniq": true
+  },
   "cmake.configureOnOpen": false,
   "cmake.showOptionsMovedNotification": false,
+  "cSpell.advanced.feature.useReferenceProviderWithRename": true,
   "cSpell.enabled": true,
   "cSpell.enableFiletypes#": ["plaintext"],
   "cSpell.language": "en,fr",
@@ -46,6 +55,7 @@
     "axum",
     "bindgen",
     "clippy",
+    "deepcopy",
     "dockercompose",
     "Drush",
     "jquery",
@@ -56,12 +66,15 @@
     "paypal",
     "PYTHONPATH",
     "tailwindcss",
+    "userguide",
     "utoipa",
     "Utoipa",
     "venv",
     "virtualenv"
   ],
+  "debugpy.showPythonInlineValues": true,
   "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.inlayHints.enabled": "onUnlessPressed",
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
     "strings": "on"
@@ -73,7 +86,7 @@
   "emmet.includeLanguages": {
     "rust": "html"
   },
-  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+  "errorLens.enabledDiagnosticLevels": ["error"],
   "errorLens.lintFilePaths": {
     "eslint": ["**/*.eslintrc.{js,cjs,yaml,yml,json}", "**/*package.json"],
     "Stylelint": [
@@ -98,14 +111,15 @@
     "*.twig": "html"
   },
   "files.autoSave": "afterDelay",
-  "git.blame.editorDecoration.enabled": true,
+  "git.blame.editorDecoration.enabled": false,
   "git.suggestSmartCommit": false,
   "github.copilot.enable": {
     "*": false,
-    "plaintext": false,
     "markdown": false,
+    "plaintext": false,
     "scminput": false
   },
+  "keyboard.dispatch": "keyCode",
   "liveServer.settings.donotShowInfoMsg": true,
   "material-icon-theme.folders.theme": "classic",
   "powermode.enabled": true,
@@ -114,12 +128,23 @@
     "${workspaceFolder}/src",
     "${workspaceFolder}"
   ],
+  "python.analysis.typeCheckingMode": "standard",
   "python.autoComplete.extraPaths": [
     "${workspaceFolder}/tst",
     "${workspaceFolder}/src",
     "${workspaceFolder}"
   ],
   "python.envFile": "${workspaceFolder}/.venv",
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    ".",
+    "-p",
+    "--ignore=ods/core/tests/core/backends2/resource/test_fetchers.py",
+    "--disable-pytest-warnings",
+    "ods"
+  ],
   "python.venvFolders": [
     "${workspaceFolder}/.venv",
     "${workspaceFolder}/.virtualenv",
@@ -145,8 +170,8 @@
     "<C-f>": false,
     "<C-g>": false,
     "<C-h>": false,
-    "<C-z>": false,
-    "<C-n>": false
+    "<C-n>": false,
+    "<C-z>": false
   },
   "vim.hlsearch": true,
   "vim.incsearch": true,
@@ -234,6 +259,7 @@
   "workbench.colorCustomizations": {
     "editorruler.foreground": "#35199b93"
   },
+  "workbench.editor.empty.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "yaml.schemas": {
