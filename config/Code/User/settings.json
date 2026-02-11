@@ -1,6 +1,6 @@
 {
   "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -49,6 +49,7 @@
     "dockercompose",
     "Drush",
     "jquery",
+    "ndarray",
     "onclick",
     "oneshot",
     "openapi",
@@ -100,7 +101,7 @@
   "git.blame.editorDecoration.enabled": true,
   "git.suggestSmartCommit": false,
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false
@@ -225,7 +226,7 @@
     }
   ],
   "vs-kubernetes": {
-    "vs-kubernetes.minikube-show-information-expiration": "2025-04-11t18:44:06.220z",
+    "vs-kubernetes.minikube-show-information-expiration": "2026-01-07T09:53:20.145Z",
     "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
     "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
   },
@@ -239,5 +240,32 @@
     "/home/baptiste/.vscode/extensions/continue.continue-1.0.9-linux-x64/config-yaml-schema.json": [
       ".continue/**/*.yaml"
     ]
-  }
+  },
+  "editor.inlineSuggest.edits.showCollapsed": true,
+  "errorLens.enabled": true,
+  "python.analysis.typeCheckingMode": "strict",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[twig]": {
+    "editor.defaultFormatter": "mblode.twig-language-2"
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "chat.mcp.gallery.enabled": true,
+  "lldb.suppressUpdateNotifications": true,
+  "errorLens.messageEnabled": true,
+  "chat.viewSessions.orientation": "stacked"
 }

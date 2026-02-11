@@ -23,3 +23,11 @@ fi
 if [ -f "/usr/share/bash-completion/completions/git" ]; then
   source /usr/share/bash-completion/completions/git
 fi
+
+if [ -x "$(command -v uv)" ]; then
+  eval "$(uv --generate-shell-completion bash)"
+fi
+
+if [ -x "$(command -v uvx)" ]; then
+  eval "$(uvx --generate-shell-completion bash)"
+fi
