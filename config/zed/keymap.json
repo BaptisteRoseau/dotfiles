@@ -11,15 +11,15 @@
             "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
             "ctrl-shift-d": [
                 "editor::SelectPrevious",
-                { "replace_newest": false }
+                { "replace_newest": false },
             ],
             "ctrl-alt-b": "workspace::ToggleRightDock",
             "ctrl-b": "workspace::ToggleLeftDock",
             "ctrl-a": "editor::SelectAll",
             "ctrl-i": null,
             "ctrl-shift-f": "pane::DeploySearch",
-            "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }]
-        }
+            "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
+        },
     },
     // Avoid vim override
     {
@@ -30,8 +30,8 @@
             "enter": "search::SelectNextMatch",
             "ctrl-f": "search::FocusSearch",
             "ctrl-h": "search::ToggleReplace",
-            "ctrl-l": "search::ToggleSelection"
-        }
+            "ctrl-l": "search::ToggleSelection",
+        },
     },
     {
         "context": "Editor && mode == full",
@@ -41,8 +41,8 @@
             "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }],
             "ctrl-<": "editor::ToggleCodeActions",
             "ctrl-down": ["editor::MoveDownByLines", { "lines": 10 }],
-            "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }]
-        }
+            "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }],
+        },
     },
     {
         "context": "vim_mode == insert",
@@ -50,8 +50,8 @@
             "ctrl-h": "editor::MoveLeft",
             "ctrl-j": "editor::MoveDown",
             "ctrl-k": "editor::MoveUp",
-            "ctrl-l": "editor::MoveRight"
-        }
+            "ctrl-l": "editor::MoveRight",
+        },
     },
     {
         "context": "Picker || menu",
@@ -61,8 +61,8 @@
             "ctrl-k": "menu::SelectPrevious",
             "ctrl-l": "editor::MoveRight",
             "shift-g": "menu::SelectLast",
-            "g g": "menu::SelectFirst"
-        }
+            "g g": "menu::SelectFirst",
+        },
     },
     {
         "context": "Pane || Workspace",
@@ -77,8 +77,8 @@
             "ctrl-8": ["workspace::ActivatePane", 7],
             "ctrl-9": ["workspace::ActivatePane", 8],
             "ctrl-up": "editor::MoveUpByLines",
-            "ctrl-down": "editor::MoveDownByLines"
-        }
+            "ctrl-down": "editor::MoveDownByLines",
+        },
     },
     {
         "context": "ProjectPanel && not_editing",
@@ -92,8 +92,8 @@
             "p": "project_panel::Paste",
             // Close project panel as project file panel on the right
             "q": "workspace::ToggleLeftDock",
-            "space e": "workspace::ToggleLeftDock"
-        }
+            "space e": "workspace::ToggleLeftDock",
+        },
     },
     {
         "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
@@ -124,24 +124,26 @@
             // Open markdown preview
             "space m p": "markdown::OpenPreview",
             "space m P": "markdown::OpenPreviewToTheSide",
-            "ctrl-s": "workspace::Save"
-        }
+            "ctrl-s": "workspace::Save",
+            // VSCode -like
+            "ctrl-alt-i": "workspace::ToggleRightDock",
+        },
     },
     // Better escape
     {
         "context": "Editor && vim_mode == insert && !menu",
         "bindings": {
             "j j": "vim::NormalBefore", // remap jj in insert mode to escape
-            "j k": "vim::NormalBefore" // remap jk in insert mode to escape
-        }
+            "j k": "vim::NormalBefore", // remap jk in insert mode to escape
+        },
     },
     {
         "context": "vim_mode == normal || vim_mode == visual",
         "bindings": {
             "s": ["vim::PushSneak", {}],
             "S": ["vim::PushSneakBackward", {}],
-            "ctrl-w": "pane::CloseActiveItem"
-        }
+            "ctrl-w": "pane::CloseActiveItem",
+        },
     },
     {
         "context": "Pane",
@@ -149,8 +151,8 @@
             "alt-left": "pane::GoBack",
             "alt-right": "pane::GoForward",
             "alt-h": "pane::GoBack",
-            "alt-l": "pane::GoForward"
-        }
-    }
+            "alt-l": "pane::GoForward",
+        },
+    },
     // TODO: tab, visual mode tab, visual to insert mode with I and A
 ]
