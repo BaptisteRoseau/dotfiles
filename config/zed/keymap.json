@@ -4,6 +4,28 @@
 // This is especially helpful for vim mode conflicts.
 //TODO: See https://github.com/jellydn/zed-101-setup/blob/main/keymap.json
 [
+    {
+        "bindings": {
+            "ctrl-alt-i": "workspace::ToggleRightDock",
+            "ctrl-b": "workspace::ToggleLeftDock",
+            "ctrl-shift-f": "pane::DeploySearch",
+            "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
+        },
+    },
+    {
+        "context": "!Welcome",
+        "bindings": {
+            "ctrl-1": ["workspace::ActivatePane", 0],
+            "ctrl-2": ["workspace::ActivatePane", 1],
+            "ctrl-3": ["workspace::ActivatePane", 2],
+            "ctrl-4": ["workspace::ActivatePane", 3],
+            "ctrl-5": ["workspace::ActivatePane", 4],
+            "ctrl-6": ["workspace::ActivatePane", 5],
+            "ctrl-7": ["workspace::ActivatePane", 6],
+            "ctrl-8": ["workspace::ActivatePane", 7],
+            "ctrl-9": ["workspace::ActivatePane", 8],
+        },
+    },
     // Vim mode resets
     {
         "context": "(VimControl && !menu) || vim_mode == insert",
@@ -14,11 +36,24 @@
                 { "replace_newest": false },
             ],
             "ctrl-alt-b": "workspace::ToggleRightDock",
-            "ctrl-b": "workspace::ToggleLeftDock",
             "ctrl-a": "editor::SelectAll",
             "ctrl-i": null,
-            "ctrl-shift-f": "pane::DeploySearch",
-            "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
+            "ctrl-shift-up": [
+                "editor::AddSelectionAbove",
+                { "skip_soft_wrap": true },
+            ],
+            "ctrl-shift-down": [
+                "editor::AddSelectionBelow",
+                { "skip_soft_wrap": true },
+            ],
+            "ctrl-alt-down": [
+                "editor::SelectNext",
+                { "replace_newest": false },
+            ],
+            "ctrl-alt-up": [
+                "editor::SelectPrevious",
+                { "replace_newest": false },
+            ],
         },
     },
     // Avoid vim override
@@ -61,23 +96,14 @@
             "ctrl-k": "menu::SelectPrevious",
             "ctrl-l": "editor::MoveRight",
             "shift-g": "menu::SelectLast",
-            "g g": "menu::SelectFirst",
+            "ctrl-g": "menu::SelectFirst",
         },
     },
     {
         "context": "Pane || Workspace",
         "bindings": {
-            "ctrl-1": ["workspace::ActivatePane", 0],
-            "ctrl-2": ["workspace::ActivatePane", 1],
-            "ctrl-3": ["workspace::ActivatePane", 2],
-            "ctrl-4": ["workspace::ActivatePane", 3],
-            "ctrl-5": ["workspace::ActivatePane", 4],
-            "ctrl-6": ["workspace::ActivatePane", 5],
-            "ctrl-7": ["workspace::ActivatePane", 6],
-            "ctrl-8": ["workspace::ActivatePane", 7],
-            "ctrl-9": ["workspace::ActivatePane", 8],
-            "ctrl-up": "editor::MoveUpByLines",
-            "ctrl-down": "editor::MoveDownByLines",
+            "ctrl-down": ["editor::MoveDownByLines", { "lines": 10 }],
+            "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }],
         },
     },
     {
@@ -119,14 +145,10 @@
             // Toggle soft wrap
             "space u w": "editor::ToggleSoftWrap",
 
-            // NOTE: Toggle Zen mode, not fully working yet
-            "space c z": "workspace::ToggleCenteredLayout",
             // Open markdown preview
             "space m p": "markdown::OpenPreview",
             "space m P": "markdown::OpenPreviewToTheSide",
             "ctrl-s": "workspace::Save",
-            // VSCode -like
-            "ctrl-alt-i": "workspace::ToggleRightDock",
         },
     },
     // Better escape
@@ -153,6 +175,6 @@
             "alt-h": "pane::GoBack",
             "alt-l": "pane::GoForward",
         },
-    },
+    }
     // TODO: tab, visual mode tab, visual to insert mode with I and A
 ]

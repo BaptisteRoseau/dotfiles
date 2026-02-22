@@ -168,7 +168,7 @@
             { "token_type": "regexp", "style": ["string.regex"] },
             { "token_type": "invalid", "style": ["invalid"] },
             { "token_type": "character", "style": ["character"] },
-            
+
             //START Rust semantic tokens: https://rust-analyzer.github.io/book/features.html#semantic-syntax-highlighting
             { "token_type": "attribute", "style": ["attribute"] },
             { "token_type": "namespace", "style": ["namespace", "type"] },
