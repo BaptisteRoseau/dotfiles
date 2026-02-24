@@ -1,335 +1,342 @@
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 {
-    "minimap": {
-        "show": "never",
+  "minimap": {
+    "show": "never",
+  },
+  "buffer_font_fallbacks": ["Hack Nerd Font Mono", ".SystemUIFont"],
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null,
     },
-    "buffer_font_fallbacks": ["Hack Nerd Font Mono", ".SystemUIFont"],
-    "diagnostics": {
-        "button": true,
-        "include_warnings": true,
-        "inline": {
-            "enabled": true,
-            "update_debounce_ms": 150,
-            "padding": 4,
-            "min_column": 0,
-            "max_severity": null,
-        },
-    },
-    "relative_line_numbers": "wrapped",
-    "icon_theme": "Material Icon Theme",
-    "show_edit_predictions": true,
-    "agent": {
-        "tool_permissions": {
-            "tools": {
-                "terminal": {
-                    "always_allow": [
-                        {
-                            "pattern": "^cargo\\s",
-                        },
-                        {
-                            "pattern": "^grep\\s",
-                        },
-                        {
-                            "pattern": "^ls\\s",
-                        },
-                        {
-                            "pattern": "^cat\\s",
-                        },
-                    ],
-                },
+  },
+  "relative_line_numbers": "wrapped",
+  "icon_theme": "Material Icon Theme",
+  "show_edit_predictions": true,
+  "agent": {
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^cargo\\s",
             },
+            {
+              "pattern": "^grep\\s",
+            },
+            {
+              "pattern": "^ls\\s",
+            },
+            {
+              "pattern": "^cat\\s",
+            },
+          ],
         },
-        "default_profile": "write",
-        "default_model": {
-            "provider": "ollama",
-            "model": "gpt-oss:latest",
-        },
-        "enabled": true,
-        "button": true,
-        "model_parameters": [],
+      },
     },
-    "base_keymap": "VSCode",
-    "autosave": {
-        "after_delay": {
-            "milliseconds": 1000,
-        },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "ollama",
+      "model": "gpt-oss:latest",
     },
-    "file_scan_exclusions": [
-        "**/.git",
-        "**/.svn",
-        "**/.hg",
-        "**/CVS",
-        "**/.DS_Store",
-        "**/Thumbs.db",
-        "**/.classpath",
-        "**/.settings",
-        // above is default from Zed
-        "**/out",
-        "**/prof",
-        "**/dist",
-        "**/.husky",
-        "**/.turbo",
-        "**/.vscode",
-        "**/.vscode",
-        "**/.next",
-        "**/.storybook",
-        "**/.tap",
-        "**/.nyc_output",
-        "**/.benchmarks",
-        "**/report",
-        "**/node_modules",
+    "enabled": true,
+    "button": true,
+    "model_parameters": [],
+  },
+  "base_keymap": "VSCode",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/prof",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode",
+    "**/.vscode",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/.benchmarks",
+    "**/report",
+    "**/node_modules",
+  ],
+  "vim_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+  },
+  "ui_font_size": 18,
+  "buffer_font_size": 15,
+  "ui_font_weight": 100,
+  "buffer_font_weight": 100,
+  "buffer_font_family": "Hack Nerd Font",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Custom VSCode Dark Modern",
+  },
+  "preferred_line_length": 90,
+  "show_wrap_guides": true,
+  "wrap_guides": [90, 120],
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+    },
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "edit_predictions": {
+    "disabled_globs": [".env", ".pyc", ".venv"],
+  },
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true,
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy",
+        },
+      },
+    },
+    "cspell": {
+      "settings": {
+        "dictionaries": ["custom"],
+        "dictionaryDefinitions": [{ "name": "custom", "path": "./.cspell_dict.txt" }],
+      },
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"],
+      },
+    },
+  },
+  "vertical_scroll_margin": 10,
+  "format_on_save": "off",
+  "use_autoclose": true,
+  "tab_size": 4,
+  "colorize_brackets": true,
+  "edit_predictions_disabled_in": ["all"],
+  "semantic_tokens": "combined",
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      { "token_modifiers": ["mutable"], "underline": true },
+      { "token_modifiers": ["readonly"], "style": ["readonly"] },
+      { "token_modifiers": ["deprecated"], "strikethrough": true },
+      { "token_type": "unresolvedReference", "style": ["unresolved_reference"] },
+      { "token_type": "enumMember", "style": ["variant", "constant"] },
+      { "token_type": "namespace", "style": ["namespace"] },
+      { "token_type": "type", "style": ["type"] },
+      { "token_type": "class", "style": ["class", "type"] },
+      { "token_type": "enum", "style": ["enum", "type"] },
+      { "token_type": "interface", "style": ["interface", "type"] },
+      { "token_type": "struct", "style": ["struct", "type"] },
+      { "token_type": "parameter", "style": ["parameter", "variable"] },
+      { "token_type": "modifier", "style": ["modifier"] },
+      { "token_type": "variable", "style": ["variable"] },
+      { "token_type": "property", "style": ["property", "attribute"] },
+      { "token_type": "function", "style": ["function"] },
+      { "token_type": "method", "style": ["function.method", "function"] },
+      { "token_type": "macro", "style": ["macro", "preproc"] },
+      { "token_type": "keyword", "style": ["keyword"] },
+      { "token_type": "comment", "style": ["comment"] },
+      { "token_type": "string", "style": ["string"] },
+      { "token_type": "number", "style": ["number"] },
+      { "token_type": "operator", "style": ["operator"] },
+      { "token_type": "regexp", "style": ["string.regex"] },
+      { "token_type": "invalid", "style": ["invalid"] },
+      { "token_type": "character", "style": ["character"] },
+
+      //START Rust semantic tokens: https://rust-analyzer.github.io/book/features.html#semantic-syntax-highlighting
+      { "token_type": "attribute", "style": ["attribute"] },
+      { "token_type": "namespace", "style": ["namespace", "type"] },
+      { "token_type": "trait", "style": ["trait"] },
+      { "token_type": "union", "style": ["union", "type"] },
+      { "token_type": "boolean", "style": ["boolean"] },
+      { "token_type": "derive", "style": ["derive", "operator"] },
+      { "token_type": "typeAlias", "style": ["type_alias", "type"] },
+      { "token_type": "escapeSequence", "style": ["string.escape"] },
+      { "token_type": "formatSpecifier", "style": ["keyword"] },
+      { "token_type": "macroBang", "style": ["function", "macro"] },
+      {
+        "token_type": "builtinAttribute",
+        "style": ["builtin_attribute", "attribute"],
+      },
+      { "token_type": "builtinType", "style": ["builtin_type", "type"] },
+      {
+        "token_type": "constParameter",
+        "style": ["const_parameter", "parameter", "constant"],
+      },
+      { "token_type": "deriveHelper", "style": ["derive_helper", "operator"] },
+      { "token_type": "enumMember", "style": ["variant"] },
+      { "token_type": "generic", "style": ["generic", "type"] },
+      { "token_type": "label", "style": ["label"] },
+      { "token_type": "lifetime", "style": ["lifetime", "keyword"] },
+      { "token_type": "selfKeyword", "style": ["keyword"] },
+      { "token_type": "selfTypeKeyword", "style": ["keyword"] },
+      { "token_type": "toolModule", "style": ["tool_module", "namespace"] },
+      { "token_type": "typeParameter", "style": ["parameter", "variable"] },
+      { "token_modifiers": ["attribute"], "style": ["attribute"] },
+      { "token_modifiers": ["constant"], "style": ["constant"] },
+      { "token_modifiers": ["consuming"], "style": ["consuming"] },
+      { "token_modifiers": ["controlFlow"], "style": ["keyword.control"] },
+      { "token_modifiers": ["crateRoot"], "style": ["crate_root", "keyword"] },
+      {
+        "token_modifiers": ["documentation"],
+        "style": ["documentation", "comment.doc"],
+      },
+      {
+        "token_modifiers": ["intraDocLink"],
+        "style": ["intra_doc_link", "link_uri", "link_text"],
+      },
+      { "token_modifiers": ["library"], "style": ["library", "namespace"] },
+      { "token_modifiers": ["macro"], "style": ["macro"] },
+      { "token_modifiers": ["trait"], "style": ["trait", "type"] },
+      { "token_modifiers": ["unsafe"], "style": ["unsafe"] },
+      // END Rust semantic tokens
+
+      // START: Common Keywords
+      { "token_type": "keyword.control", "style": ["keyword.control", "keyword"] },
+      {
+        "token_type": "source.cpp keyword.operator.new",
+        "style": ["keyword.control", "keyword"],
+      },
+      {
+        "token_type": "keyword.operator.delete",
+        "style": ["keyword.control", "keyword"],
+      },
+      {
+        "token_type": "keyword.other.using",
+        "style": ["keyword.control", "keyword"],
+      },
+      {
+        "token_type": "keyword.other.directive.using",
+        "style": ["keyword.control", "keyword"],
+      },
+      {
+        "token_type": "keyword.other.operator",
+        "style": ["keyword.control", "keyword"],
+      },
+      {
+        "token_type": "entity.name.operator",
+        "style": ["keyword.control", "keyword"],
+      },
+      // END: Common Keywords
+
+      // Markup
+      { "token_type": "markup.underline", "underline": true },
+      {
+        "token_type": "markup.bold",
+        "foreground_color": "#569CD6",
+        "font_weight": "bold",
+      },
+      {
+        "token_type": "markup.heading",
+        "foreground_color": "#569CD6",
+        "font_weight": "bold",
+      },
+      { "token_type": "markup.italic", "font_style": "italic" },
+      { "token_type": "markup.strikethrough", "strikethrough": true },
+      { "token_type": "markup.inserted", "foreground_color": "#B5CEA8" },
+      { "token_type": "markup.deleted", "foreground_color": "#CE9178" },
+      { "token_type": "markup.changed", "foreground_color": "#569CD6" },
+      { "token_type": "markup.inline.raw", "foreground_color": "#CE9178" },
     ],
-    "vim_mode": true,
-    "vim": {
-        "use_smartcase_find": true,
-    },
-    "ui_font_size": 18,
-    "buffer_font_size": 15,
-    "ui_font_weight": 100,
-    "buffer_font_weight": 100,
-    "buffer_font_family": "Hack Nerd Font",
-    "theme": {
-        "mode": "system",
-        "light": "One Light",
-        "dark": "Custom VSCode Dark Modern",
-    },
-    "preferred_line_length": 90,
-    "show_wrap_guides": true,
-    "wrap_guides": [90, 120],
-    "git": {
-        "inline_blame": {
-            "enabled": true,
-        },
-    },
-    "inlay_hints": {
+  },
+  "languages": {
+    "TypeScript": {
+      "inlay_hints": {
         "enabled": true,
+        "show_parameter_hints": false,
+        "show_other_hints": true,
+        "show_type_hints": true,
+      },
     },
-    "edit_predictions": {
-        "disabled_globs": [".env", ".pyc", ".venv"],
-    },
-    "tabs": {
-        "close_position": "right",
-        "file_icons": true,
-        "git_status": true,
-    },
-    "lsp": {
-        "rust-analyzer": {
-            "initialization_options": {
-                "check": {
-                    "command": "clippy",
-                },
-            },
-        },
-        "cspell": {
-            "settings": {
-                "dictionaries": ["custom"],
-                "dictionaryDefinitions": [
-                    { "name": "custom", "path": "./.cspell_dict.txt" },
-                ],
-            },
-        },
-        "tailwindcss-language-server": {
-            "settings": {
-                "classAttributes": ["class", "className", "ngClass", "styles"],
-            },
-        },
-    },
-    "vertical_scroll_margin": 10,
-    "format_on_save": "off",
-    "use_autoclose": true,
-    "tab_size": 4,
-    "colorize_brackets": true,
-    "edit_predictions_disabled_in": ["all"],
-    "semantic_tokens": "combined",
-    "global_lsp_settings": {
-        "semantic_token_rules": [
-            { "token_modifiers": ["mutable"], "underline": true },
-            { "token_modifiers": ["readonly"], "style": ["readonly"] },
-            { "token_modifiers": ["deprecated"], "strikethrough": true },
-            { "token_type": "unresolvedReference", "style": ["unresolved_reference"] },
-            { "token_type": "enumMember", "style": ["variant", "constant"] },
-            { "token_type": "namespace", "style": ["namespace"] },
-            { "token_type": "type", "style": ["type"] },
-            { "token_type": "class", "style": ["class", "type"] },
-            { "token_type": "enum", "style": ["enum", "type"] },
-            { "token_type": "interface", "style": ["interface", "type"] },
-            { "token_type": "struct", "style": ["struct", "type"] },
-            { "token_type": "parameter", "style": ["parameter", "variable"] },
-            { "token_type": "modifier", "style": ["modifier"] },
-            { "token_type": "variable", "style": ["variable"] },
-            { "token_type": "property", "style": ["property", "attribute"] },
-            { "token_type": "function", "style": ["function"] },
-            { "token_type": "method", "style": ["function.method", "function"] },
-            { "token_type": "macro", "style": ["macro", "preproc"] },
-            { "token_type": "keyword", "style": ["keyword"] },
-            { "token_type": "comment", "style": ["comment"] },
-            { "token_type": "string", "style": ["string"] },
-            { "token_type": "number", "style": ["number"] },
-            { "token_type": "operator", "style": ["operator"] },
-            { "token_type": "regexp", "style": ["string.regex"] },
-            { "token_type": "invalid", "style": ["invalid"] },
-            { "token_type": "character", "style": ["character"] },
-
-            //START Rust semantic tokens: https://rust-analyzer.github.io/book/features.html#semantic-syntax-highlighting
-            { "token_type": "attribute", "style": ["attribute"] },
-            { "token_type": "namespace", "style": ["namespace", "type"] },
-            { "token_type": "trait", "style": ["trait"] },
-            { "token_type": "union", "style": ["union", "type"] },
-            { "token_type": "boolean", "style": ["boolean"] },
-            { "token_type": "derive", "style": ["derive", "operator"] },
-            { "token_type": "typeAlias", "style": ["type_alias", "type"] },
-            { "token_type": "escapeSequence", "style": ["string.escape"] },
-            { "token_type": "formatSpecifier", "style": ["keyword"] },
-            { "token_type": "macroBang", "style": ["function", "macro"] },
-            {
-                "token_type": "builtinAttribute",
-                "style": ["builtin_attribute", "attribute"],
-            },
-            { "token_type": "builtinType", "style": ["builtin_type", "type"] },
-            {
-                "token_type": "constParameter",
-                "style": ["const_parameter", "parameter", "constant"],
-            },
-            { "token_type": "deriveHelper", "style": ["derive_helper", "operator"] },
-            { "token_type": "enumMember", "style": ["variant"] },
-            { "token_type": "generic", "style": ["generic", "type"] },
-            { "token_type": "label", "style": ["label"] },
-            { "token_type": "lifetime", "style": ["lifetime", "keyword"] },
-            { "token_type": "selfKeyword", "style": ["keyword"] },
-            { "token_type": "selfTypeKeyword", "style": ["keyword"] },
-            { "token_type": "toolModule", "style": ["tool_module", "namespace"] },
-            { "token_type": "typeParameter", "style": ["parameter", "variable"] },
-            { "token_modifiers": ["attribute"], "style": ["attribute"] },
-            { "token_modifiers": ["constant"], "style": ["constant"] },
-            { "token_modifiers": ["consuming"], "style": ["consuming"] },
-            { "token_modifiers": ["controlFlow"], "style": ["keyword.control"] },
-            { "token_modifiers": ["crateRoot"], "style": ["crate_root", "keyword"] },
-            {
-                "token_modifiers": ["documentation"],
-                "style": ["documentation", "comment.doc"],
-            },
-            {
-                "token_modifiers": ["intraDocLink"],
-                "style": ["intra_doc_link", "link_uri", "link_text"],
-            },
-            { "token_modifiers": ["library"], "style": ["library", "namespace"] },
-            { "token_modifiers": ["macro"], "style": ["macro"] },
-            { "token_modifiers": ["trait"], "style": ["trait", "type"] },
-            { "token_modifiers": ["unsafe"], "style": ["unsafe"] },
-            // END Rust semantic tokens
-
-            // START: Common Keywords
-            { "token_type": "keyword.control", "style": ["keyword.control", "keyword"] },
-            {
-                "token_type": "source.cpp keyword.operator.new",
-                "style": ["keyword.control", "keyword"],
-            },
-            {
-                "token_type": "keyword.operator.delete",
-                "style": ["keyword.control", "keyword"],
-            },
-            {
-                "token_type": "keyword.other.using",
-                "style": ["keyword.control", "keyword"],
-            },
-            {
-                "token_type": "keyword.other.directive.using",
-                "style": ["keyword.control", "keyword"],
-            },
-            {
-                "token_type": "keyword.other.operator",
-                "style": ["keyword.control", "keyword"],
-            },
-            {
-                "token_type": "entity.name.operator",
-                "style": ["keyword.control", "keyword"],
-            },
-            // END: Common Keywords
-
-            // Markup
-            { "token_type": "markup.underline", "underline": true },
-            {
-                "token_type": "markup.bold",
-                "foreground_color": "#569CD6",
-                "font_weight": "bold",
-            },
-            {
-                "token_type": "markup.heading",
-                "foreground_color": "#569CD6",
-                "font_weight": "bold",
-            },
-            { "token_type": "markup.italic", "font_style": "italic" },
-            { "token_type": "markup.strikethrough", "strikethrough": true },
-            { "token_type": "markup.inserted", "foreground_color": "#B5CEA8" },
-            { "token_type": "markup.deleted", "foreground_color": "#CE9178" },
-            { "token_type": "markup.changed", "foreground_color": "#569CD6" },
-            { "token_type": "markup.inline.raw", "foreground_color": "#CE9178" },
-        ],
-    },
-    "languages": {
-        "TypeScript": {
-            "inlay_hints": {
-                "enabled": true,
-                "show_parameter_hints": false,
-                "show_other_hints": true,
-                "show_type_hints": true,
-            },
-        },
-        "Python": {
-            "inlay_hints": {
-                "enabled": true,
-                "show_parameter_hints": false,
-                "show_other_hints": true,
-                "show_type_hints": true,
-            },
-            "formatter": { "language_server": { "name": "ruff" } },
-            "language_servers": ["!pyright", "ty", "ruff"],
-        },
-        "Markdown": {
-            "soft_wrap": "editor_width",
-        },
-    },
-    "telemetry": {
-        "diagnostics": true,
-        "metrics": true,
-    },
-    "tab_bar": {
-        "show": true,
-    },
-    "scrollbar": {
-        "show": "auto",
-    },
-    "file_types": {
-        "PHP": ["*.php", "*.module", "*.theme"],
-        "Dockerfile": ["Dockerfile", "Dockerfile.*"],
-        "JSON": ["json", "jsonc", "*.code-snippets"],
-        "tailwindcss": ["*.css"],
-        "html": ["*.twig"],
-        "markdown": ["*.md", "TODO"],
-    },
-    "centered_layout": {
-        "left_padding": 0.15,
-        "right_padding": 0.15,
-    },
-    "indent_guides": {
+    "Python": {
+      "inlay_hints": {
         "enabled": true,
-        "coloring": "indent_aware",
+        "show_parameter_hints": false,
+        "show_other_hints": true,
+        "show_type_hints": true,
+      },
+      "formatter": { "language_server": { "name": "ruff" } },
+      "language_servers": ["!pyright", "ty", "ruff"],
     },
-    "language_models": {
-        "ollama": {
-            "api_url": "http://localhost:11434",
-            "available_models": [
-                {
-                    "name": "gpt-oss:latest",
-                    "display_name": "GPT OSS 20B",
-                    "max_tokens": 32000,
-                    "supports_thinking": true,
-                    "supports_tools": true,
-                    "supports_images": false,
-                    "keep_alive": 300,
-                },
-            ],
+    "Markdown": {
+      "soft_wrap": "editor_width",
+    },
+    "JSON": {
+      "tab_size": 2,
+    },
+    "JSONC": {
+      "tab_size": 2,
+    },
+    "YAML": {
+      "tab_size": 2,
+    },
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+  },
+  "tab_bar": {
+    "show": true,
+  },
+  "scrollbar": {
+    "show": "auto",
+  },
+  "file_types": {
+    "PHP": ["*.php", "*.module", "*.theme"],
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"],
+    "tailwindcss": ["*.css"],
+    "html": ["*.twig"],
+    "markdown": ["*.md", "TODO"],
+  },
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15,
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "available_models": [
+        {
+          "name": "gpt-oss:latest",
+          "display_name": "GPT OSS 20B",
+          "max_tokens": 32000,
+          "supports_thinking": true,
+          "supports_tools": true,
+          "supports_images": false,
+          "keep_alive": 300,
         },
+      ],
     },
+  },
 }

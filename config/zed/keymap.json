@@ -4,165 +4,165 @@
 // This is especially helpful for vim mode conflicts.
 //TODO: See https://github.com/jellydn/zed-101-setup/blob/main/keymap.json
 [
-    {
-        "bindings": {
-            "ctrl-alt-i": "workspace::ToggleRightDock",
-            "ctrl-b": "workspace::ToggleLeftDock",
-            "ctrl-shift-f": "pane::DeploySearch",
-            "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
-        },
+  {
+    "bindings": {
+      "ctrl-alt-i": "workspace::ToggleRightDock",
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-shift-f": "pane::DeploySearch",
+      "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
     },
-    // Pane focus
-    {
-        "context": "!Welcome",
-        "bindings": {
-            "ctrl-1": ["workspace::ActivatePane", 0],
-            "ctrl-2": ["workspace::ActivatePane", 1],
-            "ctrl-3": ["workspace::ActivatePane", 2],
-            "ctrl-4": ["workspace::ActivatePane", 3],
-            "ctrl-5": ["workspace::ActivatePane", 4],
-            "ctrl-6": ["workspace::ActivatePane", 5],
-            "ctrl-7": ["workspace::ActivatePane", 6],
-            "ctrl-8": ["workspace::ActivatePane", 7],
-            "ctrl-9": ["workspace::ActivatePane", 8],
-        },
+  },
+  // Pane focus
+  {
+    "context": "!Welcome",
+    "bindings": {
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1],
+      "ctrl-3": ["workspace::ActivatePane", 2],
+      "ctrl-4": ["workspace::ActivatePane", 3],
+      "ctrl-5": ["workspace::ActivatePane", 4],
+      "ctrl-6": ["workspace::ActivatePane", 5],
+      "ctrl-7": ["workspace::ActivatePane", 6],
+      "ctrl-8": ["workspace::ActivatePane", 7],
+      "ctrl-9": ["workspace::ActivatePane", 8],
     },
-    // Vim mode resets
-    {
-        "context": "(VimControl && !menu) || vim_mode == insert",
-        "bindings": {
-            "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
-            "ctrl-shift-d": ["editor::SelectPrevious", { "replace_newest": false }],
-            "ctrl-alt-b": "workspace::ToggleRightDock",
-            "ctrl-a": "editor::SelectAll",
-            "ctrl-i": null,
-            "ctrl-o": "workspace::OpenFiles",
-            "ctrl-shift-up": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
-            "ctrl-shift-down": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
-            "ctrl-alt-down": ["editor::SelectNext", { "replace_newest": false }],
-            "ctrl-alt-up": ["editor::SelectPrevious", { "replace_newest": false }],
-        },
+  },
+  // Vim mode resets
+  {
+    "context": "(VimControl && !menu) || vim_mode == insert",
+    "bindings": {
+      "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
+      "ctrl-shift-d": ["editor::SelectPrevious", { "replace_newest": false }],
+      "ctrl-alt-b": "workspace::ToggleRightDock",
+      "ctrl-a": "editor::SelectAll",
+      "ctrl-i": null,
+      "ctrl-o": "workspace::OpenFiles",
+      "ctrl-shift-up": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
+      "ctrl-shift-down": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
+      "ctrl-alt-down": ["editor::SelectNext", { "replace_newest": false }],
+      "ctrl-alt-up": ["editor::SelectPrevious", { "replace_newest": false }],
     },
-    {
-        "context": "BufferSearchBar",
-        "bindings": {
-            "escape": "buffer_search::Dismiss",
-            "tab": "buffer_search::FocusEditor",
-            "enter": "search::SelectNextMatch",
-            "ctrl-f": "search::FocusSearch",
-            "ctrl-h": "search::ToggleReplace",
-            "ctrl-l": "search::ToggleSelection",
-        },
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "escape": "buffer_search::Dismiss",
+      "tab": "buffer_search::FocusEditor",
+      "enter": "search::SelectNextMatch",
+      "ctrl-f": "search::FocusSearch",
+      "ctrl-h": "search::ToggleReplace",
+      "ctrl-l": "search::ToggleSelection",
     },
-    {
-        "context": "Editor && mode == full",
-        "bindings": {
-            "alt-z": "editor::ToggleSoftWrap",
-            "ctrl-f": "buffer_search::Deploy",
-            "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }],
-            "ctrl-<": "editor::ToggleCodeActions",
-            "ctrl-down": ["editor::MoveDownByLines", { "lines": 10 }],
-            "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }],
-        },
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "alt-z": "editor::ToggleSoftWrap",
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-h": ["buffer_search::Deploy", { "replace_enabled": true }],
+      "ctrl-<": "editor::ToggleCodeActions",
+      "ctrl-down": ["editor::MoveDownByLines", { "lines": 10 }],
+      "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }],
     },
-    {
-        "context": "vim_mode == insert",
-        "bindings": {
-            "ctrl-h": "editor::MoveLeft",
-            "ctrl-j": "editor::MoveDown",
-            "ctrl-k": "editor::MoveUp",
-            "ctrl-l": "editor::MoveRight",
-        },
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-h": "editor::MoveLeft",
+      "ctrl-j": "editor::MoveDown",
+      "ctrl-k": "editor::MoveUp",
+      "ctrl-l": "editor::MoveRight",
     },
-    {
-        "context": "Picker || menu",
-        "bindings": {
-            "ctrl-h": "editor::MoveLeft",
-            "ctrl-j": "menu::SelectNext",
-            "ctrl-k": "menu::SelectPrevious",
-            "ctrl-l": "editor::MoveRight",
-            "shift-g": "menu::SelectLast",
-            "ctrl-g": "menu::SelectFirst",
-        },
+  },
+  {
+    "context": "Picker || menu",
+    "bindings": {
+      "ctrl-h": "editor::MoveLeft",
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-l": "editor::MoveRight",
+      "shift-g": "menu::SelectLast",
+      "ctrl-g": "menu::SelectFirst",
     },
-    {
-        "context": "Pane || Workspace",
-        "bindings": {
-            "ctrl-down": ["editor::MoveDownByLines", { "lines": 10 }],
-            "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }],
-        },
+  },
+  {
+    "context": "Pane || Workspace",
+    "bindings": {
+      "ctrl-down": ["editor::MoveDownByLines", { "lines": 10 }],
+      "ctrl-up": ["editor::MoveUpByLines", { "lines": 10 }],
     },
-    {
-        "context": "ProjectPanel && not_editing",
-        "bindings": {
-            "a": "project_panel::NewFile",
-            "A": "project_panel::NewDirectory",
-            "r": "project_panel::Rename",
-            "d": "project_panel::Delete",
-            "x": "project_panel::Cut",
-            "c": "project_panel::Copy",
-            "p": "project_panel::Paste",
-            // Close project panel as project file panel on the right
-            "q": "workspace::ToggleLeftDock",
-            "space e": "workspace::ToggleLeftDock",
-        },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      // Close project panel as project file panel on the right
+      "q": "workspace::ToggleLeftDock",
+      "space e": "workspace::ToggleLeftDock",
     },
-    {
-        "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-        "bindings": {
-            "g d": "editor::GoToDefinition",
-            "g D": "editor::GoToDefinitionSplit",
-            "g i": "editor::GoToImplementation",
-            "g I": "editor::GoToImplementationSplit",
-            "g t": "editor::GoToTypeDefinition",
-            "g T": "editor::GoToTypeDefinitionSplit",
-            "g r": "editor::FindAllReferences",
-            "] d": "editor::GoToDiagnostic",
-            "[ d": "editor::GoToPreviousDiagnostic",
-            "] h": "editor::GoToHunk",
-            "[ h": "editor::GoToPreviousHunk",
-            // Git
-            "space t g h": "editor::ToggleSelectedDiffHunks",
-            "space t g s": "git_panel::ToggleFocus",
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPreviousDiagnostic",
+      "] h": "editor::GoToHunk",
+      "[ h": "editor::GoToPreviousHunk",
+      // Git
+      "space t g h": "editor::ToggleSelectedDiffHunks",
+      "space t g s": "git_panel::ToggleFocus",
 
-            // Toggles
-            "space t i": "editor::ToggleInlayHints",
-            "space t m": "editor::ToggleMinimap",
-            "space t g b": "editor::ToggleGitBlameInline",
-            "space t g p": "git_panel::ToggleFocus",
+      // Toggles
+      "space t i": "editor::ToggleInlayHints",
+      "space t m": "editor::ToggleMinimap",
+      "space t g b": "editor::ToggleGitBlameInline",
+      "space t g p": "git_panel::ToggleFocus",
 
-            // Open markdown preview
-            "space m p": "markdown::OpenPreview",
-            "space m P": "markdown::OpenPreviewToTheSide",
-            "ctrl-s": "workspace::Save",
-        },
+      // Open markdown preview
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide",
+      "ctrl-s": "workspace::Save",
     },
-    // Better escape
-    {
-        "context": "Editor && vim_mode == insert && !menu",
-        "bindings": {
-            "j j": "vim::NormalBefore", // remap jj in insert mode to escape
-            "j k": "vim::NormalBefore", // remap jk in insert mode to escape
-        },
+  },
+  // Better escape
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j j": "vim::NormalBefore", // remap jj in insert mode to escape
+      "j k": "vim::NormalBefore", // remap jk in insert mode to escape
     },
-    {
-        "context": "vim_mode == normal || vim_mode == visual",
-        "bindings": {
-            "s": ["vim::PushSneak", {}],
-            "S": ["vim::PushSneakBackward", {}],
-            "ctrl-w": "pane::CloseActiveItem",
-            "tab": "vim::Indent",
-            "shift-tab": "vim::Outdent",
-        },
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": ["vim::PushSneak", {}],
+      "S": ["vim::PushSneakBackward", {}],
+      "ctrl-w": "pane::CloseActiveItem",
+      "tab": "vim::Indent",
+      "shift-tab": "vim::Outdent",
     },
-    {
-        "context": "Pane",
-        "bindings": {
-            "alt-left": "pane::GoBack",
-            "alt-right": "pane::GoForward",
-            "alt-h": "pane::GoBack",
-            "alt-l": "pane::GoForward",
-            "ctrl-k ctrl-m": "workspace::ToggleZoom",
-        },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-left": "pane::GoBack",
+      "alt-right": "pane::GoForward",
+      "alt-h": "pane::GoBack",
+      "alt-l": "pane::GoForward",
+      "ctrl-k ctrl-m": "workspace::ToggleZoom",
     },
+  },
 ]
