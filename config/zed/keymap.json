@@ -37,6 +37,7 @@
       "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-a": "editor::SelectAll",
       "ctrl-i": null,
+      "ctrl-t": "project_symbols::Toggle",
       "ctrl-o": "workspace::OpenFiles",
       "ctrl-shift-up": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
       "ctrl-shift-down": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
