@@ -313,7 +313,7 @@
     "JSON": ["json", "jsonc", "*.code-snippets"],
     "tailwindcss": ["*.css"],
     "html": ["*.twig"],
-    "markdown": ["*.md", "TODO"],
+    "Markdown": ["*.md", "*TODO*"],
   },
   "centered_layout": {
     "left_padding": 0.15,
