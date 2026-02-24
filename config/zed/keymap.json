@@ -165,6 +165,8 @@
       "alt-h": "pane::GoBack",
       "alt-l": "pane::GoForward",
       "ctrl-k ctrl-m": "workspace::ToggleZoom",
+      "ctrl-k ctrl-p": "workspace::CopyRelativePath",
+      "ctrl-k p": "workspace::CopyPath",
       "ctrl-!": ["workspace::MoveItemToPane", { "destination": 0 }],
       "ctrl-@": ["workspace::MoveItemToPane", { "destination": 1 }],
       "ctrl-#": ["workspace::MoveItemToPane", { "destination": 2 }],
