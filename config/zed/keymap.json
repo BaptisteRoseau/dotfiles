@@ -12,6 +12,7 @@
             "ctrl-shift-h": ["pane::DeploySearch", { "replace_enabled": true }],
         },
     },
+    // Pane focus
     {
         "context": "!Welcome",
         "bindings": {
@@ -31,32 +32,17 @@
         "context": "(VimControl && !menu) || vim_mode == insert",
         "bindings": {
             "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
-            "ctrl-shift-d": [
-                "editor::SelectPrevious",
-                { "replace_newest": false },
-            ],
+            "ctrl-shift-d": ["editor::SelectPrevious", { "replace_newest": false }],
             "ctrl-alt-b": "workspace::ToggleRightDock",
             "ctrl-a": "editor::SelectAll",
             "ctrl-i": null,
-            "ctrl-shift-up": [
-                "editor::AddSelectionAbove",
-                { "skip_soft_wrap": true },
-            ],
-            "ctrl-shift-down": [
-                "editor::AddSelectionBelow",
-                { "skip_soft_wrap": true },
-            ],
-            "ctrl-alt-down": [
-                "editor::SelectNext",
-                { "replace_newest": false },
-            ],
-            "ctrl-alt-up": [
-                "editor::SelectPrevious",
-                { "replace_newest": false },
-            ],
+            "ctrl-o": "workspace::OpenFiles",
+            "ctrl-shift-up": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
+            "ctrl-shift-down": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
+            "ctrl-alt-down": ["editor::SelectNext", { "replace_newest": false }],
+            "ctrl-alt-up": ["editor::SelectPrevious", { "replace_newest": false }],
         },
     },
-    // Avoid vim override
     {
         "context": "BufferSearchBar",
         "bindings": {
@@ -136,14 +122,14 @@
             "] h": "editor::GoToHunk",
             "[ h": "editor::GoToPreviousHunk",
             // Git
-            "space g h d": "editor::ToggleSelectedDiffHunks",
-            "space g s": "git_panel::ToggleFocus",
+            "space t g h": "editor::ToggleSelectedDiffHunks",
+            "space t g s": "git_panel::ToggleFocus",
 
-            // Toggle inlay hints
+            // Toggles
             "space t i": "editor::ToggleInlayHints",
-
-            // Toggle soft wrap
-            "space u w": "editor::ToggleSoftWrap",
+            "space t m": "editor::ToggleMinimap",
+            "space t g b": "editor::ToggleGitBlameInline",
+            "space t g p": "git_panel::ToggleFocus",
 
             // Open markdown preview
             "space m p": "markdown::OpenPreview",
@@ -165,6 +151,8 @@
             "s": ["vim::PushSneak", {}],
             "S": ["vim::PushSneakBackward", {}],
             "ctrl-w": "pane::CloseActiveItem",
+            "tab": "vim::Indent",
+            "shift-tab": "vim::Outdent",
         },
     },
     {
@@ -174,7 +162,7 @@
             "alt-right": "pane::GoForward",
             "alt-h": "pane::GoBack",
             "alt-l": "pane::GoForward",
+            "ctrl-k ctrl-m": "workspace::ToggleZoom",
         },
-    }
-    // TODO: tab, visual mode tab, visual to insert mode with I and A
+    },
 ]

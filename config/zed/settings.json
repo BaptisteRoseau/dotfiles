@@ -2,7 +2,7 @@
 // documentation: https://zed.dev/docs/configuring-zed
 {
     "minimap": {
-        "show": "auto",
+        "show": "never",
     },
     "buffer_font_fallbacks": ["Hack Nerd Font Mono", ".SystemUIFont"],
     "diagnostics": {
@@ -94,6 +94,7 @@
         "light": "One Light",
         "dark": "Custom VSCode Dark Modern",
     },
+    "preferred_line_length": 90,
     "show_wrap_guides": true,
     "wrap_guides": [90, 120],
     "git": {
@@ -134,6 +135,7 @@
             },
         },
     },
+    "vertical_scroll_margin": 10,
     "format_on_save": "off",
     "use_autoclose": true,
     "tab_size": 4,
@@ -180,9 +182,15 @@
             { "token_type": "escapeSequence", "style": ["string.escape"] },
             { "token_type": "formatSpecifier", "style": ["keyword"] },
             { "token_type": "macroBang", "style": ["function", "macro"] },
-            { "token_type": "builtinAttribute", "style": ["builtin_attribute", "attribute"] },
+            {
+                "token_type": "builtinAttribute",
+                "style": ["builtin_attribute", "attribute"],
+            },
             { "token_type": "builtinType", "style": ["builtin_type", "type"] },
-            { "token_type": "constParameter", "style": ["const_parameter", "parameter", "constant"] },
+            {
+                "token_type": "constParameter",
+                "style": ["const_parameter", "parameter", "constant"],
+            },
             { "token_type": "deriveHelper", "style": ["derive_helper", "operator"] },
             { "token_type": "enumMember", "style": ["variant"] },
             { "token_type": "generic", "style": ["generic", "type"] },
@@ -197,8 +205,14 @@
             { "token_modifiers": ["consuming"], "style": ["consuming"] },
             { "token_modifiers": ["controlFlow"], "style": ["keyword.control"] },
             { "token_modifiers": ["crateRoot"], "style": ["crate_root", "keyword"] },
-            { "token_modifiers": ["documentation"], "style": ["documentation", "comment.doc"] },
-            { "token_modifiers": ["intraDocLink"], "style": ["intra_doc_link", "link_uri", "link_text"] },
+            {
+                "token_modifiers": ["documentation"],
+                "style": ["documentation", "comment.doc"],
+            },
+            {
+                "token_modifiers": ["intraDocLink"],
+                "style": ["intra_doc_link", "link_uri", "link_text"],
+            },
             { "token_modifiers": ["library"], "style": ["library", "namespace"] },
             { "token_modifiers": ["macro"], "style": ["macro"] },
             { "token_modifiers": ["trait"], "style": ["trait", "type"] },
@@ -206,13 +220,31 @@
             // END Rust semantic tokens
 
             // START: Common Keywords
-            { "token_type": "keyword.control", "style": ["keyword.control", "keyword"]},
-            { "token_type": "source.cpp keyword.operator.new", "style": ["keyword.control", "keyword"] },
-            { "token_type": "keyword.operator.delete", "style": ["keyword.control", "keyword"] },
-            { "token_type": "keyword.other.using", "style": ["keyword.control", "keyword"] },
-            { "token_type": "keyword.other.directive.using", "style": ["keyword.control", "keyword"] },
-            { "token_type": "keyword.other.operator", "style": ["keyword.control", "keyword"] },
-            { "token_type": "entity.name.operator", "style": ["keyword.control", "keyword"] },
+            { "token_type": "keyword.control", "style": ["keyword.control", "keyword"] },
+            {
+                "token_type": "source.cpp keyword.operator.new",
+                "style": ["keyword.control", "keyword"],
+            },
+            {
+                "token_type": "keyword.operator.delete",
+                "style": ["keyword.control", "keyword"],
+            },
+            {
+                "token_type": "keyword.other.using",
+                "style": ["keyword.control", "keyword"],
+            },
+            {
+                "token_type": "keyword.other.directive.using",
+                "style": ["keyword.control", "keyword"],
+            },
+            {
+                "token_type": "keyword.other.operator",
+                "style": ["keyword.control", "keyword"],
+            },
+            {
+                "token_type": "entity.name.operator",
+                "style": ["keyword.control", "keyword"],
+            },
             // END: Common Keywords
 
             // Markup
@@ -220,12 +252,12 @@
             {
                 "token_type": "markup.bold",
                 "foreground_color": "#569CD6",
-                "font_weight": "bold"
+                "font_weight": "bold",
             },
             {
                 "token_type": "markup.heading",
                 "foreground_color": "#569CD6",
-                "font_weight": "bold"
+                "font_weight": "bold",
             },
             { "token_type": "markup.italic", "font_style": "italic" },
             { "token_type": "markup.strikethrough", "strikethrough": true },
@@ -254,6 +286,9 @@
             "formatter": { "language_server": { "name": "ruff" } },
             "language_servers": ["!pyright", "ty", "ruff"],
         },
+        "Markdown": {
+            "soft_wrap": "editor_width",
+        },
     },
     "telemetry": {
         "diagnostics": true,
@@ -271,6 +306,7 @@
         "JSON": ["json", "jsonc", "*.code-snippets"],
         "tailwindcss": ["*.css"],
         "html": ["*.twig"],
+        "markdown": ["*.md", "TODO"],
     },
     "centered_layout": {
         "left_padding": 0.15,
