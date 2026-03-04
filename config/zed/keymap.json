@@ -74,6 +74,9 @@
       "ctrl-j": "editor::MoveDown",
       "ctrl-k": "editor::MoveUp",
       "ctrl-l": "editor::MoveRight",
+      "ctrl-c": "editor::Copy",
+      "ctrl-x": "editor::Cut",
+      "ctrl-v": "editor::Paste",
     },
   },
   {
@@ -124,8 +127,13 @@
       "] h": "editor::GoToHunk",
       "[ h": "editor::GoToPreviousHunk",
       // Git
-      "space t g h": "editor::ToggleSelectedDiffHunks",
-      "space t g s": "git_panel::ToggleFocus",
+      "space t g h d": "editor::ToggleSelectedDiffHunks", // [T]oggle [G]it [H]unk [D]iff
+      "space g h r": "git::Restore", // [G]it [H]unk [R]estore
+      "space g f r": "git::RestoreFile", // [G]it [F]ile [R]estore
+      "space g w r": "git::RestoreTrackedFiles", // [G]it [W]orkspace [R]estore
+      "space g a": "git::Add", // [G]it [A]dd
+      "space g d": "git::Diff", // [G]it [D]iff
+      "space g b d": "git::BranchDiff", // [G]it [B]ranch [D]iff
 
       // Toggles
       "space t i": "editor::ToggleInlayHints",

@@ -1,6 +1,7 @@
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 {
+  "disable_ai": false,
   "minimap": {
     "show": "never",
   },
@@ -16,10 +17,46 @@
       "max_severity": null,
     },
   },
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 50,
+  },
   "relative_line_numbers": "wrapped",
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": true,
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "anthropic",
+        "model": "claude-haiku-4-5-latest",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-6-thinking-latest",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-6-latest",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6-latest",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-opus-4-6-thinking-latest",
+        "enable_thinking": false,
+      },
+      {
+        "provider": "anthropic",
+        "model": "claude-haiku-4-5-thinking-latest",
+        "enable_thinking": false,
+      },
+    ],
     "tool_permissions": {
       "tools": {
         "terminal": {
@@ -42,8 +79,8 @@
     },
     "default_profile": "write",
     "default_model": {
-      "provider": "ollama",
-      "model": "gpt-oss:latest",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-latest",
     },
     "enabled": true,
     "button": true,
