@@ -32,3 +32,10 @@ export MANPATH="$MANPATH:$NVIM_ROOT/man"
 export LUMEN_AI_PROVIDER="ollama"
 export LUMEN_AI_MODEL="deepseek-coder-v2:latest"
 
+# CUDA
+export PATH="/usr/local/cuda/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+
+# Intel MKL
+source /opt/intel/oneapi/setvars.sh > /dev/null
+export LD_LIBRARY_PATH="/opt/intel/oneapi/mkl/latest/lib:$LD_LIBRARY_PATH"
