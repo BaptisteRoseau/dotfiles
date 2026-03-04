@@ -65,6 +65,9 @@
     ],
     "tool_permissions": {
       "tools": {
+        "create_directory": {
+          "default": "allow"
+        },
         "terminal": {
           "always_allow": [
             {
