@@ -21,6 +21,12 @@
     "enabled": true,
     "delay_ms": 50,
   },
+  "search": {
+    "include_ignored": true,
+  },
+  "file_finder": {
+    "include_ignored": "all",
+  },
   "relative_line_numbers": "wrapped",
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": true,
