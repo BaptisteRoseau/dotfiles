@@ -1,4 +1,3 @@
-live_config_reload = true
 
 [env]
 TERM = "alacritty"
@@ -9,13 +8,19 @@ color = "0xffffff"
 duration = 0
 
 [[hints.enabled]]
+binding = { key = "U", mods = "Control|Shift" }
 command = "xdg-open"
+mouse.enabled = true
+mouse.mods = "Control"
 hyperlinks = true
 post_processing = true
 persist = false
-mouse.enabled = true
-mouse.mods = "Control"
-binding = { key = "U", mods = "Control|Shift" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
+
+[[hints.enabled]]
+command = ""
+hyperlinks = true
+mouse.enabled = false
 
 [colors]
 draw_bold_text_with_bright_colors = false
@@ -29,25 +34,25 @@ foreground = '#C6C6C4'
 
 # Normal colors
 [colors.normal]
-black   = '#10100E'
-red     = '#C40233'
-green   = '#009F6B'
-yellow  = '#FFD700'
-blue    = '#0087BD'
+black = '#10100E'
+red = '#C40233'
+green = '#009F6B'
+yellow = '#FFD700'
+blue = '#0087BD'
 magenta = '#9A4EAE'
-cyan    = '#20B2AA'
-white   = '#C6C6C4'
+cyan = '#20B2AA'
+white = '#C6C6C4'
 
 # Bright colors
 [colors.bright]
-black   = '#696969'
-red     = '#FF2400'
-green   = '#03C03C'
-yellow  = '#FDFF00'
-blue    = '#007FFF'
+black = '#696969'
+red = '#FF2400'
+green = '#03C03C'
+yellow = '#FDFF00'
+blue = '#007FFF'
 magenta = '#FF1493'
-cyan    = '#00CCCC'
-white   = '#FFFAFA'
+cyan = '#00CCCC'
+white = '#FFFAFA'
 
 [colors.cursor]
 cursor = "#FFFFFF"
@@ -165,22 +170,19 @@ key = "End"
 mode = "~Alt"
 mods = "Shift"
 
-[mouse]
-hide_when_typing = true
-
-[[mouse.bindings]]
-action = "PasteSelection"
-mouse = "Middle"
+[[mouse]]
+bindings = { action = "PasteSelection", mouse = "Middle" }
+enabled = true
 
 [scrolling]
 history = 10000
 multiplier = 3
 
 [selection]
-save_to_clipboard = false
-semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+save_to_clipboard = true
+semantic_escape_chars = "\t\n,│`|:\"' ()[]{}<>"
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/bash"
 args = ["-c", "tmux attach -t main || tmux new -s main"]
 
@@ -189,3 +191,8 @@ decorations = "None"
 dynamic_padding = false
 opacity = 1.0
 startup_mode = "Windowed"
+
+[general]
+live_config_reload = true
+
+[terminal]
