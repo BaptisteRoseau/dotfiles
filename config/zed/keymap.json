@@ -38,6 +38,7 @@
       "ctrl-a": "editor::SelectAll",
       "ctrl-i": null,
       "ctrl-t": "project_symbols::Toggle",
+      "ctrl-g": "go_to_line::Toggle",
       "ctrl-o": "workspace::OpenFiles",
       "ctrl-shift-up": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
       "ctrl-shift-down": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
