@@ -11,3 +11,6 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.cargo/env"
+
+# opencode
+export PATH=/home/baptiste/.opencode/bin:$PATH
