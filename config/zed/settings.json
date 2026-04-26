@@ -1,10 +1,24 @@
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
 {
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
   "disable_ai": false,
   "minimap": {
     "show": "never",
   },
+  "zoomed_padding": false,
   "buffer_font_fallbacks": ["Hack Nerd Font Mono", ".SystemUIFont"],
   "diagnostics": {
     "button": true,
@@ -21,9 +35,6 @@
     "enabled": true,
     "delay_ms": 50,
   },
-  "search": {
-    "include_ignored": true,
-  },
   "file_finder": {
     "include_ignored": "all",
   },
@@ -31,6 +42,7 @@
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": true,
   "agent": {
+    "dock": "right",
     "favorite_models": [
       {
         "provider": "anthropic",
@@ -62,13 +74,45 @@
         "model": "claude-haiku-4-5-thinking-latest",
         "enable_thinking": false,
       },
+      {
+        "provider": "ollama",
+        "model": "gpt-oss:latest",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "ollama",
+        "model": "qwen3.5:9b",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "ollama",
+        "model": "gemma4:e4b",
+        "enable_thinking": true,
+      },
     ],
     "tool_permissions": {
       "tools": {
+        "restore_file_from_disk": {
+          "default": "allow",
+        },
+        "fetch": {
+          "always_allow": [
+            {
+              "pattern": "^https?://docs\\.rs",
+            },
+            {
+              "pattern": "^https?://testcontainers\\.org",
+            },
+          ],
+        },
+        "mcp:mcp-server-context7:query-docs": {
+          "default": "allow",
+        },
         "create_directory": {
-          "default": "allow"
+          "default": "allow",
         },
         "terminal": {
+          "default": "allow",
           "always_allow": [
             {
               "pattern": "^cargo\\s",
@@ -82,14 +126,18 @@
             {
               "pattern": "^cat\\s",
             },
+            {
+              "pattern": "^find\\s+fullstack\\-rust\\-react\\-template(\\s|$)",
+            },
           ],
         },
       },
     },
     "default_profile": "write",
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-haiku-4-5-latest",
+      "enable_thinking": true,
+      "provider": "ollama",
+      "model": "qwen3.5:9b",
     },
     "enabled": true,
     "button": true,
@@ -188,12 +236,33 @@
   "semantic_tokens": "combined",
   "global_lsp_settings": {
     "semantic_token_rules": [
+      // ==========================================
+      // 1. THE NUCLEAR RUST OVERRIDES
+      // ==========================================
+      // These are at the top to guarantee they don't get overwritten
+      //
+      { "token_type": "trait", "foreground_color": "#4EC9B0" },
+      { "token_type": "derive", "foreground_color": "#4EC9B0" },
+      { "token_type": "builtinAttribute", "foreground_color": "#569CD6" },
+      { "token_type": "attribute", "foreground_color": "#DCDCAA" },
+      { "token_type": "deriveHelper", "foreground_color": "#C586C0" },
+      { "token_type": "toolModule", "foreground_color": "#4EC9B0" },
+      { "token_type": "module", "foreground_color": "#4EC9B0" },
+
+      { "token_type": "deriveHelper", "style": ["type"] },
+      { "token_type": "trait", "style": ["type"] },
+
+      // ==========================================
+      // 2. BASE TOKENS & MODIFIERS
+      // ==========================================
       { "token_modifiers": ["mutable"], "underline": true },
       { "token_modifiers": ["readonly"], "style": ["readonly"] },
       { "token_modifiers": ["deprecated"], "strikethrough": true },
-      { "token_type": "unresolvedReference", "style": ["unresolved_reference"] },
-      { "token_type": "enumMember", "style": ["variant", "constant"] },
-      { "token_type": "namespace", "style": ["namespace"] },
+      {
+        "token_type": "unresolvedReference",
+        "style": ["unresolved_reference"],
+      },
+      { "token_type": "namespace", "style": ["namespace", "type"] },
       { "token_type": "type", "style": ["type"] },
       { "token_type": "class", "style": ["class", "type"] },
       { "token_type": "enum", "style": ["enum", "type"] },
@@ -205,8 +274,6 @@
       { "token_type": "property", "style": ["property", "attribute"] },
       { "token_type": "function", "style": ["function"] },
       { "token_type": "method", "style": ["function.method", "function"] },
-      { "token_type": "macro", "style": ["macro", "preproc"] },
-      { "token_type": "keyword", "style": ["keyword"] },
       { "token_type": "comment", "style": ["comment"] },
       { "token_type": "string", "style": ["string"] },
       { "token_type": "number", "style": ["number"] },
@@ -215,39 +282,31 @@
       { "token_type": "invalid", "style": ["invalid"] },
       { "token_type": "character", "style": ["character"] },
 
-      //START Rust semantic tokens: https://rust-analyzer.github.io/book/features.html#semantic-syntax-highlighting
-      { "token_type": "attribute", "style": ["attribute"] },
-      { "token_type": "namespace", "style": ["namespace", "type"] },
-      { "token_type": "trait", "style": ["trait"] },
+      // ==========================================
+      // 3. RUST SPECIFIC TOKENS
+      // ==========================================
       { "token_type": "union", "style": ["union", "type"] },
       { "token_type": "boolean", "style": ["boolean"] },
-      { "token_type": "derive", "style": ["derive", "operator"] },
       { "token_type": "typeAlias", "style": ["type_alias", "type"] },
       { "token_type": "escapeSequence", "style": ["string.escape"] },
       { "token_type": "formatSpecifier", "style": ["keyword"] },
-      { "token_type": "macroBang", "style": ["function", "macro"] },
-      {
-        "token_type": "builtinAttribute",
-        "style": ["builtin_attribute", "attribute"],
-      },
+      { "token_type": "macro", "foreground_color": "#569CD6" },
+      { "token_type": "macroBang", "foreground_color": "#569CD6" },
       { "token_type": "builtinType", "style": ["builtin_type", "type"] },
       {
         "token_type": "constParameter",
         "style": ["const_parameter", "parameter", "constant"],
       },
-      { "token_type": "deriveHelper", "style": ["derive_helper", "operator"] },
       { "token_type": "enumMember", "style": ["variant"] },
       { "token_type": "generic", "style": ["generic", "type"] },
       { "token_type": "label", "style": ["label"] },
       { "token_type": "lifetime", "style": ["lifetime", "keyword"] },
       { "token_type": "selfKeyword", "style": ["keyword"] },
-      { "token_type": "selfTypeKeyword", "style": ["keyword"] },
+      { "token_type": "selfTypeKeyword", "style": ["self_type", "keyword"] },
       { "token_type": "toolModule", "style": ["tool_module", "namespace"] },
       { "token_type": "typeParameter", "style": ["parameter", "variable"] },
-      { "token_modifiers": ["attribute"], "style": ["attribute"] },
       { "token_modifiers": ["constant"], "style": ["constant"] },
       { "token_modifiers": ["consuming"], "style": ["consuming"] },
-      { "token_modifiers": ["controlFlow"], "style": ["keyword.control"] },
       { "token_modifiers": ["crateRoot"], "style": ["crate_root", "keyword"] },
       {
         "token_modifiers": ["documentation"],
@@ -257,14 +316,13 @@
         "token_modifiers": ["intraDocLink"],
         "style": ["intra_doc_link", "link_uri", "link_text"],
       },
-      { "token_modifiers": ["library"], "style": ["library", "namespace"] },
-      { "token_modifiers": ["macro"], "style": ["macro"] },
-      { "token_modifiers": ["trait"], "style": ["trait", "type"] },
+      { "token_modifiers": ["library"], "style": ["library"] },
       { "token_modifiers": ["unsafe"], "style": ["unsafe"] },
-      // END Rust semantic tokens
+      { "token_modifiers": ["readonly"], "style": ["readonly"] },
 
-      // START: Common Keywords
-      { "token_type": "keyword.control", "style": ["keyword.control", "keyword"] },
+      // ==========================================
+      // 4. COMMON C++ / MARKUP
+      // ==========================================
       {
         "token_type": "source.cpp keyword.operator.new",
         "style": ["keyword.control", "keyword"],
@@ -289,9 +347,6 @@
         "token_type": "entity.name.operator",
         "style": ["keyword.control", "keyword"],
       },
-      // END: Common Keywords
-
-      // Markup
       { "token_type": "markup.underline", "underline": true },
       {
         "token_type": "markup.bold",
@@ -309,6 +364,13 @@
       { "token_type": "markup.deleted", "foreground_color": "#CE9178" },
       { "token_type": "markup.changed", "foreground_color": "#569CD6" },
       { "token_type": "markup.inline.raw", "foreground_color": "#CE9178" },
+
+      // ==========================================
+      // 5. KEYWORDS & CONTROL FLOW (ORDER MATTERS)
+      // ==========================================
+      { "token_modifiers": ["controlFlow"], "style": ["keyword.control"] }, // Purple 'if/match'
+      { "token_modifiers": ["async"], "style": ["keyword.async", "keyword"] }, // Purple 'await'
+      { "token_type": "keyword", "style": ["keyword"] }, // Blue 'let'
     ],
   },
   "languages": {
@@ -370,6 +432,26 @@
     "coloring": "indent_aware",
   },
   "language_models": {
+    "openai_compatible": {
+      "vLLM": {
+        "api_url": "http://127.0.0.1:39119",
+        "available_models": [
+          {
+            "name": "AxionML/Qwen3.5-9B-NVFP4",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+            },
+          },
+        ],
+      },
+    },
     "ollama": {
       "api_url": "http://localhost:11434",
       "available_models": [
@@ -380,6 +462,24 @@
           "supports_thinking": true,
           "supports_tools": true,
           "supports_images": false,
+          "keep_alive": 300,
+        },
+        {
+          "name": "qwen3.5:9b",
+          "display_name": "qwen 3.5 9b",
+          "max_tokens": 90000,
+          "supports_thinking": true,
+          "supports_tools": true,
+          "supports_images": true,
+          "keep_alive": 300,
+        },
+        {
+          "name": "gemma4:e4b",
+          "display_name": "gemma4:e4b",
+          "max_tokens": 128000,
+          "supports_thinking": true,
+          "supports_tools": true,
+          "supports_images": true,
           "keep_alive": 300,
         },
       ],
