@@ -237,24 +237,15 @@
   "global_lsp_settings": {
     "semantic_token_rules": [
       // ==========================================
-      // 1. THE NUCLEAR RUST OVERRIDES
+      // 1. BASE TOKENS & MODIFIERS
       // ==========================================
-      // These are at the top to guarantee they don't get overwritten
-      //
-      { "token_type": "trait", "foreground_color": "#4EC9B0" },
-      { "token_type": "derive", "foreground_color": "#4EC9B0" },
-      { "token_type": "builtinAttribute", "foreground_color": "#569CD6" },
-      { "token_type": "attribute", "foreground_color": "#DCDCAA" },
-      { "token_type": "deriveHelper", "foreground_color": "#C586C0" },
-      { "token_type": "toolModule", "foreground_color": "#4EC9B0" },
-      { "token_type": "module", "foreground_color": "#4EC9B0" },
-
-      { "token_type": "deriveHelper", "style": ["type"] },
-      { "token_type": "trait", "style": ["type"] },
-
-      // ==========================================
-      // 2. BASE TOKENS & MODIFIERS
-      // ==========================================
+      { "token_type": "trait", "style": ["trait"] },
+      { "token_type": "derive", "style": ["derive"] },
+      { "token_type": "builtinAttribute", "style": ["builtin.attribute"] },
+      { "token_type": "attribute", "style": ["attribute"] },
+      { "token_type": "deriveHelper", "style": ["derive.helper"] },
+      { "token_type": "toolModule", "style": ["type"] },
+      { "token_type": "module", "style": ["type"] },
       { "token_modifiers": ["mutable"], "underline": true },
       { "token_modifiers": ["readonly"], "style": ["readonly"] },
       { "token_modifiers": ["deprecated"], "strikethrough": true },
@@ -283,27 +274,27 @@
       { "token_type": "character", "style": ["character"] },
 
       // ==========================================
-      // 3. RUST SPECIFIC TOKENS
+      // 2. RUST SPECIFIC TOKENS
       // ==========================================
       { "token_type": "union", "style": ["union", "type"] },
       { "token_type": "boolean", "style": ["boolean"] },
-      { "token_type": "typeAlias", "style": ["type_alias", "type"] },
+      { "token_type": "typeAlias", "style": ["type.alias", "type"] },
       { "token_type": "escapeSequence", "style": ["string.escape"] },
       { "token_type": "formatSpecifier", "style": ["keyword"] },
-      { "token_type": "macro", "foreground_color": "#569CD6" },
-      { "token_type": "macroBang", "foreground_color": "#569CD6" },
-      { "token_type": "builtinType", "style": ["builtin_type", "type"] },
+      { "token_type": "macro", "style": ["macro"] },
+      { "token_type": "macroBang", "style": ["macro"] },
+      { "token_type": "builtinType", "style": ["type.builtin", "type"] },
       {
         "token_type": "constParameter",
-        "style": ["const_parameter", "parameter", "constant"],
+        "style": ["parameter.const", "parameter", "constant"],
       },
       { "token_type": "enumMember", "style": ["variant"] },
       { "token_type": "generic", "style": ["generic", "type"] },
       { "token_type": "label", "style": ["label"] },
       { "token_type": "lifetime", "style": ["lifetime", "keyword"] },
-      { "token_type": "selfKeyword", "style": ["keyword"] },
-      { "token_type": "selfTypeKeyword", "style": ["self_type", "keyword"] },
-      { "token_type": "toolModule", "style": ["tool_module", "namespace"] },
+      { "token_type": "selfKeyword", "style": ["builtin.attribute"] },
+      { "token_type": "selfTypeKeyword", "style": ["builtin.attribute"] },
+      { "token_type": "toolModule", "style": ["namespace"] },
       { "token_type": "typeParameter", "style": ["parameter", "variable"] },
       { "token_modifiers": ["constant"], "style": ["constant"] },
       { "token_modifiers": ["consuming"], "style": ["consuming"] },
@@ -321,7 +312,7 @@
       { "token_modifiers": ["readonly"], "style": ["readonly"] },
 
       // ==========================================
-      // 4. COMMON C++ / MARKUP
+      // 3. COMMON C++ / MARKUP
       // ==========================================
       {
         "token_type": "source.cpp keyword.operator.new",
@@ -348,29 +339,14 @@
         "style": ["keyword.control", "keyword"],
       },
       { "token_type": "markup.underline", "underline": true },
-      {
-        "token_type": "markup.bold",
-        "foreground_color": "#569CD6",
-        "font_weight": "bold",
-      },
-      {
-        "token_type": "markup.heading",
-        "foreground_color": "#569CD6",
-        "font_weight": "bold",
-      },
+      { "token_type": "markup.bold", "style": ["markup.bold"] },
+      { "token_type": "markup.heading", "style": ["markup.heading"] },
       { "token_type": "markup.italic", "font_style": "italic" },
       { "token_type": "markup.strikethrough", "strikethrough": true },
-      { "token_type": "markup.inserted", "foreground_color": "#B5CEA8" },
-      { "token_type": "markup.deleted", "foreground_color": "#CE9178" },
-      { "token_type": "markup.changed", "foreground_color": "#569CD6" },
-      { "token_type": "markup.inline.raw", "foreground_color": "#CE9178" },
-
-      // ==========================================
-      // 5. KEYWORDS & CONTROL FLOW (ORDER MATTERS)
-      // ==========================================
-      { "token_modifiers": ["controlFlow"], "style": ["keyword.control"] }, // Purple 'if/match'
-      { "token_modifiers": ["async"], "style": ["keyword.async", "keyword"] }, // Purple 'await'
-      { "token_type": "keyword", "style": ["keyword"] }, // Blue 'let'
+      { "token_type": "markup.inserted", "style": ["markup.inserted"] },
+      { "token_type": "markup.deleted", "style": ["markup.deleted"] },
+      { "token_type": "markup.changed", "style": ["markup.changed"] },
+      { "token_type": "markup.inline.raw", "style": ["markup.inline.raw"] },
     ],
   },
   "languages": {

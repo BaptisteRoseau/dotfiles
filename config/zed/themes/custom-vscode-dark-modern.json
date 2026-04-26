@@ -562,8 +562,8 @@
         "syntax": {
           "trait": { "color": "#4EC9B0" },
           "derive": { "color": "#4EC9B0" },
-          "builtinAttribute": { "color": "#569CD6" },
-          "deriveHelper": { "color": "#C586C0" },
+          "builtin.attribute": { "color": "#569CD6" },
+          "derive.helper": { "color": "#C586C0" },
           "attribute": { "color": "#5DC5FD" },
           "boolean": { "color": "#569CD6" },
           "comment": { "color": "#606060" },
@@ -576,7 +576,8 @@
           "function.method": { "color": "#C7C778" },
           "hint": { "color": "#969696" },
           "info": { "color": "#00B7E4", "background_color": "#00B7E420" },
-          "keyword": { "color": "#559CD6" },
+          "keyword": { "color": "#C586C0" },
+          "namespace": { "color": "#C586C0" },
           "label": { "color": "#C8C8C8" },
           "link_text": { "color": "#A07D3A", "font_style": "italic" },
           "link_uri": { "color": "#A07D3A", "font_style": "italic" },
@@ -604,12 +605,21 @@
           "readonly": { "font_weight": 300 },
           "modifier": { "color": "#CE9178" },
           "parameter": { "color": "#81DCF7", "font_style": "italic" },
+          "parameter.const": { "color": "#81DCF7", "font_style": "italic" },
           "unresolved_reference": { "color": "#C93F3F" },
           "keyword.control": { "color": "#C586C0" },
           "invalid": { "color": "#F44747" },
           "unsafe": { "color": "#CD9731", "front_style": "italic" },
           "constructor": { "color": "#35B9FF", "font_weight": 500 },
-          "type.builtin": { "color": "#569CD6", "font_style": "italic" }
+          "type.builtin": { "color": "#569CD6", "font_style": "italic" },
+          "type.alias": { "color": "#569CD6", "font_style": "italic" },
+          "markup.bold": { "color": "#569CD6", "font_weight": 500 },
+          "markup.heading": { "color": "#569CD6", "font_weight": 500 },
+          "markup.inserted": { "color": "#B5CEA8" },
+          "markup.deleted": { "color": "#CE9178" },
+          "markup.changed": { "color": "#569CD6" },
+          "markup.inline.raw": { "color": "#CE9178" },
+          "crate_root": { "color": "#569CD6" }
         }
       }
     }
