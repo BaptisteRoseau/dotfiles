@@ -170,9 +170,6 @@ key = "End"
 mode = "~Alt"
 mods = "Shift"
 
-[[mouse]]
-bindings = { action = "PasteSelection", mouse = "Middle" }
-enabled = true
 
 [scrolling]
 history = 10000
@@ -182,7 +179,7 @@ multiplier = 3
 save_to_clipboard = true
 semantic_escape_chars = "\t\n,│`|:\"' ()[]{}<>"
 
-[terminal.shell]
+[shell]
 program = "/usr/bin/bash"
 args = ["-c", "tmux attach -t main || tmux new -s main"]
 
@@ -191,8 +188,3 @@ decorations = "None"
 dynamic_padding = false
 opacity = 1.0
 startup_mode = "Windowed"
-
-[general]
-live_config_reload = true
-
-[terminal]
