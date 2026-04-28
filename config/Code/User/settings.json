@@ -1,48 +1,48 @@
 {
   "[dockercompose]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
   },
   "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
   "[tailwindCSS]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "chat.agent.enabled": true,
   "chat.extensionTools.enabled": false,
   "chat.tools.terminal.autoApprove": {
     "awk": true,
-    "uniq": true
+    "uniq": true,
   },
   "cmake.configureOnOpen": false,
   "cmake.showOptionsMovedNotification": false,
@@ -58,6 +58,7 @@
     "deepcopy",
     "dockercompose",
     "Drush",
+    "IDLETIME",
     "jquery",
     "ndarray",
     "onclick",
@@ -70,21 +71,21 @@
     "utoipa",
     "Utoipa",
     "venv",
-    "virtualenv"
+    "virtualenv",
   ],
   "debugpy.showPythonInlineValues": true,
   "editor.fontFamily": "'Hack Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
   "editor.inlayHints.enabled": "onUnlessPressed",
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
-    "strings": "on"
+    "strings": "on",
   },
   "editor.rulers": [90, 120],
   "editor.tokenColorCustomizations": {
-    "comments": "#606060"
+    "comments": "#606060",
   },
   "emmet.includeLanguages": {
-    "rust": "html"
+    "rust": "html",
   },
   "errorLens.enabledDiagnosticLevels": ["error"],
   "errorLens.lintFilePaths": {
@@ -93,22 +94,22 @@
       "**/*.stylelintrc",
       "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
       "**/*stylelint.config.{cjs,js}",
-      "**/*package.json"
+      "**/*package.json",
     ],
     "tailwindCSS": [
       "**/*.tailwind.config.{cjs,js,json,yaml,yml}",
       "**/*package.json",
-      "**/*.css"
-    ]
+      "**/*.css",
+    ],
   },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "asvetliakov.vscode-neovim": 1,
   },
   "files.associations": {
     "*.css": "tailwindcss",
-    "*.twig": "html"
+    "*.twig": "html",
   },
   "files.autoSave": "afterDelay",
   "git.blame.editorDecoration.enabled": false,
@@ -117,7 +118,7 @@
     "*": false,
     "markdown": false,
     "plaintext": false,
-    "scminput": false
+    "scminput": false,
   },
   "keyboard.dispatch": "keyCode",
   "liveServer.settings.donotShowInfoMsg": true,
@@ -126,13 +127,13 @@
   "python.analysis.extraPaths": [
     "${workspaceFolder}/tst",
     "${workspaceFolder}/src",
-    "${workspaceFolder}"
+    "${workspaceFolder}",
   ],
   "python.analysis.typeCheckingMode": "standard",
   "python.autoComplete.extraPaths": [
     "${workspaceFolder}/tst",
     "${workspaceFolder}/src",
-    "${workspaceFolder}"
+    "${workspaceFolder}",
   ],
   "python.envFile": "${workspaceFolder}/.venv",
   "python.testing.pytestEnabled": true,
@@ -143,12 +144,12 @@
     "-p",
     "--ignore=ods/core/tests/core/backends2/resource/test_fetchers.py",
     "--disable-pytest-warnings",
-    "ods"
+    "ods",
   ],
   "python.venvFolders": [
     "${workspaceFolder}/.venv",
     "${workspaceFolder}/.virtualenv",
-    "${workspaceFolder}/.env"
+    "${workspaceFolder}/.env",
   ],
   "redhat.telemetry.enabled": false,
   "rust-analyzer.check.command": "clippy",
@@ -157,10 +158,10 @@
   "sqltools.useNodeRuntime": true,
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
-    "rust": "html"
+    "rust": "html",
   },
   "terminal.integrated.env.linux": {
-    "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}"
+    "PYTHONPATH": "${workspaceFolder}/tst:${workspaceFolder}/src:${env:PYTHONPATH}",
   },
   "vim.camelCaseMotion.enable": true,
   "vim.handleKeys": {
@@ -171,7 +172,7 @@
     "<C-g>": false,
     "<C-h>": false,
     "<C-n>": false,
-    "<C-z>": false
+    "<C-z>": false,
   },
   "vim.hlsearch": true,
   "vim.incsearch": true,
@@ -179,53 +180,53 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["ctrl+w"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "commands": ["workbench.action.closeActiveEditor"],
     },
     // Dependi
     {
       "before": ["<leader>CU"],
       "commands": ["dependi.commands.updateall"],
-      "when": "editortextfocus && resourcefilename in dependi.supportedfiles"
+      "when": "editortextfocus && resourcefilename in dependi.supportedfiles",
     },
     {
       "before": ["<leader>cu"],
       "commands": ["dependi.commands.replaceversion"],
-      "when": "editortextfocus && resourcefilename in dependi.supportedfiles"
+      "when": "editortextfocus && resourcefilename in dependi.supportedfiles",
     },
     {
       "before": ["<leader>ca"],
       "commands": ["editor.action.quickfix"],
-      "when": "editortextfocus"
+      "when": "editortextfocus",
     },
     // case switching
     {
       "before": ["<leader>cc"],
-      "commands": ["editor.action.transformtocamelcase"]
+      "commands": ["editor.action.transformtocamelcase"],
     },
     {
       "before": ["<leader>cs"],
-      "commands": ["editor.action.transformtosnakecase"]
+      "commands": ["editor.action.transformtosnakecase"],
     },
     {
       "before": ["<leader>ck"],
-      "commands": ["editor.action.transformtokebabcase"]
+      "commands": ["editor.action.transformtokebabcase"],
     },
     {
       "before": ["<leader>ct"],
-      "commands": ["editor.action.transformtotitlecase"]
+      "commands": ["editor.action.transformtotitlecase"],
     },
     {
       "before": ["<leader>cp"],
-      "commands": ["editor.action.transformtopascalcase"]
+      "commands": ["editor.action.transformtopascalcase"],
     },
     {
       "before": ["<leader>cu"],
-      "commands": ["editor.action.transformtouppercase"]
+      "commands": ["editor.action.transformtouppercase"],
     },
     {
       "before": ["<leader>cl"],
-      "commands": ["editor.action.transformtolowercase"]
-    }
+      "commands": ["editor.action.transformtolowercase"],
+    },
   ],
   "vim.overrideCopy": true,
   "vim.surround": true,
@@ -233,48 +234,48 @@
   "vim.visualModeKeyBindings": [
     {
       "after": ["\"", "+", "y"],
-      "before": ["<c-c>"]
+      "before": ["<c-c>"],
     },
     {
       "after": ["\"", "+", "p"],
-      "before": ["<c-v>"]
-    }
+      "before": ["<c-v>"],
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["ctrl+w"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "commands": ["workbench.action.closeActiveEditor"],
     },
     {
       "before": ["<space>"],
-      "commands": ["whichkey.show"]
-    }
+      "commands": ["whichkey.show"],
+    },
   ],
   "vs-kubernetes": {
     "vs-kubernetes.minikube-show-information-expiration": "2026-01-07T09:53:20.145Z",
     "vscode-kubernetes.helm-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
-    "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    "vscode-kubernetes.minikube-path-linux": "/home/baptiste/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
   },
   "window.menuBarVisibility": "toggle",
   "workbench.colorCustomizations": {
-    "editorruler.foreground": "#35199b93"
+    "editorruler.foreground": "#35199b93",
   },
   "workbench.editor.empty.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "yaml.schemas": {
     "/home/baptiste/.vscode/extensions/continue.continue-1.0.9-linux-x64/config-yaml-schema.json": [
-      ".continue/**/*.yaml"
-    ]
+      ".continue/**/*.yaml",
+    ],
   },
   "editor.inlineSuggest.edits.showCollapsed": true,
   "errorLens.enabled": true,
   "python.analysis.typeCheckingMode": "strict",
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[twig]": {
-    "editor.defaultFormatter": "mblode.twig-language-2"
+    "editor.defaultFormatter": "mblode.twig-language-2",
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
@@ -283,15 +284,21 @@
     "editor.quickSuggestions": {
       "other": true,
       "comments": false,
-      "strings": true
+      "strings": true,
     },
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "chat.mcp.gallery.enabled": true,
   "lldb.suppressUpdateNotifications": true,
   "errorLens.messageEnabled": true,
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "chat.tools.urls.autoApprove": {
+    "https://alacritty.org": {
+      "approveRequest": true,
+      "approveResponse": false,
+    },
+  },
 }

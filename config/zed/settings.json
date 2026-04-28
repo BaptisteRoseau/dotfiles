@@ -3,16 +3,16 @@
 {
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "outline_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "collaboration_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "git_panel": {
-    "dock": "left",
+    "dock": "left"
   },
   "disable_ai": false,
   "minimap": {
@@ -38,7 +38,6 @@
   "file_finder": {
     "include_ignored": "all",
   },
-  "relative_line_numbers": "wrapped",
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": true,
   "agent": {
@@ -47,31 +46,33 @@
       {
         "provider": "anthropic",
         "model": "claude-haiku-4-5-latest",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "anthropic",
         "model": "claude-sonnet-4-6-thinking-latest",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "anthropic",
         "model": "claude-sonnet-4-6-latest",
         "enable_thinking": false,
+        "effort": "high"
       },
       {
         "provider": "anthropic",
         "model": "claude-opus-4-6-latest",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "anthropic",
         "model": "claude-opus-4-6-thinking-latest",
-        "enable_thinking": false,
+        "enable_thinking": false
       },
       {
         "provider": "anthropic",
         "model": "claude-haiku-4-5-thinking-latest",
+<<<<<<< Updated upstream
         "enable_thinking": false,
       },
       {
@@ -89,6 +90,10 @@
         "model": "gemma4:e4b",
         "enable_thinking": true,
       },
+=======
+        "enable_thinking": false
+      }
+>>>>>>> Stashed changes
     ],
     "tool_permissions": {
       "tools": {
@@ -133,11 +138,18 @@
         },
       },
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
+<<<<<<< Updated upstream
       "enable_thinking": true,
       "provider": "ollama",
       "model": "qwen3.5:9b",
+=======
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6-thinking-latest",
+>>>>>>> Stashed changes
     },
     "enabled": true,
     "button": true,

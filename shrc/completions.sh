@@ -31,3 +31,7 @@ fi
 if [ -x "$(command -v uvx)" ]; then
   eval "$(uvx --generate-shell-completion bash)"
 fi
+
+if [ -x "$(command -v sbx)" ]; then
+  eval "$(sbx completion bash)"
+fi
