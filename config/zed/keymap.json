@@ -40,6 +40,7 @@
       "ctrl-t": "project_symbols::Toggle",
       "ctrl-g": "go_to_line::Toggle",
       "ctrl-o": "workspace::OpenFiles",
+      "ctrl-g": "go_to_line::Toggle",
       "ctrl-shift-up": ["editor::AddSelectionAbove", { "skip_soft_wrap": true }],
       "ctrl-shift-down": ["editor::AddSelectionBelow", { "skip_soft_wrap": true }],
       "ctrl-alt-down": ["editor::SelectNext", { "replace_newest": false }],
@@ -55,6 +56,19 @@
       "ctrl-f": "search::FocusSearch",
       "ctrl-h": "search::ToggleReplace",
       "ctrl-l": "search::ToggleSelection",
+    },
+  },
+  {
+    "context": "BufferSearchBar && in_replace > Editor",
+    "bindings": {
+      "ctrl-enter": null,
+      "ctrl-alt-enter": "search::ReplaceAll",
+    },
+  },
+  {
+    "context": "ProjectSearchBar && in_replace > Editor",
+    "bindings": {
+      "ctrl-alt-enter": "search::ReplaceAll",
     },
   },
   {
