@@ -37,5 +37,7 @@ export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 
 # Intel MKL
-source /opt/intel/oneapi/setvars.sh > /dev/null
+if [ -f "/opt/intel/oneapi/setvars.sh" ]; then
+	source /opt/intel/oneapi/setvars.sh > /dev/null
+fi
 export LD_LIBRARY_PATH="/opt/intel/oneapi/mkl/latest/lib:$LD_LIBRARY_PATH"
