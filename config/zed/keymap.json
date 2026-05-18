@@ -37,6 +37,7 @@
       "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-a": "editor::SelectAll",
       "ctrl-i": null,
+      "ctrl-w": "pane::CloseActiveItem",
       "ctrl-t": "project_symbols::Toggle",
       "ctrl-g": "go_to_line::Toggle",
       "ctrl-o": "workspace::OpenFiles",
@@ -180,18 +181,13 @@
     }
   },
   {
-    "context": "Pane && vim_mode != insert",
-    "bindings": {
-      "ctrl-w": "pane::CloseActiveItem",
-    },
-  },
-  {
     "context": "Pane",
     "bindings": {
       "alt-left": "pane::GoBack",
       "alt-right": "pane::GoForward",
       "alt-h": "pane::GoBack",
       "alt-l": "pane::GoForward",
+      "ctrl-w": "pane::CloseActiveItem",
       "ctrl-k ctrl-m": "workspace::ToggleZoom",
       "ctrl-k ctrl-p": "workspace::CopyRelativePath",
       "ctrl-k p": "workspace::CopyPath",
