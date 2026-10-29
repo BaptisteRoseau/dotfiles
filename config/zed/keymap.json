@@ -160,9 +160,9 @@
       "space g w r": "git::RestoreTrackedFiles", // [G]it [W]orkspace [R]estore
       "space g a": "git::Add", // [G]it [A]dd
       "space g d": "git::Diff", // [G]it [D]iff
-      "space g b d": "git::BranchDiff", // [G]it [B]ranch [D]iff
+      "space g b d": "git::DiffBranch", // [G]it [B]ranch [D]iff
       "space g o m": "git::OpenModifiedFiles", // [G]it [O]pen [M]odified files
-      "space g o g": ["git_graph::OpenAtCommit", { "sha": "HEAD" }], // [G]it [O]pen [G]raph
+      "space t g g": ["git_graph::OpenAtCommit", { "sha": "HEAD" }], // [T]oggle [G]it [G]raph
 
       // Toggles
       "space t i": "editor::ToggleInlayHints",
