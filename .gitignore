@@ -15,3 +15,4 @@ config/Code/User/sync/
 .git
 .mypy_cache
 shrc/secure_claude.sh
+gitconfig
